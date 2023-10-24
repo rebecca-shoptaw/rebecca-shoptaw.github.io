@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+const site_link = "https://rebecca-shoptaw.github.io";
 const projects = [
   {
     id: `focusify`,
@@ -48,7 +48,7 @@ const projects = [
   {
     id: `ask-oscar`,
     title: `Ask Oscar Wilde`,
-    link: `https://codesandbox.io/p/sandbox/ask-oscar-wilde-jxjl29`,
+    link: `${site_link}/ask-oscar-wilde/`,
     img_id: `oscar-img`,
     img_src: `https://pilgrimtiles.co.uk/wp-content/uploads/2020/10/wm-straw-thief-detail-blue.jpg`,
     img_alt: `William Morris bird illustration`,
