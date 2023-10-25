@@ -62,7 +62,7 @@ const projects = [
     title: `Cat Band`,
     link: `https://codesandbox.io/p/sandbox/cat-band-7vsq3c?file=%2Fsrc%2Fcomponents%2FCatBand.tsx%3A1%2C`,
     img_id: `cat-band-img`,
-    img_src: "./assets/cat-band.png",
+    img_src: "./assets/cat-band.jpg",
     img_alt: `Drawing of singing cat`,
     description: `An all-cat jazz band for which the user can start and stop the instruments at will. Built with Typescript and React.`,
     description_italics: ``,
