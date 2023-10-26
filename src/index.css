@@ -1,6 +1,8 @@
 /* global */
 :root {
-  --theme-1-accent: #acc4c4;
+  --theme-2-accent: #acc4c4;
+  --theme-1-accent: #564;
+  --theme-3-accent: ;
   --light-gray: #ccc;
   --mid-gray: #666;
 }
@@ -113,7 +115,8 @@ body,
 nav {
   color: #fff;
   width: 100%;
-  background-image: url(https://sothebys-md.brightspotcdn.com/0e/df/bd40bb90400a9be899a057a8c3bf/l21008-btlgd-02.jpg);
+  /*background-image: url(https://sothebys-md.brightspotcdn.com/0e/df/bd40bb90400a9be899a057a8c3bf/l21008-btlgd-02.jpg);*/
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2f/Arcadian_landscape_with_a_bust_of_Flora%2C_by_Jan_van_Huijsum.jpg);
   background-size: 152%;
   background-position: -246px 0px;
   background-attachment: fixed;
