@@ -29,7 +29,7 @@ const projects = [
     title: `Pomodoro`,
     link: `${site_link}/pomodoro/`,
     img_id: `pomodoro-img`,
-    img_src: "./assets/pomodoro.png",
+    img_src: "./pomodoro.png",
     img_alt: `Minimal logo text that reads "pomodoro"`,
     description: `A fully functional and customizable pomodoro study timer, with light and dark modes. Built with Typescript and React.`,
     description_italics: ``,
@@ -38,9 +38,9 @@ const projects = [
   {
     id: `triolingo`,
     title: `Triolingo`,
-    link: `https://codesandbox.io/p/sandbox/triolingo-lzt8zw`,
+    link: `${site_link}/triolingo/`,
     img_id: `triolingo-img`,
-    img_src: "./assets/triolingo.png",
+    img_src: "./triolingo.png",
     img_alt: `Smiling gray cartoon cat`,
     description: `A Duolingo look-alike to help students practice SSAT Vocabulary. Features functionality for repeating and generating new word-sets and keeping score for each round. Built with Typescript and React.`,
     description_italics: ``,
@@ -60,9 +60,9 @@ const projects = [
   {
     id: `cat-band`,
     title: `Cat Band`,
-    link: `https://codesandbox.io/p/sandbox/cat-band-7vsq3c?file=%2Fsrc%2Fcomponents%2FCatBand.tsx%3A1%2C`,
+    link: `${site_link}/cat-band/`,
     img_id: `cat-band-img`,
-    img_src: "./assets/cat-band.jpg",
+    img_src: "./cat-band.jpg",
     img_alt: `Drawing of singing cat`,
     description: `An all-cat jazz band for which the user can start and stop the instruments at will. Built with Typescript and React.`,
     description_italics: ``,
@@ -133,6 +133,9 @@ const projects = [
 const Homepage = () => {
   let [loaded, setLoaded] = useState(false);
   window.onload = () => setLoaded(true);
+
+  /*document.body.style.backgroundImage = `url(${book.cover})`;
+  document.body.style.backgroundSize = book.cover_size;*/
 
   return (
     <>
