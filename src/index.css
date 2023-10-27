@@ -17,6 +17,14 @@ body {
   padding: 0px;
 }
 
+#loading {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  margin-top: -50px;
+  margin-right: -50px;
+}
+
 @media only screen and (max-width: 500px) {
   body,
   nav {
@@ -128,6 +136,10 @@ nav {
   background-size: 152%;
   background-position: -246px 0px;
   background-attachment: fixed;
+  transition: opacity 2s, transform 2s ease-in-out;
+}
+
+#site-body {
   transition: opacity 2s, transform 2s ease-in-out;
 }
 
