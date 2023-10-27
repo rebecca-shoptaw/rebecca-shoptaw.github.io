@@ -170,7 +170,7 @@ const Homepage = () => {
         <div className="title">
           <h1>Rebecca Shoptaw</h1>
           <h2>
-            <i>Front-end Developer</i>
+            <i>Frontend Developer</i>
           </h2>
         </div>
       </section>
@@ -251,14 +251,14 @@ const Homepage = () => {
                     <a
                       href={git_link + project.link}
                       target="_blank"
-                      className="button"
+                      className="button code"
                     >
                       Code
                     </a>
                     <a
                       href={site_link + project.link}
                       target="_blank"
-                      className="button"
+                      className="button live"
                     >
                       Live
                     </a>
