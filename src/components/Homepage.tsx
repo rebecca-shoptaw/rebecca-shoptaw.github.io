@@ -1,94 +1,99 @@
 import { useState } from "react";
 const site_link = "https://rebecca-shoptaw.github.io";
+const git_link = "https://github.com/rebecca-shoptaw";
 
-const projects = [
+interface projects_arr {
+  id: string;
+  title: string;
+  link?: string;
+  img_id: string;
+  img_src: string;
+  img_alt: string;
+  description: string;
+  description_italics?: string;
+  wip?: boolean;
+}
+
+const projects: projects_arr[] = [
   {
     id: `focusify`,
     title: `Focusify`,
-    link: `javascript: void(0)`,
     img_id: `focusify-img`,
     img_src: `https://static.thenounproject.com/png/263649-200.png`,
     img_alt: `Minimalist white circle on black background`,
     description: `A minimalist Spotify re-design with a light/dark mode and built-in functionality for audio visualizers and other view customizations. Further integrations to come. Built with Typescript, React, and the Spotify API.`,
-    description_italics: ``,
     wip: true,
   },
   {
     id: `open-editions`,
     title: `Open Editions`,
-    link: `${site_link}/open-editions/`,
+    link: `/open-editions/`,
     img_id: `open-editions-img`,
     img_src: `https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Elizabeth_Winthrop_Chanler.JPG/1200px-Elizabeth_Winthrop_Chanler.JPG`,
     img_alt: `Sargent painting of Elizabeth Winthrop Chanler`,
     description: `A minimalist and aesthetically pleasing audiobook player, which combines public domain audiobook recordings of classic novels with customized cover images . Built with Typescript and React.`,
-    description_italics: ``,
     wip: true,
   },
   {
     id: `pomodoro`,
     title: `Pomodoro`,
-    link: `${site_link}/pomodoro/`,
+    link: `/pomodoro/`,
     img_id: `pomodoro-img`,
     img_src: "./pomodoro.png",
     img_alt: `Minimal logo text that reads "pomodoro"`,
     description: `A fully functional and customizable pomodoro study timer, with light and dark modes. Built with Typescript and React.`,
-    description_italics: ``,
+
     wip: true,
   },
   {
     id: `triolingo`,
     title: `Triolingo`,
-    link: `${site_link}/triolingo/`,
+    link: `}/triolingo/`,
     img_id: `triolingo-img`,
     img_src: "./triolingo.png",
     img_alt: `Smiling gray cartoon cat`,
     description: `A Duolingo look-alike to help students practice SSAT Vocabulary. Features functionality for repeating and generating new word-sets and keeping score for each round. Built with Typescript and React.`,
-    description_italics: ``,
+
     wip: true,
   },
   {
     id: `ask-oscar`,
     title: `Ask Oscar Wilde`,
-    link: `${site_link}/ask-oscar-wilde/`,
+    link: `/ask-oscar-wilde/`,
     img_id: `oscar-img`,
     img_src: `https://pilgrimtiles.co.uk/wp-content/uploads/2020/10/wm-straw-thief-detail-blue.jpg`,
     img_alt: `William Morris bird illustration`,
     description: `A dynamic site in which Oscar Wilde aphorisms appear in
         response to user predicaments.`,
-    description_italics: ``,
   },
   {
     id: `cat-band`,
     title: `Cat Band`,
-    link: `${site_link}/cat-band/`,
+    link: `/cat-band/`,
     img_id: `cat-band-img`,
     img_src: "./cat-band.jpg",
     img_alt: `Drawing of singing cat`,
     description: `An all-cat jazz band for which the user can start and stop the instruments at will. Built with Typescript and React.`,
-    description_italics: ``,
-    wip: true,
   },
   {
     id: `deco-calculator`,
     title: `Deco Calculator`,
-    link: `https://codesandbox.io/p/sandbox/deco-calculator-z8cwmc`,
+    link: `/deco-calculator/`,
     img_id: `deco-calculator-img`,
     img_src: `https://www.burkedecor.com/cdn/shop/products/DD139230_1800x1800.jpg?v=1671736060`,
     img_alt: `Art Deco pattern`,
     description: `A stylish and fully functional calculator designed for doing basic calculations in an art deco manner. Built with Typescript and React.`,
-    description_italics: ``,
   },
   {
     id: `tabula-rasa`,
     title: `Tabula Rasa`,
-    link: `https://codesandbox.io/p/sandbox/tabula-rasa-h75xkd`,
+    link: `/tabula-rasa`,
     img_id: `tabula-img`,
     img_src: `https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Jan_van_Huysum_-_Arcadian_Landscape_with_a_Bust_of_Flora_-_1113_-_Mauritshuis.jpg/1600px-Jan_van_Huysum_-_Arcadian_Landscape_with_a_Bust_of_Flora_-_1113_-_Mauritshuis.jpg?20200127083852`,
     img_alt: `Jan van Huysum Arcadian Lanscape painting`,
     description: `A minimal and elegant responsive markdown previewer.`,
-    description_italics: ``,
   },
-  {
+  /*{
     id: `haines-project`,
     title: `Personal Website`,
     link: `https://codepen.io/rebecca-shoptaw/pen/WNYgmjv`,
@@ -97,18 +102,18 @@ const projects = [
     img_alt: `Crossed tennis rackets logo`,
     description: `A sample website for the fictional 1950s tennis player and murder suspect, Guy Haines.`,
     description_italics: ``,
-  },
+  },*/
   {
     id: `portrait-project`,
     title: `Film Press Kit`,
-    link: `https://codepen.io/rebecca-shoptaw/pen/dyQqrvj`,
+    link: `/mrs-john-lennox/`,
     img_id: `portrait-img`,
     img_src: `https://filmfreeway-production-storage-01-storage.filmfreeway.com/attachments/files/007/294/084/original/Screen_Shot_2023-06-16_at_5.37.15_PM.jpg?1686951530`,
     img_alt: `Woman in period costume looking at viewer`,
     description: `A press website for the short film `,
     description_italics: `The Portrait of Mrs. John Lennox.`,
   },
-  {
+  /*{
     id: `vampires-project`,
     title: `Series Watch Page`,
     link: `https://codepen.io/rebecca-shoptaw/pen/rNQZRjm`,
@@ -127,7 +132,7 @@ const projects = [
     img_alt: `Laura Knight painting of two women embracing in front of clouds`,
     description: `An audition sign-up form for a film of Shakespeare's `,
     description_italics: `As You Like It.`,
-  },
+  },*/
 ];
 
 const Homepage = () => {
@@ -213,12 +218,7 @@ const Homepage = () => {
             {projects.map((project) => (
               <div className="project-tile" id={project.id}>
                 <div className="img-wrapper">
-                  <a
-                    href={project.link}
-                    target={`${
-                      project.link != "javascript: void(0)" ? "about_blank" : ""
-                    }`}
-                  >
+                  <a href={site_link + project.link} target="_blank">
                     <img
                       id={project.img_id}
                       src={project.img_src as string}
@@ -229,12 +229,8 @@ const Homepage = () => {
                 <div className="description">
                   <p>
                     <a
-                      href={project.link}
-                      target={`${
-                        project.link != "javascript: void(0)"
-                          ? "about_blank"
-                          : ""
-                      }`}
+                      href={site_link + project.link}
+                      target="_blank"
                       className="project-link"
                     >
                       {project.title}
@@ -251,15 +247,22 @@ const Homepage = () => {
                       {project.description_italics}
                     </i>
                   </p>
-                  <a
-                    href={project.link}
-                    target={`${
-                      project.link != "javascript: void(0)" ? "about_blank" : ""
-                    }`}
-                    className="button"
-                  >
-                    Visit
-                  </a>
+                  <div id="visit-btns">
+                    <a
+                      href={git_link + project.link}
+                      target="_blank"
+                      className="button"
+                    >
+                      Code
+                    </a>
+                    <a
+                      href={site_link + project.link}
+                      target="_blank"
+                      className="button"
+                    >
+                      Live
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

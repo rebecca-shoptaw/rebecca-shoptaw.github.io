@@ -61,6 +61,14 @@ body {
     flex-direction: column !important;
   }
 
+  #visit-btns {
+    flex-direction: column !important;
+  }
+
+  #visit-btns .button {
+    width: 100%;
+  }
+
   .description {
     display: flex;
     flex-direction: column;
@@ -517,18 +525,25 @@ section a:hover {
   margin-bottom: 20px !important;
 }
 
+#visit-btns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+}
+
 .button {
   color: var(--mid-gray);
-  border: 0.2px solid var(--light-gray);
+  border: 1px solid var(--light-gray);
   text-decoration: none;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 14px;
   line-height: 1.8em;
 }
 
 .project-tile:hover .button {
   color: #fff;
-  border: 0.2px solid #fff;
+  border: 1px solid #fff;
 }
 
 .button:hover {
