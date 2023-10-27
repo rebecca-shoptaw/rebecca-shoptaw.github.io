@@ -541,12 +541,24 @@ section a:hover {
   line-height: 1.8em;
 }
 
+/*.button.live {
+  background-color: #888;
+  border: 1px solid #fff;
+  color: #fff !important;
+}
+
+.project-tile:hover .button.live:hover {
+  background-color: var(--theme-1-accent);
+  border: 1px solid #fff;
+  color: #fff !important;
+}*/
+
 .project-tile:hover .button {
   color: #fff;
   border: 1px solid #fff;
 }
 
-.button:hover {
+.button:hover/*, .project-tile:hover .button.live*/ {
   background-color: #fff;
   color: var(--theme-1-accent) !important;
 }
