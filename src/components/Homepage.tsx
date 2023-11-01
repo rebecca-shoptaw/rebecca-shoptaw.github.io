@@ -18,13 +18,14 @@ interface projects_arr {
 
 const projects: projects_arr[] = [
   {
-    id: `focusify`,
-    title: `Focusify`,
-    img_id: `focusify-img`,
-    img_src: `https://static.thenounproject.com/png/263649-200.png`,
-    img_alt: `Minimalist white circle on black background`,
-    description: `A minimalist Spotify re-design with a light/dark mode and built-in functionality for audio visualizers and other view customizations. Further integrations to come. Built with Typescript, React, and the Spotify API.`,
-    wip: true,
+    id: "calmtube",
+    title: "CalmTube",
+    link: `/calmtube/`,
+    img_id: "calmtube-img",
+    img_src: "./calmtube.png",
+    img_alt: "Simple gray play button.",
+    description:
+      "A minimalist YouTube re-design with a light/dark mode and no distractions. Built with Typescript, React, and the YouTube Data API.",
   },
   {
     id: `open-editions`,
@@ -34,6 +35,15 @@ const projects: projects_arr[] = [
     img_src: `https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Elizabeth_Winthrop_Chanler.JPG/1200px-Elizabeth_Winthrop_Chanler.JPG`,
     img_alt: `Sargent painting of Elizabeth Winthrop Chanler`,
     description: `A minimalist and aesthetically pleasing audiobook player, which combines public domain audiobook recordings of classic novels with customized cover images . Built with Typescript and React.`,
+    wip: true,
+  },
+  {
+    id: `focusify`,
+    title: `Focusify`,
+    img_id: `focusify-img`,
+    img_src: `https://static.thenounproject.com/png/263649-200.png`,
+    img_alt: `Minimalist white circle on black background`,
+    description: `A minimalist Spotify re-design with a light/dark mode and built-in functionality for audio visualizers and other view customizations. Further integrations to come. Built with Typescript, React, and the Spotify API.`,
     wip: true,
   },
   {
@@ -190,7 +200,7 @@ const Homepage = () => {
               <span id="bio-block">
                 <p className="bio-text">
                   {`Hello! My name is Rebecca and I'm a
-                filmmaker-turned-front-end-developer.`}
+                filmmaker-turned-frontend-developer.`}
                   <br></br>
                   <br></br>
                   {`I bring from my background in filmmaking and photo/video editing the combination
@@ -203,7 +213,7 @@ const Homepage = () => {
                 video-editing app.`}
                   <br></br>
                   <br></br>
-                  {`Now, I'm focusing on front-end
+                  {`Now, I'm focusing on frontend
                 development, and using React with a mix of HTML, CSS, and Javascript/Typescript to make beautiful and functional responsive sites and applications.`}
                   <br></br>
                   <br></br>
