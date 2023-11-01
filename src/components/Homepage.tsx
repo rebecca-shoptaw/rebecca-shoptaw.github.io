@@ -38,13 +38,13 @@ const projects: projects_arr[] = [
     wip: true,
   },
   {
-    id: `focusify`,
-    title: `Focusify`,
-    img_id: `focusify-img`,
-    img_src: `https://static.thenounproject.com/png/263649-200.png`,
-    img_alt: `Minimalist white circle on black background`,
-    description: `A minimalist Spotify re-design with a light/dark mode and built-in functionality for audio visualizers and other view customizations. Further integrations to come. Built with Typescript, React, and the Spotify API.`,
-    wip: true,
+    id: `cat-band`,
+    title: `Cat Band`,
+    link: `/cat-band/`,
+    img_id: `cat-band-img`,
+    img_src: "./cat-band.jpg",
+    img_alt: `Drawing of singing cat`,
+    description: `An all-cat jazz band. Built with Typescript and React.`,
   },
   {
     id: `pomodoro`,
@@ -55,6 +55,15 @@ const projects: projects_arr[] = [
     img_alt: `Minimal logo text that reads "pomodoro"`,
     description: `A fully functional and customizable pomodoro study timer, with light and dark modes. Built with Typescript and React.`,
 
+    wip: true,
+  },
+  {
+    id: `focusify`,
+    title: `Focusify`,
+    img_id: `focusify-img`,
+    img_src: `https://static.thenounproject.com/png/263649-200.png`,
+    img_alt: `Minimalist white circle on black background`,
+    description: `A minimalist Spotify re-design with a light/dark mode and built-in functionality for audio visualizers and other view customizations. Further integrations to come. Built with Typescript, React, and the Spotify API.`,
     wip: true,
   },
   {
@@ -77,15 +86,6 @@ const projects: projects_arr[] = [
     img_alt: `William Morris bird illustration`,
     description: `A dynamic site in which Oscar Wilde aphorisms appear in
         response to user predicaments.`,
-  },
-  {
-    id: `cat-band`,
-    title: `Cat Band`,
-    link: `/cat-band/`,
-    img_id: `cat-band-img`,
-    img_src: "./cat-band.jpg",
-    img_alt: `Drawing of singing cat`,
-    description: `An all-cat jazz band for which the user can start and stop the instruments at will. Built with Typescript and React.`,
   },
   {
     id: `deco-calculator`,
@@ -284,24 +284,13 @@ const Homepage = () => {
                   </div>
                 </div>
               ))}
-              <div className="project-tile" id="codepen-project">
-                <div className="codepen-wrapper">
-                  <a href="https://codepen.io/rebecca-shoptaw" target="_blank">
-                    <img
-                      id="codepen"
-                      src="https://seeklogo.com/images/C/codepen-logo-FDEB3664F1-seeklogo.com.png"
-                    />
-                  </a>
-                  <a
-                    className="project-link"
-                    id="profile-link"
-                    href="https://codepen.io/rebecca-shoptaw"
-                    target="_blank"
-                  >
+              {/*<div className="project-tile" id="codepen-project">
+                <a className="codepen-wrapper">
+                  <a id="portfolio-link" href={git_link} className="project-link">
                     Full Portfolio
                   </a>
-                </div>
-              </div>
+                </a>
+                      </div>*/}
             </div>
           </div>
         </section>
@@ -322,13 +311,6 @@ const Homepage = () => {
                     src="https://icons.veryicon.com/png/o/internet--web/billion-square-cloud/mail-213.png"
                     className="social-icon"
                     id="mail"
-                  />
-                </a>
-                <a href="https://codepen.io/rebecca-shoptaw" target="_blank">
-                  <img
-                    src="https://seeklogo.com/images/C/codepen-logo-FDEB3664F1-seeklogo.com.png"
-                    className="social-icon"
-                    id="codepen2"
                   />
                 </a>
                 <a href="https://github.com/rebecca-shoptaw" target="_blank">
