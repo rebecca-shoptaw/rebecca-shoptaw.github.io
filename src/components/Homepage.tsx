@@ -8,8 +8,8 @@ interface projects_arr {
   id: string;
   title: string;
   link?: string;
-  img_id: string;
-  img_src: string;
+  img_id?: string;
+  img_src?: string;
   img_alt: string;
   description: string;
   description_italics?: string;
@@ -20,117 +20,81 @@ const projects: projects_arr[] = [
   {
     id: "calmtube",
     title: "CalmTube",
-    link: `/calmtube/`,
-    img_id: "calmtube-img",
-    img_src: "./calmtube.png",
-    img_alt: "Simple gray play button.",
+    img_alt: "Simple black search interface.",
     description:
       "A minimalist YouTube re-design with a light/dark mode and no distractions. Built with Typescript, React, and the YouTube Data API.",
   },
   {
     id: `open-editions`,
     title: `Open Editions`,
-    link: `/open-editions/`,
-    img_id: `open-editions-img`,
-    img_src: `https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Elizabeth_Winthrop_Chanler.JPG/1200px-Elizabeth_Winthrop_Chanler.JPG`,
-    img_alt: `Sargent painting of Elizabeth Winthrop Chanler`,
+    img_alt: `Audiobook playlist with romantic painting in the background.`,
     description: `A minimalist and aesthetically pleasing audiobook player, which combines public domain audiobook recordings of classic novels with customized cover images . Built with Typescript and React.`,
     wip: true,
   },
   {
     id: `cat-band`,
     title: `Cat Band`,
-    link: `/cat-band/`,
-    img_id: `cat-band-img`,
-    img_src: "./cat-band.jpg",
-    img_alt: `Drawing of singing cat`,
+    img_alt: `Black and white interface with drawings of cats playing instruments.`,
     description: `An all-cat jazz band. Built with Typescript and React.`,
   },
   {
     id: `pomodoro`,
     title: `Pomodoro`,
-    link: `/pomodoro/`,
-    img_id: `pomodoro-img`,
-    img_src: "./pomodoro.png",
-    img_alt: `Minimal logo text that reads "pomodoro"`,
+    img_alt: `Minimal timer text and controls.`,
     description: `A fully functional and customizable pomodoro study timer, with light and dark modes. Built with Typescript and React.`,
-
     wip: true,
   },
   {
     id: `focusify`,
     title: `Focusify`,
-    img_id: `focusify-img`,
-    img_src: `https://static.thenounproject.com/png/263649-200.png`,
-    img_alt: `Minimalist white circle on black background`,
+    img_alt: `Simple off-white home screen with the text "Begin"`,
     description: `A minimalist Spotify re-design with a light/dark mode and built-in functionality for audio visualizers and other view customizations. Further integrations to come. Built with Typescript, React, and the Spotify API.`,
     wip: true,
   },
   {
     id: `triolingo`,
     title: `Triolingo`,
-    link: `/triolingo/`,
-    img_id: `triolingo-img`,
-    img_src: "./triolingo.png",
-    img_alt: `Smiling gray cartoon cat`,
+    img_alt: `Duolingo-esque interface with a gray cat.`,
     description: `A Duolingo look-alike to help students practice SSAT Vocabulary. Features functionality for repeating and generating new word-sets and keeping score for each round. Built with Typescript and React.`,
 
     wip: true,
   },
   {
-    id: `ask-oscar`,
+    id: `ask-oscar-wilde`,
     title: `Ask Oscar Wilde`,
-    link: `/ask-oscar-wilde/`,
-    img_id: `oscar-img`,
-    img_src: `https://pilgrimtiles.co.uk/wp-content/uploads/2020/10/wm-straw-thief-detail-blue.jpg`,
-    img_alt: `William Morris bird illustration`,
+    img_alt: `Submission and quote boxes on a William Morris print.`,
     description: `A dynamic site in which Oscar Wilde aphorisms appear in
         response to user predicaments.`,
   },
   {
     id: `deco-calculator`,
     title: `Deco Calculator`,
-    link: `/deco-calculator/`,
-    img_id: `deco-calculator-img`,
-    img_src: `https://www.burkedecor.com/cdn/shop/products/DD139230_1800x1800.jpg?v=1671736060`,
-    img_alt: `Art Deco pattern`,
+    img_alt: `Green and gold calculator with an art deco background`,
     description: `A stylish and fully functional calculator designed for doing basic calculations in an art deco manner. Built with Typescript and React.`,
   },
   {
     id: `tabula-rasa`,
     title: `Tabula Rasa`,
-    link: `/tabula-rasa`,
-    img_id: `tabula-img`,
-    img_src: `https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Jan_van_Huysum_-_Arcadian_Landscape_with_a_Bust_of_Flora_-_1113_-_Mauritshuis.jpg/1600px-Jan_van_Huysum_-_Arcadian_Landscape_with_a_Bust_of_Flora_-_1113_-_Mauritshuis.jpg?20200127083852`,
-    img_alt: `Jan van Huysum Arcadian Lanscape painting`,
+    img_alt: `Simple white text entry and preview windows.`,
     description: `A minimal and elegant responsive markdown previewer.`,
   },
   /*{
     id: `haines-project`,
     title: `Personal Website`,
-    link: `https://codepen.io/rebecca-shoptaw/pen/WNYgmjv`,
-    img_id: `haines-img`,
-    img_src: `https://media.istockphoto.com/id/1292722853/vector/illustration-of-crossed-tennis-rackets-logotype-for-sports-club-or-team-logo-lineart.jpg?s=612x612&w=0&k=20&c=GqWUXumfGvmmjFYbptFGap2W-MnhLIUT3_yvxKZj9w0=`,
     img_alt: `Crossed tennis rackets logo`,
     description: `A sample website for the fictional 1950s tennis player and murder suspect, Guy Haines.`,
     description_italics: ``,
   },*/
   {
-    id: `portrait-project`,
+    id: `mrs-john-lennox`,
     title: `Film Press Kit`,
-    link: `/mrs-john-lennox/`,
-    img_id: `portrait-img`,
-    img_src: `https://filmfreeway-production-storage-01-storage.filmfreeway.com/attachments/files/007/294/084/original/Screen_Shot_2023-06-16_at_5.37.15_PM.jpg?1686951530`,
-    img_alt: `Woman in period costume looking at viewer`,
+    img_alt: `Press site with text blocks and an image of a woman in period costume.`,
     description: `A press website for the short film `,
     description_italics: `The Portrait of Mrs. John Lennox.`,
   },
   /*{
     id: `vampires-project`,
     title: `Series Watch Page`,
-    link: `https://codepen.io/rebecca-shoptaw/pen/rNQZRjm`,
-    img_id: `vampires-img`,
-    img_src: `https://upload.wikimedia.org/wikipedia/en/9/9c/Lesvampires.PNG`,
     img_alt: `Design of three masked figures with the text 'Qui' 'Quoi' 'Quand' 'Ou...'`,
     description: `A video hosting site for Louis Feuillade's 1920s French serial `,
     description_italics: `Les Vampires.`,
@@ -138,9 +102,6 @@ const projects: projects_arr[] = [
   {
     id: `ayli-project`,
     title: `Audition Sign-Up Form`,
-    link: `https://codepen.io/rebecca-shoptaw/pen/GRwXeme`,
-    img_id: `ayli-img`,
-    img_src: `https://sothebys-md.brightspotcdn.com/0e/df/bd40bb90400a9be899a057a8c3bf/l21008-btlgd-02.jpg`,
     img_alt: `Laura Knight painting of two women embracing in front of clouds`,
     description: `An audition sign-up form for a film of Shakespeare's `,
     description_italics: `As You Like It.`,
@@ -234,12 +195,12 @@ const Homepage = () => {
             <h1 className="section-title">Work Samples</h1>
             <div className="project-links">
               {projects.map((project) => (
-                <div className="project-tile" id={project.id}>
+                <div className="project-tile" id={project.id} key={project.id}>
                   <div className="img-wrapper">
-                    <a href={site_link + project.link} target="_blank">
+                    <a href={`${site_link}/${project.id}/`} target="_blank">
                       <img
-                        id={project.img_id}
-                        src={project.img_src as string}
+                        id={`${project.id}-img`}
+                        src={`./${project.id}.png`}
                         alt={project.img_alt}
                       />
                     </a>
@@ -247,7 +208,7 @@ const Homepage = () => {
                   <div className="description">
                     <p>
                       <a
-                        href={site_link + project.link}
+                        href={`${site_link}/${project.id}/`}
                         target="_blank"
                         className="project-link"
                       >
@@ -267,14 +228,14 @@ const Homepage = () => {
                     </p>
                     <div id="visit-btns">
                       <a
-                        href={git_link + project.link}
+                        href={`${git_link}/${project.id}/`}
                         target="_blank"
                         className="button code"
                       >
                         Code
                       </a>
                       <a
-                        href={site_link + project.link}
+                        href={`${site_link}/${project.id}/`}
                         target="_blank"
                         className="button live"
                       >

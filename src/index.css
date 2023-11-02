@@ -414,62 +414,6 @@ section a:hover {
   border: 3px solid #fff;
 }
 
-#focusify-img {
-  filter: invert(1);
-  background-color: #fff;
-  padding: 15px;
-}
-
-#pomodoro-img {
-  padding: 9px;
-  background-color: #002;
-}
-
-#calmtube-img {
-  filter: brightness(1.8);
-  background-color: #000;
-}
-
-#triolingo-img {
-  padding: 5px;
-  background-color: #fff;
-}
-
-#cat-band-img {
-  filter: invert(0.9);
-  padding: 15px;
-  background-color: #fff;
-}
-
-#tabula-img {
-  clip-path: inset(80px);
-  object-position: -140px 80px;
-  width: calc(125px + 80px + 80px);
-  height: calc(125px + 80px + 80px);
-  margin: -80px;
-}
-
-#haines-img {
-  filter: invert(100%);
-  background: #fff;
-  padding: 15px 0px;
-}
-
-#vampires-img {
-  width: 131px;
-  height: 131px;
-  clip-path: inset(3px);
-  margin: -3px;
-}
-
-#ayli-img {
-  clip-path: inset(80px);
-  object-position: 40px 80px;
-  width: calc(125px + 80px + 80px);
-  height: calc(125px + 80px + 80px);
-  margin: -80px;
-}
-
 #focusify a:hover {
   cursor: default;
   text-decoration: underline #ffffff00;
