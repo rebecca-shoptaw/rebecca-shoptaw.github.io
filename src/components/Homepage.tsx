@@ -69,7 +69,7 @@ const projects: projects_arr[] = [
   {
     id: `triolingo`,
     title: `Triolingo`,
-    link: `}/triolingo/`,
+    link: `/triolingo/`,
     img_id: `triolingo-img`,
     img_src: "./triolingo.png",
     img_alt: `Smiling gray cartoon cat`,
