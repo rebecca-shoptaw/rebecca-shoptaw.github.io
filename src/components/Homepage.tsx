@@ -177,7 +177,7 @@ const Homepage = () => {
           <div className="title">
             <h1>Rebecca Shoptaw</h1>
             <h2>
-              <i>Frontend Developer</i>
+              Frontend Developer
             </h2>
           </div>
         </section>

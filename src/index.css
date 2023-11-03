@@ -34,15 +34,15 @@ body {
 @media only screen and (min-width: 1168px) {
   body,
   nav {
-    background-position: 0% 40%;
+    background-position: 0% 12% !important;
   }
 }
 
 @media only screen and (max-width: 500px) {
   body,
   nav {
-    background-size: 230% !important;
-    background-position: -340px 0px !important;
+    background-size: 140% !important;
+    background-position: 0px 0px !important;
   }
 
   .nav-content {
@@ -96,6 +96,10 @@ body {
     text-align: center;
   }
 
+  .button {
+    text-align: center;
+  }
+
   #about .bio {
     display: flex !important;
     flex-direction: column-reverse !important;
@@ -114,6 +118,10 @@ body {
 
   #contact {
     height: calc(100vh - 105px) !important;
+  }
+
+  #contact i {
+    font-size: 30px !important;
   }
 }
 
