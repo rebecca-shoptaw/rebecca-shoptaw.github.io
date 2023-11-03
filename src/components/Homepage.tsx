@@ -108,12 +108,40 @@ const projects: projects_arr[] = [
   },*/
 ];
 
+interface social_arr {
+  id: string;
+  icon_class: string;
+  link: string;
+  title: string;
+}
+
+const social_links: social_arr[] = [
+  {
+    id: `mail`,
+    icon_class: `envelope`,
+    link: `mailto:rebecca.shoptaw@gmail.com`,
+    title: `Email`,
+  },
+  {
+    id: `github`,
+    icon_class: `github`,
+    link: `https://github.com/rebecca-shoptaw`,
+    title: `Github`,
+  },
+  {
+    id: `insta`,
+    icon_class: `instagram`,
+    link: `https://www.instagram.com/rebeccashoptawfilms/`,
+    title: `Instagram`,
+  },
+];
+
 const Homepage = () => {
   let [loaded, setLoaded] = useState(false);
   window.onload = () => setLoaded(true);
 
-  /*document.body.style.backgroundImage = `url(${book.cover})`;
-  document.body.style.backgroundSize = book.cover_size;*/
+  /*document.body.style.backgroundImage = `url(https://www.christies.com/img/LotImages/2017/NYR/2017_NYR_15004_0012A_000(rene_magritte_lempire_des_lumieres125847).jpg?mode=max)`*/
+  /*document.body.style.backgroundSize = book.cover_size;*/
 
   return (
     <>
@@ -157,7 +185,7 @@ const Homepage = () => {
         <section id="about">
           <div className="section-body">
             <h1 className="section-title">About</h1>
-            <div className="bio">
+            <div className="bio tile">
               <span id="bio-block">
                 <p className="bio-text">
                   {`Hello! My name is Rebecca and I'm a
@@ -179,7 +207,9 @@ const Homepage = () => {
                   <br></br>
                   <br></br>
                 </p>
-                <a href="#contact-ref">Get in Touch</a>
+                <a className="button" href="#contact-ref">
+                  Get in Touch
+                </a>
               </span>
               <img
                 id="bio-img"
@@ -195,7 +225,11 @@ const Homepage = () => {
             <h1 className="section-title">Work Samples</h1>
             <div className="project-links">
               {projects.map((project) => (
-                <div className="project-tile" id={project.id} key={project.id}>
+                <div
+                  className="project-tile tile"
+                  id={project.id}
+                  key={project.id}
+                >
                   <div className="img-wrapper">
                     <a href={`${site_link}/${project.id}/`} target="_blank">
                       <img
@@ -226,22 +260,22 @@ const Homepage = () => {
                         {project.description_italics}
                       </i>
                     </p>
-                    <div id="visit-btns">
-                      <a
-                        href={`${git_link}/${project.id}/`}
-                        target="_blank"
-                        className="button code"
-                      >
-                        Code
-                      </a>
-                      <a
-                        href={`${site_link}/${project.id}/`}
-                        target="_blank"
-                        className="button live"
-                      >
-                        Live
-                      </a>
-                    </div>
+                  </div>
+                  <div id="visit-btns">
+                    <a
+                      href={`${git_link}/${project.id}/`}
+                      target="_blank"
+                      className="button code"
+                    >
+                      Code
+                    </a>
+                    <a
+                      href={`${site_link}/${project.id}/`}
+                      target="_blank"
+                      className="button live"
+                    >
+                      Live
+                    </a>
                   </div>
                 </div>
               ))}
@@ -259,38 +293,24 @@ const Homepage = () => {
         <section id="contact">
           <div className="section-body">
             <h1 className="section-title">Contact</h1>
-            <div id="contact-body">
+            <div id="contact-body" className="tile">
               <div className="letter-wrap">
-                <img
-                  id="letter"
-                  src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/352203/769892/restricted"
-                />
+                <img id="letter" src="./contact.jpg" />
               </div>
               <div className="social-icons">
-                <a href="mailto:rebecca.shoptaw@gmail.com">
-                  <img
-                    src="https://icons.veryicon.com/png/o/internet--web/billion-square-cloud/mail-213.png"
-                    className="social-icon"
-                    id="mail"
-                  />
-                </a>
-                <a href="https://github.com/rebecca-shoptaw" target="_blank">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
-                    className="social-icon"
-                    id="github"
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/rebeccashoptawfilms/"
-                  target="_blank"
-                >
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
-                    className="social-icon"
-                    id="insta"
-                  />
-                </a>
+                {social_links.map((social) => (
+                  <a
+                    key={social.id}
+                    href={social.link}
+                    target="_blank"
+                    title={social.title}
+                  >
+                    <i
+                      id={social.id}
+                      className={`social-icon bi bi-${social.icon_class}`}
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>

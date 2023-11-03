@@ -5,11 +5,17 @@
   --theme-3-accent: ;
   --light-gray: #ccc;
   --mid-gray: #666;
+
+  --mostly-opaque: #000000ee;
+  --semi-transparent: #000000cc;
+  --fully-transparent: #00000000;
+  --off-white: #ddd;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Space Mono", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.3s;
 }
 
 body {
@@ -23,6 +29,13 @@ body {
   right: 50%;
   margin-top: -50px;
   margin-right: -50px;
+}
+
+@media only screen and (min-width: 1168px) {
+  body,
+  nav {
+    background-position: 0% 40%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -83,22 +96,10 @@ body {
     text-align: center;
   }
 
-  /*#contact-link {
-    border: none !important;
-    padding: 0px !important;
-  }
-
-  #contact-link:hover {
-    background-color: transparent !important;
-    color: #fff !important;
-    text-decoration: underline !important;
-  }*/
-
   #about .bio {
     display: flex !important;
     flex-direction: column-reverse !important;
     align-items: center !important;
-    text-align: justify;
     font-size: 15px;
   }
 
@@ -129,14 +130,15 @@ body {
 
 body,
 nav {
-  color: #fff;
+  color: var(--off-white);
   width: 100%;
-  background-image: url(https://sothebys-md.brightspotcdn.com/0e/df/bd40bb90400a9be899a057a8c3bf/l21008-btlgd-02.jpg);
-  /*background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2f/Arcadian_landscape_with_a_bust_of_Flora%2C_by_Jan_van_Huijsum.jpg);*/
-  background-color: #ddd;
+  background-image: url(https://media.artsbma.org/wp-content/uploads/2023/09/23055230/gPiction_Repository_2db_photod3348u305334881984121_01_o2.jpg);
+  /*background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a2/John_Singer_Sargent_-_Elizabeth_Winthrop_Chanler_%28Mrs._John_Jay_Chapman%29_-_Google_Art_Project.jpg);*/
+  background-color: #bbb;
   background-blend-mode: multiply;
-  background-size: 152%;
-  background-position: -246px 0px;
+  background-size: 130%;
+  /*background-position: -246px 0px;*/
+  background-position: 0% 3%;
   background-attachment: fixed;
   transition: opacity 2s, transform 2s ease-in-out;
 }
@@ -146,7 +148,7 @@ nav {
 }
 
 .hidden {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 .locator {
@@ -189,7 +191,7 @@ nav a,
 nav h1 {
   color: #fff;
   text-decoration: underline #ffffff00;
-  transition: text-decoration-color 0.5s;
+  text-underline-offset: 3px;
 }
 
 .nav-links {
@@ -201,8 +203,7 @@ nav h1 {
   gap: 0px;
 }
 
-nav a:hover,
-nav h1:hover {
+nav a:hover {
   color: #fff;
   text-decoration: underline !important;
 }
@@ -212,15 +213,12 @@ nav h1:hover {
   padding: 5px;
   margin-left: 10px;
   text-decoration: none;
-  transition: color 0.5s;
-  transition: background-color 0.5s;
 }
 
 #contact-link:hover {
-  color: var(--theme-1-accent);
-  background-color: white;
+  color: #fff;
+  background-color: var(--semi-transparent);
   text-decoration: none !important;
-  border: 1px solid var(--theme-1-accent);
 }
 
 #welcome-section {
@@ -274,18 +272,18 @@ section:last-of-type {
 }
 
 .section-body {
-  color: #666;
-  background-color: #ffffff;
+  background-color: var(--semi-transparent);
   margin: 0px 30px;
   height: auto;
   padding-bottom: 40px;
 }
 
 .section-title {
+  color: #fff;
   width: 90%;
   margin: 0 auto;
   padding-top: 10px;
-  border-bottom: 0.5px solid #ccc;
+  border-bottom: 0.5px solid var(--off-white);
   font-size: 25px;
   text-align: center;
   line-height: 2em;
@@ -300,13 +298,8 @@ section:last-of-type {
   margin-right: auto !important;
 }
 
-section p,
-section a {
-  font-family: "DM Sans", sans-serif;
-}
-
 section a:hover {
-  text-decoration: none;
+  text-decoration: underline #00000000;
 }
 
 .bio {
@@ -315,46 +308,68 @@ section a:hover {
   justify-content: space-between;
   gap: 15px;
   padding: 20px;
-  transition: background-color 1s, color 1s;
 }
 
-#about a {
-  text-decoration: none;
-  color: var(--mid-gray);
-  border: 1px solid var(--light-gray);
-  background-color: #fff;
-  padding: 8px;
-  font-weight: 800;
-  transition: color 1s, border 1s;
+/* global tile rules */
+
+.tile {
+  background-color: var(--fully-transparent);
+  color: var(--off-white);
 }
 
-.bio:hover {
-  background-color: var(--theme-1-accent);
+.tile > * {
+  color: var(--off-white);
+}
+
+.tile:hover {
+  background-color: var(--mostly-opaque);
   color: #fff;
 }
 
-.bio:hover #bio-img {
-  border: 10px solid #fff !important;
+.tile:hover > * {
+  color: #fff;
+  border-color: #fff;
 }
 
-.bio:hover a {
-  color: var(--theme-1-accent) !important;
-  border: 1px solid #fff !important;
+.tile img,
+.tile .letter-wrap {
+  border: 1px solid var(--off-white);
 }
 
-#about a:hover {
-  color: #fff !important;
+.tile:hover img {
   border: 1px solid #fff;
-  background-color: var(--theme-1-accent);
-  /* alt color: #d3d1c4 */
+  filter: brightness(1.1);
+}
+
+.button {
+  border: 1px solid var(--off-white);
+  color: var(--off-white);
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.8em;
+}
+
+.button.live {
+  background-color: var(--off-white);
+  color: #000;
+}
+
+.button:hover {
+  color: #fff;
+  filter: brightness(3);
+  text-decoration: none;
+}
+
+.button.live:hover {
+  color: #000;
+  filter: brightness(1.5);
 }
 
 #bio-img {
   width: 200px;
   height: 267px;
-  border: 10px solid var(--theme-1-accent);
   margin-top: 15px;
-  transition: border-color 1s;
 }
 
 .bio-text {
@@ -362,61 +377,48 @@ section a:hover {
 }
 
 .project-links {
-  margin: 15px;
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 .project-tile {
-  background-color: #fff !important;
-  color: #666 !important;
-  width: 100%;
+  background-color: var(--fully-transparent);
+  color: #fff;
+  width: 380px;
   height: auto;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   gap: 10px;
-  margin-bottom: 0px;
-  padding: 20px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-}
-
-.project-tile,
-#contact-body {
-  transition: background-color 0.5s;
-}
-
-.description p,
-.description a {
-  transition: border-color 0.5s;
-  transition: color 0.5s, text-decoration-color 0.5s, background-color 0.5s,
-    border 0.5s;
+  text-align: left;
+  padding: 40px;
 }
 
 .project-tile:hover {
-  background-color: var(--theme-1-accent) !important;
+  background-color: #000;
 }
 
 .project-tile img {
-  width: 125px;
-  height: 125px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
 }
 
 .img-wrapper {
-  border: 3px solid var(--theme-1-accent);
   margin-left: -5px;
   margin-right: 5px;
   padding: 0px;
-  transition: border-color 0.5s;
 }
 
-.project-tile:hover .img-wrapper {
-  border: 3px solid #fff;
-}
-
-#focusify a:hover {
-  cursor: default;
-  text-decoration: underline #ffffff00;
+#visit-btns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+  margin-top: auto;
 }
 
 #focusify .button {
@@ -450,7 +452,7 @@ section a:hover {
 #profile-link {
   font-size: 15px;
   line-height: 1.2em;
-  color: #666;
+  color: #fff;
 }
 
 .project-tile:hover .description {
@@ -464,13 +466,13 @@ section a:hover {
 
 .project-link {
   text-decoration: underline #ffffff00;
-  color: #666;
+  color: var(--off-white);
   line-height: 2em;
   font-size: 17px;
-  transition: text-decoration-color 0.5s;
 }
 
 .project-link:hover {
+  color: #fff;
   text-decoration: underline #fff;
 }
 
@@ -479,52 +481,9 @@ section a:hover {
   font-size: 14px;
 }
 
-.project-italics,
-.wip {
-  font-family: "DM Sans", sans-serif;
-}
-
 .wip {
   margin-top: -20px !important;
   margin-bottom: 20px !important;
-}
-
-#visit-btns {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 10px;
-}
-
-.button {
-  color: var(--mid-gray);
-  border: 1px solid var(--light-gray);
-  text-decoration: none;
-  padding: 5px 10px;
-  font-size: 14px;
-  line-height: 1.8em;
-}
-
-/*.button.live {
-  background-color: #888;
-  border: 1px solid #fff;
-  color: #fff !important;
-}
-
-.project-tile:hover .button.live:hover {
-  background-color: var(--theme-1-accent);
-  border: 1px solid #fff;
-  color: #fff !important;
-}*/
-
-.project-tile:hover .button {
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-.button:hover/*, .project-tile:hover .button.live*/ {
-  background-color: #fff;
-  color: var(--theme-1-accent) !important;
 }
 
 #contact {
@@ -540,54 +499,29 @@ section a:hover {
   margin: 0px 15px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
   padding: 25px 10px;
 }
 
-#contact-body:hover {
-  background-color: var(--theme-1-accent);
-}
-
 #letter {
-  display: block;
-  clip-path: inset(50px);
-  width: 225px;
-  height: 225px;
-  margin: -50px;
-  object-fit: cover;
-  object-position: 5px;
-}
-
-.letter-wrap {
-  display: block;
-  border: 8px solid var(--theme-1-accent);
-  width: calc(125px + 16px);
-  height: calc(125px + 16px);
-  transition: border-color 0.5s;
-}
-
-#contact-body:hover .letter-wrap {
-  border: 8px solid #fff;
+  width: 150px;
+  height: auto;
 }
 
 .social-icons {
   padding: 4px 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
-.social-icon {
-  width: 30px;
-  filter: brightness(0) invert(0.6);
+#contact-body i {
+  color: var(--off-white);
+  font-size: 20px;
 }
 
-#contact-body:hover .social-icon {
-  filter: brightness(0) invert(1);
-}
-
-.social-icon:hover {
-  filter: brightness(0) invert(95%) !important;
+i:hover {
+  color: #fff;
 }
