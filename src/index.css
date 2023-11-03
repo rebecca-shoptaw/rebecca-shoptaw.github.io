@@ -12,6 +12,10 @@
   --off-white: #ddd;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
@@ -413,6 +417,7 @@ section a:hover {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  align-items: stretch;
 }
 
 .project-tile {
@@ -447,13 +452,15 @@ section a:hover {
   flex-grow: 1 !important;
 }
 
+.btns-wrap {
+  margin-top: auto;
+}
+
 #visit-btns {
   display: flex;
   flex-direction: row;
   width: 100%;
   gap: 10px;
-  margin-top: auto;
-  align-self: center !important;
 }
 
 #focusify .button {

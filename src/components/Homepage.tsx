@@ -144,6 +144,12 @@ const Homepage = () => {
   /*document.body.style.backgroundImage = `url(https://www.christies.com/img/LotImages/2017/NYR/2017_NYR_15004_0012A_000(rene_magritte_lempire_des_lumieres125847).jpg?mode=max)`*/
   /*document.body.style.backgroundSize = book.cover_size;*/
 
+  const resetUrl = () => {
+    setTimeout(() => {
+      window.history.pushState({}, "", "/");
+    });
+  };
+
   return (
     <>
       {!loaded && (
@@ -155,19 +161,23 @@ const Homepage = () => {
         <nav id="navbar" className={`${!loaded ? "hidden" : ""}`}>
           <div className="nav-content">
             <span>
-              <a className="welcome-link" href="#welcome-section">
+              <a
+                className="welcome-link"
+                href="#welcome-section"
+                onClick={resetUrl}
+              >
                 <h1>Rebecca Shoptaw</h1>
               </a>
             </span>
             <span>
               <div className="nav-links">
-                <a className="nav-link" href="#about-ref">
+                <a className="nav-link" href="#about-ref" onClick={resetUrl}>
                   About
                 </a>
-                <a className="nav-link" href="#projects-ref">
+                <a className="nav-link" href="#projects-ref" onClick={resetUrl}>
                   Work
                 </a>
-                <a id="contact-link" href="#contact-ref">
+                <a id="contact-link" href="#contact-ref" onClick={resetUrl}>
                   Contact
                 </a>
               </div>
@@ -239,12 +249,12 @@ const Homepage = () => {
             <h1 className="section-title">Work Samples</h1>
             <div className="project-links">
               {projects.map((project) => (
-                <Fade>
-                  <div
-                    className="project-tile tile"
-                    id={project.id}
-                    key={project.id}
-                  >
+                <div
+                  className="project-tile tile"
+                  id={project.id}
+                  key={project.id}
+                >
+                  <Fade>
                     <div className="img-wrapper">
                       <a href={`${site_link}/${project.id}/`} target="_blank">
                         <img
@@ -254,6 +264,8 @@ const Homepage = () => {
                         />
                       </a>
                     </div>
+                  </Fade>
+                  <Fade>
                     <div className="description">
                       <p>
                         <a
@@ -279,6 +291,8 @@ const Homepage = () => {
                         </i>
                       </p>
                     </div>
+                  </Fade>
+                  <Fade className="btns-wrap">
                     <div id="visit-btns">
                       <a
                         href={`${git_link}/${project.id}/`}
@@ -295,8 +309,8 @@ const Homepage = () => {
                         Live
                       </a>
                     </div>
-                  </div>
-                </Fade>
+                  </Fade>
+                </div>
               ))}
               {/*<div className="project-tile" id="codepen-project">
                 <a className="codepen-wrapper">
