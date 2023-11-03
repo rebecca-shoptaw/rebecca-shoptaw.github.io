@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rebecca-shoptaw.github.io/",
+  "homepage": "https://rebeccashoptaw.dev",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
