@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
+import { Fade } from "react-awesome-reveal";
 
 const site_link = "https://rebeccashoptaw.dev";
 const git_link = "https://github.com/rebecca-shoptaw";
@@ -186,34 +187,45 @@ const Homepage = () => {
             <div className="bio tile">
               <span id="bio-block">
                 <p className="bio-text">
-                  {`Hello! My name is Rebecca and I'm a
+                  <Fade>
+                    {`Hello! My name is Rebecca and I'm a
                 freelance frontend web developer.`}
+                  </Fade>
                   <br></br>
-                  <br></br>
-                  {`I bring from my background in filmmaking and photo/video editing the combination
+                  <Fade>
+                    {`I bring from my background in filmmaking and photo/video editing the combination
                 of a strong visual sense and minute technical precision.`}
+                  </Fade>
+
                   <br></br>
-                  <br></br>
-                  {`My training in coding began in high school on my TI-84 calculator,
+                  <Fade>
+                    {`My training in coding began in high school on my TI-84 calculator,
                 and continued through CS50 in college, for which I learned a
                 number of coding languages and taught myself Swift to build a
                 video-editing app.`}
+                  </Fade>
+
                   <br></br>
-                  <br></br>
-                  {`Now, I'm focusing on frontend
+                  <Fade>
+                    {`Now, I'm focusing on frontend
                 development, and using React with a mix of HTML, CSS, and Javascript/Typescript to make beautiful and functional responsive sites and applications.`}
-                  <br></br>
+                  </Fade>
+
                   <br></br>
                 </p>
-                <a className="button" href="#contact-ref">
-                  Get in Touch
-                </a>
+                <Fade>
+                  <a className="button" href="#contact-ref">
+                    Get in Touch
+                  </a>
+                </Fade>
               </span>
-              <img
-                id="bio-img"
-                src="https://images.squarespace-cdn.com/content/v1/58c9909ce58c627a188f8a64/ad9e7ee7-964e-4151-96a6-e99d81353fd2/20201007.JPG?format=2500w"
-                alt="Profile picture"
-              />
+              <Fade>
+                <img
+                  id="bio-img"
+                  src="https://images.squarespace-cdn.com/content/v1/58c9909ce58c627a188f8a64/ad9e7ee7-964e-4151-96a6-e99d81353fd2/20201007.JPG?format=2500w"
+                  alt="Profile picture"
+                />
+              </Fade>
             </div>
           </div>
         </section>
@@ -228,53 +240,60 @@ const Homepage = () => {
                   id={project.id}
                   key={project.id}
                 >
-                  <div className="img-wrapper">
-                    <a href={`${site_link}/${project.id}/`} target="_blank">
-                      <img
-                        id={`${project.id}-img`}
-                        src={`./${project.id}.png`}
-                        alt={project.img_alt}
-                      />
-                    </a>
-                  </div>
-                  <div className="description">
-                    <p>
+                  <Fade>
+                    <div className="img-wrapper">
+                      <a href={`${site_link}/${project.id}/`} target="_blank">
+                        <img
+                          id={`${project.id}-img`}
+                          src={`./${project.id}.png`}
+                          alt={project.img_alt}
+                        />
+                      </a>
+                    </div>
+
+                    <div className="description">
+                      <p>
+                        <a
+                          href={`${site_link}/${project.id}/`}
+                          target="_blank"
+                          className="project-link"
+                        >
+                          {project.title}
+                        </a>
+
+                        {project.wip ? (
+                          <div>
+                            <i className="wip">Work in Progress</i>
+                          </div>
+                        ) : (
+                          <br></br>
+                        )}
+
+                        {project.description}
+
+                        <i className="project-italics">
+                          {project.description_italics}
+                        </i>
+                      </p>
+                    </div>
+
+                    <div id="visit-btns">
+                      <a
+                        href={`${git_link}/${project.id}/`}
+                        target="_blank"
+                        className="button code"
+                      >
+                        Code
+                      </a>
                       <a
                         href={`${site_link}/${project.id}/`}
                         target="_blank"
-                        className="project-link"
+                        className="button live"
                       >
-                        {project.title}
+                        Live
                       </a>
-                      {project.wip ? (
-                        <div>
-                          <i className="wip">Work in Progress</i>
-                        </div>
-                      ) : (
-                        <br></br>
-                      )}
-                      {project.description}
-                      <i className="project-italics">
-                        {project.description_italics}
-                      </i>
-                    </p>
-                  </div>
-                  <div id="visit-btns">
-                    <a
-                      href={`${git_link}/${project.id}/`}
-                      target="_blank"
-                      className="button code"
-                    >
-                      Code
-                    </a>
-                    <a
-                      href={`${site_link}/${project.id}/`}
-                      target="_blank"
-                      className="button live"
-                    >
-                      Live
-                    </a>
-                  </div>
+                    </div>
+                  </Fade>
                 </div>
               ))}
               {/*<div className="project-tile" id="codepen-project">
@@ -292,22 +311,26 @@ const Homepage = () => {
           <div className="section-body">
             <h1 className="section-title">Contact</h1>
             <div id="contact-body" className="tile">
-              <div className="letter-wrap">
-                <img id="letter" src="./contact.jpg" />
-              </div>
+              <Fade>
+                <div className="letter-wrap">
+                  <img id="letter" src="./contact.jpg" />
+                </div>
+              </Fade>
               <div className="social-icons">
                 {social_links.map((social) => (
-                  <a
-                    key={social.id}
-                    href={social.link}
-                    target="_blank"
-                    title={social.title}
-                  >
-                    <i
-                      id={social.id}
-                      className={`social-icon bi bi-${social.icon_class}`}
-                    />
-                  </a>
+                  <Fade>
+                    <a
+                      key={social.id}
+                      href={social.link}
+                      target="_blank"
+                      title={social.title}
+                    >
+                      <i
+                        id={social.id}
+                        className={`social-icon bi bi-${social.icon_class}`}
+                      />
+                    </a>
+                  </Fade>
                 ))}
               </div>
             </div>
