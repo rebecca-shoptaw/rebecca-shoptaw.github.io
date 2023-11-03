@@ -155,7 +155,7 @@ const Homepage = () => {
         <nav id="navbar" className={`${!loaded ? "hidden" : ""}`}>
           <div className="nav-content">
             <span>
-              <a href="#welcome-section">
+              <a className="welcome-link" href="#welcome-section">
                 <h1>Rebecca Shoptaw</h1>
               </a>
             </span>
@@ -167,19 +167,23 @@ const Homepage = () => {
                 <a className="nav-link" href="#projects-ref">
                   Work
                 </a>
-                <a id="contact-link" className="button" href="#contact-ref">
+                <a id="contact-link" href="#contact-ref">
                   Contact
                 </a>
               </div>
             </span>
           </div>
         </nav>
+
         <section id="welcome-section" className={`${!loaded ? "hidden" : ""}`}>
-          <div className="title">
-            <h1>Rebecca Shoptaw</h1>
-            <h2>Frontend Developer</h2>
-          </div>
+          <Fade>
+            <div className="title">
+              <h1>Rebecca Shoptaw</h1>
+              <h2>Frontend Developer</h2>
+            </div>
+          </Fade>
         </section>
+
         <div id="about-ref" className="locator"></div>
         <section id="about">
           <div className="section-body">
@@ -235,12 +239,12 @@ const Homepage = () => {
             <h1 className="section-title">Work Samples</h1>
             <div className="project-links">
               {projects.map((project) => (
-                <div
-                  className="project-tile tile"
-                  id={project.id}
-                  key={project.id}
-                >
-                  <Fade>
+                <Fade>
+                  <div
+                    className="project-tile tile"
+                    id={project.id}
+                    key={project.id}
+                  >
                     <div className="img-wrapper">
                       <a href={`${site_link}/${project.id}/`} target="_blank">
                         <img
@@ -250,7 +254,6 @@ const Homepage = () => {
                         />
                       </a>
                     </div>
-
                     <div className="description">
                       <p>
                         <a
@@ -276,7 +279,6 @@ const Homepage = () => {
                         </i>
                       </p>
                     </div>
-
                     <div id="visit-btns">
                       <a
                         href={`${git_link}/${project.id}/`}
@@ -293,8 +295,8 @@ const Homepage = () => {
                         Live
                       </a>
                     </div>
-                  </Fade>
-                </div>
+                  </div>
+                </Fade>
               ))}
               {/*<div className="project-tile" id="codepen-project">
                 <a className="codepen-wrapper">

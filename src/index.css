@@ -222,6 +222,10 @@ nav h1 {
   text-underline-offset: 3px;
 }
 
+.welcome-link {
+  text-decoration: none !important;
+}
+
 .nav-links {
   padding: 10px;
   display: flex;
@@ -439,12 +443,17 @@ section a:hover {
   padding: 0px;
 }
 
+.description {
+  flex-grow: 1 !important;
+}
+
 #visit-btns {
   display: flex;
   flex-direction: row;
   width: 100%;
   gap: 10px;
   margin-top: auto;
+  align-self: center !important;
 }
 
 #focusify .button {
