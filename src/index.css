@@ -50,11 +50,34 @@ body {
     padding-top: 15px !important;
   }
 
+  nav h1 {
+    font-size: 25px !important;
+  }
+
   .nav-links {
     text-align: center !important;
-    margin-top: -20px !important;
+    margin-top: -12px !important;
+    margin-bottom: 8px;
     flex-direction: row !important;
-    gap: 10px !important;
+    gap: 0px !important;
+    font-size: 16px !important;
+    padding: 0px !important;
+    justify-content: left !important;
+  }
+
+  nav a {
+    margin: 0px !important;
+  }
+
+  #contact-link {
+    font-size: 16px !important;
+    border: none !important;
+    padding-right: 13px !important;
+  }
+
+  #contact-link:hover {
+    background-color: transparent !important;
+    text-decoration: underline #fff !important;
   }
 
   .title {
@@ -80,6 +103,15 @@ body {
   .project-tile {
     display: flex !important;
     flex-direction: column !important;
+  }
+
+  .tile {
+    width: 100% !important;
+  }
+
+  .project-tile img {
+    width: 100% !important;
+    height: auto !important;
   }
 
   #visit-btns {
@@ -125,17 +157,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 432px) {
-  .project-tile {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .description {
-    margin-top: -10px !important;
-  }
-}
-
 body,
 nav {
   color: var(--off-white);
@@ -169,7 +190,6 @@ nav {
   position: fixed;
   z-index: 1;
   width: 100%;
-  min-width: 281px;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -187,7 +207,7 @@ nav.hidden .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row !important;
+  flex-direction: row;
   transition: transform 2s;
 }
 
@@ -203,15 +223,13 @@ nav h1 {
 }
 
 .nav-links {
-  text-align: right;
   padding: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0px;
 }
 
-nav a:hover {
+.nav-link:hover {
   color: #fff;
   text-decoration: underline !important;
 }
@@ -226,7 +244,7 @@ nav a:hover {
 #contact-link:hover {
   color: #fff;
   background-color: var(--semi-transparent);
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 #welcome-section {
@@ -406,7 +424,7 @@ section a:hover {
 }
 
 .project-tile:hover {
-  background-color: #000;
+  background-color: var(--mostly-opaque);
 }
 
 .project-tile img {

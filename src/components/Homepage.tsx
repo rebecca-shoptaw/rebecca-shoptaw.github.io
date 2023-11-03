@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
 
-const site_link = "https://rebecca-shoptaw.github.io";
+const site_link = "https://rebeccashoptaw.dev";
 const git_link = "https://github.com/rebecca-shoptaw";
 
 interface projects_arr {
@@ -166,7 +166,7 @@ const Homepage = () => {
                 <a className="nav-link" href="#projects-ref">
                   Work
                 </a>
-                <a id="contact-link" href="#contact-ref">
+                <a id="contact-link" className="button" href="#contact-ref">
                   Contact
                 </a>
               </div>
@@ -176,9 +176,7 @@ const Homepage = () => {
         <section id="welcome-section" className={`${!loaded ? "hidden" : ""}`}>
           <div className="title">
             <h1>Rebecca Shoptaw</h1>
-            <h2>
-              Frontend Developer
-            </h2>
+            <h2>Frontend Developer</h2>
           </div>
         </section>
         <div id="about-ref" className="locator"></div>
@@ -189,7 +187,7 @@ const Homepage = () => {
               <span id="bio-block">
                 <p className="bio-text">
                   {`Hello! My name is Rebecca and I'm a
-                filmmaker-turned-frontend-developer.`}
+                freelance frontend web developer.`}
                   <br></br>
                   <br></br>
                   {`I bring from my background in filmmaking and photo/video editing the combination
