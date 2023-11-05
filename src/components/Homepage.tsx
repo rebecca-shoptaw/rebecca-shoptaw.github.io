@@ -15,6 +15,7 @@ interface projects_arr {
   description: string;
   description_italics?: string;
   wip?: boolean;
+  offline?: boolean;
 }
 
 const projects: projects_arr[] = [
@@ -51,6 +52,7 @@ const projects: projects_arr[] = [
     img_alt: `Simple off-white home screen with the text "Begin"`,
     description: `A minimalist Spotify re-design with a light/dark mode and built-in functionality for audio visualizers and other view customizations. Further integrations to come. Built with Typescript, React, and the Spotify API.`,
     wip: true,
+    offline: true,
   },
   {
     id: `triolingo`,
@@ -120,7 +122,7 @@ const social_links: social_arr[] = [
   {
     id: `mail`,
     icon_class: `envelope`,
-    link: `mailto:rebecca.shoptaw@gmail.com`,
+    link: `mailto:rebecca@rebeccashoptaw.dev`,
     title: `Email`,
   },
   {
@@ -128,6 +130,12 @@ const social_links: social_arr[] = [
     icon_class: `github`,
     link: `https://github.com/rebecca-shoptaw`,
     title: `Github`,
+  },
+  {
+    id: `linkedin`,
+    icon_class: `linkedin`,
+    link: `https://www.linkedin.com/in/rebeccashoptaw/`,
+    title: `LinkedIn`,
   },
   {
     id: `insta`,
@@ -256,7 +264,14 @@ const Homepage = () => {
                 >
                   <Fade>
                     <div className="img-wrapper">
-                      <a href={`${site_link}/${project.id}/`} target="_blank">
+                      <a
+                        href={
+                          !project.offline
+                            ? `${site_link}/${project.id}/`
+                            : "javascript:void(0)"
+                        }
+                        target="_blank"
+                      >
                         <img
                           id={`${project.id}-img`}
                           src={`./${project.id}.png`}
