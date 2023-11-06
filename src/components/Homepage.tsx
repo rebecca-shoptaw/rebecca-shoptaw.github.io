@@ -95,6 +95,12 @@ const projects: projects_arr[] = [
     description: `A press website for the short film `,
     description_italics: `The Portrait of Mrs. John Lennox.`,
   },
+  {
+    id: `portfolio`,
+    title: `This Site`,
+    img_alt: `Screenshot of the portfolio site you're currently on.`,
+    description: `The portfolio site you're currently on. Built with React, Typescript, and HTML/CSS.`,
+  },
   /*{
     id: `vampires-project`,
     title: `Series Watch Page`,
@@ -267,10 +273,16 @@ const Homepage = () => {
                       <a
                         href={
                           !project.offline
-                            ? `${site_link}/${project.id}/`
+                            ? project.id != "portfolio"
+                              ? `${site_link}/${project.id}/`
+                              : `${site_link}`
                             : "javascript:void(0)"
                         }
-                        target="_blank"
+                        target={`${
+                          !project.offline && project.id != "portfolio"
+                            ? "_blank"
+                            : ""
+                        }`}
                       >
                         <img
                           id={`${project.id}-img`}
@@ -284,7 +296,11 @@ const Homepage = () => {
                     <div className="description">
                       <p>
                         <a
-                          href={`${site_link}/${project.id}/`}
+                          href={
+                            project.id != "portfolio"
+                              ? `${site_link}/${project.id}/`
+                              : `${git_link}/${project.id}`
+                          }
                           target="_blank"
                           className="project-link"
                         >
@@ -317,7 +333,11 @@ const Homepage = () => {
                         Code
                       </a>
                       <a
-                        href={`${site_link}/${project.id}/`}
+                        href={
+                          project.id != "portfolio"
+                            ? `${site_link}/${project.id}/`
+                            : site_link
+                        }
                         target="_blank"
                         className="button live"
                       >

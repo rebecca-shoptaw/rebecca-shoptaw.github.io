@@ -467,6 +467,10 @@ section a:hover {
   display: none;
 }
 
+#focusify img:hover {
+  cursor: auto;
+}
+
 #codepen-project {
   margin-bottom: -40px;
   display: flex;
