@@ -128,7 +128,7 @@ const social_links: social_arr[] = [
   {
     id: `mail`,
     icon_class: `envelope`,
-    link: `mailto:rebecca@rebeccashoptaw.dev`,
+    link: `mailto:rebecca.shoptaw@gmail.com`,
     title: `Email`,
   },
   {
