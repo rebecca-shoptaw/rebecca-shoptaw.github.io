@@ -20,18 +20,26 @@ interface projects_arr {
 
 const projects: projects_arr[] = [
   {
+    id: `open-editions`,
+    title: `Open Editions`,
+    img_alt: `Audiobook playlist with romantic painting in the background.`,
+    description: `A minimalist and aesthetically pleasing audiobook player, which combines public domain audiobook recordings of classic novels with customized cover images . Built with Typescript, React and the Librivox API.`,
+    wip: true,
+  },
+  {
+    id: `triolingo`,
+    title: `Triolingo`,
+    img_alt: `Duolingo-esque interface with a gray cat.`,
+    description: `A Duolingo look-alike to help students practice SSAT Vocabulary. Features functionality for repeating and generating new word-sets and keeping score for each round. Built with Typescript and React.`,
+
+    wip: true,
+  },
+  {
     id: "calmtube",
     title: "CalmTube",
     img_alt: "Simple black search interface.",
     description:
       "A minimalist YouTube re-design with a light/dark mode and no distractions. Built with Typescript, React, and the YouTube Data API.",
-  },
-  {
-    id: `open-editions`,
-    title: `Open Editions`,
-    img_alt: `Audiobook playlist with romantic painting in the background.`,
-    description: `A minimalist and aesthetically pleasing audiobook player, which combines public domain audiobook recordings of classic novels with customized cover images . Built with Typescript and React.`,
-    wip: true,
   },
   {
     id: `cat-band`,
@@ -53,14 +61,6 @@ const projects: projects_arr[] = [
     description: `A minimalist Spotify re-design with a light/dark mode and built-in functionality for audio visualizers and other view customizations. Further integrations to come. Built with Typescript, React, and the Spotify API.`,
     wip: true,
     offline: true,
-  },
-  {
-    id: `triolingo`,
-    title: `Triolingo`,
-    img_alt: `Duolingo-esque interface with a gray cat.`,
-    description: `A Duolingo look-alike to help students practice SSAT Vocabulary. Features functionality for repeating and generating new word-sets and keeping score for each round. Built with Typescript and React.`,
-
-    wip: true,
   },
   {
     id: `ask-oscar-wilde`,
@@ -132,22 +132,22 @@ const social_links: social_arr[] = [
     title: `Email`,
   },
   {
-    id: `github`,
-    icon_class: `github`,
-    link: `https://github.com/rebecca-shoptaw`,
-    title: `Github`,
-  },
-  {
     id: `linkedin`,
     icon_class: `linkedin`,
     link: `https://www.linkedin.com/in/rebeccashoptaw/`,
     title: `LinkedIn`,
   },
   {
-    id: `insta`,
-    icon_class: `instagram`,
-    link: `https://www.instagram.com/rebeccashoptawfilms/`,
-    title: `Instagram`,
+    id: `resume`,
+    icon_class: `file-earmark-person`,
+    link: `./RShoptaw_Resume.pdf`,
+    title: `Resume`,
+  },
+  {
+    id: `github`,
+    icon_class: `github`,
+    link: `https://github.com/rebecca-shoptaw`,
+    title: `Github`,
   },
 ];
 
@@ -241,10 +241,19 @@ const Homepage = () => {
 
                   <br></br>
                 </p>
-                <Fade>
-                  <a className="button" href="#contact-ref">
-                    Get in Touch
-                  </a>
+                <Fade className="btns-wrap">
+                  <div className="visit-btns">
+                    <a
+                      className="button"
+                      href="./RShoptaw_Resume.pdf"
+                      target="_blank"
+                    >
+                      Resume
+                    </a>
+                    <a className="button live" href="#contact-ref">
+                      Get in Touch
+                    </a>
+                  </div>
                 </Fade>
               </span>
               <Fade>
@@ -324,7 +333,7 @@ const Homepage = () => {
                     </div>
                   </Fade>
                   <Fade className="btns-wrap">
-                    <div id="visit-btns">
+                    <div className="visit-btns">
                       <a
                         href={`${git_link}/${project.id}/`}
                         target="_blank"
@@ -347,13 +356,6 @@ const Homepage = () => {
                   </Fade>
                 </div>
               ))}
-              {/*<div className="project-tile" id="codepen-project">
-                <a className="codepen-wrapper">
-                  <a id="portfolio-link" href={git_link} className="project-link">
-                    Full Portfolio
-                  </a>
-                </a>
-                      </div>*/}
             </div>
           </div>
         </section>
@@ -367,6 +369,7 @@ const Homepage = () => {
                   <img id="letter" src="./contact.jpg" />
                 </div>
               </Fade>
+
               <div className="social-icons">
                 {social_links.map((social) => (
                   <Fade>

@@ -118,11 +118,11 @@ body {
     height: auto !important;
   }
 
-  #visit-btns {
+  .visit-btns {
     flex-direction: column !important;
   }
 
-  #visit-btns .button {
+  .visit-btns .button {
     width: 100%;
   }
 
@@ -456,7 +456,7 @@ section a:hover {
   margin-top: auto;
 }
 
-#visit-btns {
+.visit-btns {
   display: flex;
   flex-direction: row;
   width: 100%;
