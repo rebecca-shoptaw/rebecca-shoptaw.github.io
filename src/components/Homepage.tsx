@@ -40,6 +40,7 @@ const projects: projects_arr[] = [
     img_alt: "Simple black search interface.",
     description:
       "A minimalist YouTube re-design with a light/dark mode and no distractions. Built with Typescript, React, and the YouTube Data API.",
+    wip: true,
   },
   {
     id: `cat-band`,
@@ -216,29 +217,46 @@ const Homepage = () => {
               <span id="bio-block">
                 <p className="bio-text">
                   <Fade>
-                    {`Hello! My name is Rebecca and I'm a
-                freelance frontend web developer.`}
-                  </Fade>
-                  <br></br>
-                  <Fade>
-                    {`I bring from my background in filmmaking and photo/video editing the combination
-                of a strong visual sense and minute technical precision.`}
+                    <p>
+                      Hello! My name is Rebecca and I'm a freelance frontend web
+                      developer.
+                    </p>
                   </Fade>
 
-                  <br></br>
                   <Fade>
-                    {`My training in coding began in high school on my TI-84 calculator,
-                and continued through CS50 in college, for which I learned a
-                number of coding languages and taught myself Swift to build a
-                video-editing app.`}
+                    <p>
+                      I bring from my background in filmmaking and photo/video
+                      editing the combination of a strong visual sense and
+                      minute technical precision.
+                    </p>
                   </Fade>
 
-                  <br></br>
                   <Fade>
-                    {`Now, I'm focusing on frontend
-                development, and using React with a mix of HTML, CSS, and Javascript/Typescript to make beautiful and functional responsive sites and applications.`}
+                    <p>
+                      My training in programming began in CS50 in college, for
+                      which I learned Javascript, HTML/CSS, C and SQL. For the
+                      final project, I taught myself Swift to build a
+                      video-editing app, and I was selected to be{" "}
+                      <a
+                        href="https://youtu.be/TWw28ZwjQvE?t=5390"
+                        target="_blank"
+                        title="Interview Video"
+                      >
+                        interviewed about the app
+                      </a>{" "}
+                      at the year-end course fair.
+                    </p>
                   </Fade>
 
+                  <Fade>
+                    <p>
+                      {" "}
+                      Now, I'm focusing on frontend development, and using React
+                      with a mix of HTML, CSS, and Javascript/Typescript to make
+                      beautiful and functional responsive sites and
+                      applications.
+                    </p>
+                  </Fade>
                   <br></br>
                 </p>
                 <Fade className="btns-wrap">
