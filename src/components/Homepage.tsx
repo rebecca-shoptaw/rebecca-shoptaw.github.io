@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal";
 
 const site_link = "https://rebeccashoptaw.dev";
 const git_link = "https://github.com/rebecca-shoptaw";
+const resume_path = "./Rebecca_Shoptaw_resume.pdf";
 
 interface projects_arr {
   id: string;
@@ -141,7 +142,7 @@ const social_links: social_arr[] = [
   {
     id: `resume`,
     icon_class: `file-earmark-person`,
-    link: `./RShoptaw_Resume.pdf`,
+    link: resume_path,
     title: `Resume`,
   },
   {
@@ -233,10 +234,11 @@ const Homepage = () => {
 
                   <Fade>
                     <p>
-                      My training in programming began in CS50 in college, for
-                      which I learned Javascript, HTML/CSS, C and SQL. For the
-                      final project, I taught myself Swift to build a
-                      video-editing app, and I was selected to be{" "}
+                      My training in programming began in the CS50 course in
+                      college back in 2015, for which I learned Javascript,
+                      HTML/CSS, C and SQL. For the final project, I taught
+                      myself Swift to build a video-editing app, and I was
+                      selected to be{" "}
                       <a
                         href="https://youtu.be/TWw28ZwjQvE?t=5390"
                         target="_blank"
@@ -261,11 +263,7 @@ const Homepage = () => {
                 </p>
                 <Fade className="btns-wrap">
                   <div className="visit-btns">
-                    <a
-                      className="button"
-                      href="./RShoptaw_Resume.pdf"
-                      target="_blank"
-                    >
+                    <a className="button" href={resume_path} target="_blank">
                       Resume
                     </a>
                     <a className="button live" href="#contact-ref">
