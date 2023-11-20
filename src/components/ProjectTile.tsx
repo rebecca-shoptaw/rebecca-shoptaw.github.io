@@ -1,7 +1,7 @@
 import links from "../data/SiteLinks";
-import { projectTileProps } from "../types/Types";
+import { ProjectTileProps } from "../types/Types";
 
-const ProjectTile: React.FC<projectTileProps> = ({ project }) => {
+const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
   return (
     <div>
       <div className="project-tile tile" id={project.id} key={project.id}>
@@ -10,8 +10,8 @@ const ProjectTile: React.FC<projectTileProps> = ({ project }) => {
             href={
               !project.offline
                 ? project.id != "portfolio"
-                  ? `${links.site_link}/${project.id}/`
-                  : `${links.site_link}`
+                  ? `${links.SITE_LINK}/${project.id}/`
+                  : `${links.SITE_LINK}`
                 : "javascript:void(0)"
             }
             target={`${
@@ -31,8 +31,8 @@ const ProjectTile: React.FC<projectTileProps> = ({ project }) => {
             <a
               href={
                 project.id != "portfolio"
-                  ? `${links.site_link}/${project.id}/`
-                  : `${links.git_link}/${project.id}`
+                  ? `${links.SITE_LINK}/${project.id}/`
+                  : `${links.GIT_LINK}/${project.id}`
               }
               target="_blank"
               className="project-link"
@@ -56,7 +56,7 @@ const ProjectTile: React.FC<projectTileProps> = ({ project }) => {
 
         <div className="visit-btns btns-wrap">
           <a
-            href={`${links.git_link}/${project.id}/`}
+            href={`${links.GIT_LINK}/${project.id}/`}
             target="_blank"
             className="button code"
           >
@@ -65,8 +65,8 @@ const ProjectTile: React.FC<projectTileProps> = ({ project }) => {
           <a
             href={
               project.id != "portfolio"
-                ? `${links.site_link}/${project.id}/`
-                : links.site_link
+                ? `${links.SITE_LINK}/${project.id}/`
+                : links.SITE_LINK
             }
             target="_blank"
             className="button live"

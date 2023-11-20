@@ -1,7 +1,7 @@
-import { socialArr } from "../types/Types";
+import { SocialArr } from "../types/Types";
 import links from "./SiteLinks";
 
-const social_links: socialArr[] = [
+const SOCIAL_LINKS: SocialArr[] = [
   {
     id: `mail`,
     icon_class: `envelope`,
@@ -17,7 +17,7 @@ const social_links: socialArr[] = [
   {
     id: `resume`,
     icon_class: `file-earmark-person`,
-    link: links.resume_path,
+    link: links.RESUME_PATH,
     title: `Resume`,
   },
   {
@@ -28,4 +28,4 @@ const social_links: socialArr[] = [
   },
 ];
 
-export default social_links;
+export default SOCIAL_LINKS;

@@ -1,4 +1,4 @@
-export interface projectsArr {
+export interface ProjectsArr {
   id: string;
   title: string;
   link?: string;
@@ -11,13 +11,13 @@ export interface projectsArr {
   offline?: boolean;
 }
 
-export interface socialArr {
+export interface SocialArr {
   id: string;
   icon_class: string;
   link: string;
   title: string;
 }
 
-export interface projectTileProps {
-  project: projectsArr;
+export interface ProjectTileProps {
+  project: ProjectsArr;
 }

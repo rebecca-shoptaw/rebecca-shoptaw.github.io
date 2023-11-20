@@ -1,6 +1,6 @@
-import { projectsArr } from "../types/Types";
+import { ProjectsArr } from "../types/Types";
 
-const projects: projectsArr[] = [
+const projects: ProjectsArr[] = [
   {
     id: `open-editions`,
     title: `Open Editions`,

@@ -116,7 +116,7 @@ const Homepage = () => {
                   <div className="visit-btns">
                     <a
                       className="button"
-                      href={links.resume_path}
+                      href={links.RESUME_PATH}
                       target="_blank"
                     >
                       Resume
