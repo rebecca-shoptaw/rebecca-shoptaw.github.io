@@ -10,8 +10,8 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
             href={
               !project.offline
                 ? project.id != "portfolio"
-                  ? `${links.SITE_LINK}/${project.id}/`
-                  : `${links.SITE_LINK}`
+                  ? `/${project.id}/`
+                  : `/`
                 : "javascript:void(0)"
             }
             target={`${
@@ -31,7 +31,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
             <a
               href={
                 project.id != "portfolio"
-                  ? `${links.SITE_LINK}/${project.id}/`
+                  ? `/${project.id}/`
                   : `${links.GIT_LINK}/${project.id}`
               }
               target="_blank"
@@ -64,9 +64,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
           </a>
           <a
             href={
-              project.id != "portfolio"
-                ? `${links.SITE_LINK}/${project.id}/`
-                : links.SITE_LINK
+              project.id != "portfolio" ? `/${project.id}/` : links.SITE_LINK
             }
             target="_blank"
             className="button live"
