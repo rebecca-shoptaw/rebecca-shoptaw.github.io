@@ -25,7 +25,7 @@ const Homepage = () => {
           <ClipLoader size={100} color="#fff" />
         </div>
       )}
-      <div id="site-body" className={`${!loaded ? "hidden" : ""}`}>
+      <article id="site-body" className={`${!loaded ? "hidden" : ""}`}>
         <nav id="navbar" className={`${!loaded ? "hidden" : ""}`}>
           <div className="nav-content">
             <span>
@@ -181,7 +181,7 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-      </div>
+      </article>
     </>
   );
 };

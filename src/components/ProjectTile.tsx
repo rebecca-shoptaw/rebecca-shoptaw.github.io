@@ -14,9 +14,6 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
                   : `/`
                 : "javascript:void(0)"
             }
-            target={`${
-              !project.offline && project.id != "portfolio" ? "_blank" : ""
-            }`}
           >
             <img
               id={`${project.id}-img`}
@@ -34,7 +31,6 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
                   ? `/${project.id}/`
                   : `${links.GIT_LINK}/${project.id}`
               }
-              target="_blank"
               className="project-link"
             >
               {project.title}
@@ -63,10 +59,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
             Code
           </a>
           <a
-            href={
-              project.id != "portfolio" ? `/${project.id}/` : links.SITE_LINK
-            }
-            target="_blank"
+            href={project.id != "portfolio" ? `/${project.id}/` : `/`}
             className="button live"
           >
             Live
