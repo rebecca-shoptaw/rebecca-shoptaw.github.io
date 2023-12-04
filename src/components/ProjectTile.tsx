@@ -19,6 +19,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
               id={`${project.id}-img`}
               src={`./${project.id}.png`}
               alt={project.img_alt}
+              loading="lazy"
             />
           </a>
         </div>

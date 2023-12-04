@@ -20,11 +20,7 @@ const Homepage = () => {
 
   return (
     <>
-      {!loaded && (
-        <div id="loading">
-          <ClipLoader size={100} color="#fff" />
-        </div>
-      )}
+      <ClipLoader id="loading" size={100} loading={!loaded} color="#fff" />
       <article id="site-body" className={`${!loaded ? "hidden" : ""}`}>
         <nav id="navbar" className={`${!loaded ? "hidden" : ""}`}>
           <div className="nav-content">
@@ -132,6 +128,7 @@ const Homepage = () => {
                   id="bio-img"
                   src="https://images.squarespace-cdn.com/content/v1/58c9909ce58c627a188f8a64/ad9e7ee7-964e-4151-96a6-e99d81353fd2/20201007.JPG?format=2500w"
                   alt="Profile picture"
+                  loading="lazy"
                 />
               </Fade>
             </div>
@@ -157,7 +154,12 @@ const Homepage = () => {
             <div id="contact-body" className="tile">
               <Fade>
                 <div className="letter-wrap">
-                  <img id="letter" src="./contact.jpg" />
+                  <img
+                    id="letter"
+                    src="./contact.jpg"
+                    alt="Painting of a woman writing a letter"
+                    loading="lazy"
+                  />
                 </div>
               </Fade>
 

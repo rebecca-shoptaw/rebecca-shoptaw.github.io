@@ -35,138 +35,14 @@ body {
   margin-right: -50px;
 }
 
-@media only screen and (min-width: 1168px) {
-  body,
-  nav {
-    background-position: 0% 12% !important;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  body,
-  nav {
-    background-size: 140% !important;
-    background-position: 0px 0px !important;
-  }
-
-  .nav-content {
-    flex-direction: column !important;
-    padding-top: 15px !important;
-  }
-
-  nav h1 {
-    font-size: 25px !important;
-  }
-
-  .nav-links {
-    text-align: center !important;
-    margin-top: -12px !important;
-    margin-bottom: 8px;
-    flex-direction: row !important;
-    gap: 0px !important;
-    font-size: 16px !important;
-    padding: 0px !important;
-    justify-content: left !important;
-  }
-
-  nav a {
-    margin: 0px !important;
-  }
-
-  #contact-link {
-    font-size: 16px !important;
-    border: none !important;
-    padding-right: 13px !important;
-  }
-
-  #contact-link:hover {
-    background-color: transparent !important;
-    text-decoration: underline #fff !important;
-  }
-
-  .title {
-    width: 250px !important;
-  }
-
-  .title h1 {
-    font-size: 23px !important;
-  }
-
-  .title h2 {
-    font-size: 16px !important;
-  }
-
-  .locator {
-    margin-bottom: 105px !important;
-  }
-
-  section {
-    margin-bottom: -80px !important;
-  }
-
-  .project-tile {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .tile {
-    width: 100% !important;
-  }
-
-  .project-tile img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .visit-btns {
-    flex-direction: column !important;
-  }
-
-  .visit-btns .button {
-    width: 100%;
-  }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #about .bio {
-    display: flex !important;
-    flex-direction: column-reverse !important;
-    align-items: center !important;
-    font-size: 15px;
-  }
-
-  #bio-block {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #bio-block a {
-    text-align: center;
-  }
-
-  #contact {
-    height: calc(100vh - 105px) !important;
-  }
-
-  #contact i {
-    font-size: 30px !important;
-  }
-}
-
 body,
 nav {
   color: var(--off-white);
   width: 100%;
   background-image: url(https://media.artsbma.org/wp-content/uploads/2023/09/23055230/gPiction_Repository_2db_photod3348u305334881984121_01_o2.jpg);
-  /*background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a2/John_Singer_Sargent_-_Elizabeth_Winthrop_Chanler_%28Mrs._John_Jay_Chapman%29_-_Google_Art_Project.jpg);*/
   background-color: #bbb;
   background-blend-mode: multiply;
   background-size: 130%;
-  /*background-position: -246px 0px;*/
   background-position: 0% 3%;
   background-attachment: fixed;
   transition: opacity 2s, transform 2s ease-in-out;
@@ -578,4 +454,126 @@ section a:hover {
 
 i:hover {
   color: #fff;
+}
+
+@media only screen and (min-width: 1168px) {
+  body,
+  nav {
+    background-position: 0% 12% !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body,
+  nav {
+    background-size: 140% !important;
+    background-position: 0px 0px !important;
+  }
+
+  .nav-content {
+    flex-direction: column !important;
+    padding-top: 15px !important;
+  }
+
+  nav h1 {
+    font-size: 25px !important;
+  }
+
+  .nav-links {
+    text-align: center !important;
+    margin-top: -12px !important;
+    margin-bottom: 8px;
+    flex-direction: row !important;
+    gap: 0px !important;
+    font-size: 16px !important;
+    padding: 0px !important;
+    justify-content: left !important;
+  }
+
+  nav a {
+    margin: 0px !important;
+  }
+
+  #contact-link {
+    font-size: 16px !important;
+    border: none !important;
+    padding-right: 13px !important;
+  }
+
+  #contact-link:hover {
+    background-color: transparent !important;
+    text-decoration: underline #fff !important;
+  }
+
+  .title {
+    width: 250px !important;
+  }
+
+  .title h1 {
+    font-size: 23px !important;
+  }
+
+  .title h2 {
+    font-size: 16px !important;
+  }
+
+  .locator {
+    margin-bottom: 105px !important;
+  }
+
+  section {
+    margin-bottom: -80px !important;
+  }
+
+  .project-tile {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .tile {
+    width: 100% !important;
+  }
+
+  .project-tile img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .visit-btns {
+    flex-direction: column !important;
+  }
+
+  .visit-btns .button {
+    width: 100%;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .bio {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    font-size: 15px;
+  }
+
+  #bio-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #bio-block a {
+    text-align: center;
+  }
+
+  #contact {
+    height: calc(100vh - 105px) !important;
+  }
+
+  #contact i {
+    font-size: 30px !important;
+  }
 }
