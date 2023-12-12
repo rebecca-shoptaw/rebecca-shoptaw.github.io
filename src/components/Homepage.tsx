@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { Fade } from "react-awesome-reveal";
+import {gsap} from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 import ProjectTile from "./ProjectTile";
-
 import projects from "../data/ProjectData";
 import links from "../data/SiteLinks";
 import social_links from "../data/SocialData";
