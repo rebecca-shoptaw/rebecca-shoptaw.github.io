@@ -39,7 +39,7 @@ body,
 nav {
   color: var(--off-white);
   width: 100%;
-  background-image: url(https://media.artsbma.org/wp-content/uploads/2023/09/23055230/gPiction_Repository_2db_photod3348u305334881984121_01_o2.jpg);
+  background-image: url(./homepage-background.jpg);
   background-color: #bbb;
   background-blend-mode: multiply;
   background-size: 130%;
