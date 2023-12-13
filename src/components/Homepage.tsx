@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { ClipLoader } from "react-spinners";
 import { Fade } from "react-awesome-reveal";
-import {gsap} from 'gsap';
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +21,6 @@ const Homepage = () => {
 
   return (
     <>
-      <ClipLoader id="loading" size={100} loading={!loaded} color="#fff" />
       <article id="site-body" className={`${!loaded ? "hidden" : ""}`}>
         <nav id="navbar" className={`${!loaded ? "hidden" : ""}`}>
           <div className="nav-content">
@@ -119,7 +117,11 @@ const Homepage = () => {
                     >
                       Resume
                     </a>
-                    <a className="button live" href="#contact-ref">
+                    <a
+                      className="button live"
+                      href="#contact-ref"
+                      onClick={resetUrl}
+                    >
                       Get in Touch
                     </a>
                   </div>
