@@ -39,7 +39,7 @@ body,
 nav {
   color: var(--off-white);
   width: 100%;
-  background-image: url(./homepage-background.jpg);
+  background-image: url(./assets/homepage-background.jpg);
   background-color: #bbb;
   background-blend-mode: multiply;
   background-size: 130%;
