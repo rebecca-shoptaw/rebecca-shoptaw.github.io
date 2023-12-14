@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,28 +11,23 @@ import links from "../data/SiteLinks";
 import social_links from "../data/SocialData";
 
 const Homepage = () => {
-  const bodyRef = useRef(null);
-  const navRef = useRef(null);
-  const welcomeRef = useRef(null);
-  const siteRef = useRef();
-
   useGSAP(() => {
     gsap.from("#welcome-section", {
       duration: 2.5,
-      opacity: 0,
       delay: 1,
       scale: 1.3,
-    });
-
-    gsap.from(".nav-content", {
-      opacity: 0,
-      duration: 5,
     });
 
     gsap.from(".nav-content", {
       y: -100,
       duration: 2.5,
       delay: 1,
+    });
+
+    gsap.from("#site-body", {
+      opacity: 0,
+      duration: 4,
+      delay: 0.5,
     });
   });
 
@@ -44,8 +39,8 @@ const Homepage = () => {
 
   return (
     <>
-      <article id="site-body" ref={bodyRef}>
-        <nav id="navbar" ref={navRef}>
+      <article id="site-body">
+        <nav id="navbar">
           <div className="nav-content">
             <span>
               <a
@@ -72,7 +67,7 @@ const Homepage = () => {
           </div>
         </nav>
 
-        <section id="welcome-section" ref={welcomeRef}>
+        <section id="welcome-section">
           <div className="title">
             <h1>Rebecca Shoptaw</h1>
             <h2>Frontend Developer</h2>
