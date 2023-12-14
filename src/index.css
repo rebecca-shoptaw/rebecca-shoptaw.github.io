@@ -19,7 +19,7 @@ html {
 * {
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
-  transition: all 0.3s;
+  transition: text-decoration-color 0.3s, filter 0.3s;
 }
 
 body {
@@ -45,11 +45,6 @@ nav {
   background-size: 130%;
   background-position: 0% 3%;
   background-attachment: fixed;
-  transition: opacity 2s, transform 2s ease-in-out;
-}
-
-#site-body {
-  transition: opacity 2s, transform 2s ease-in-out;
 }
 
 .hidden {
@@ -71,10 +66,6 @@ nav {
   flex-direction: row;
 }
 
-nav.hidden .nav-content {
-  transform: translateY(-100px);
-}
-
 .nav-content {
   width: 100%;
   margin: 0px 30px 15px 30px;
@@ -84,7 +75,6 @@ nav.hidden .nav-content {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  transition: transform 2s;
 }
 
 nav h1 {
@@ -136,7 +126,6 @@ nav h1 {
   background-attachment: fixed;
   z-index: 0;
   height: 100vh;
-  transition: opacity 2s, transform 2s;
   transform: scale(1);
 }
 
@@ -221,10 +210,12 @@ section a:hover {
 .tile {
   background-color: var(--fully-transparent);
   color: var(--off-white);
+  transition: all 0.3s;
 }
 
 .tile > * {
   color: var(--off-white);
+  transition: all 0.3s;
 }
 
 .tile:hover {
@@ -255,6 +246,7 @@ section a:hover {
   padding: 5px 10px;
   font-size: 14px;
   line-height: 1.8em;
+  transition: all 0.3s;
 }
 
 .button.live {
@@ -457,9 +449,12 @@ i:hover {
 }
 
 @media only screen and (min-width: 1168px) {
-  body,
-  nav {
+  body {
     background-position: 0% 12% !important;
+  }
+
+  nav {
+    background-position: 0% 9% !important;
   }
 }
 

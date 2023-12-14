@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useRef, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 import ProjectTile from "./ProjectTile";
@@ -10,8 +11,30 @@ import links from "../data/SiteLinks";
 import social_links from "../data/SocialData";
 
 const Homepage = () => {
-  let [loaded, setLoaded] = useState(false);
-  document.onreadystatechange = () => setLoaded(true);
+  const bodyRef = useRef(null);
+  const navRef = useRef(null);
+  const welcomeRef = useRef(null);
+  const siteRef = useRef();
+
+  useGSAP(() => {
+    gsap.from("#welcome-section", {
+      duration: 2.5,
+      opacity: 0,
+      delay: 1,
+      scale: 1.3,
+    });
+
+    gsap.from(".nav-content", {
+      opacity: 0,
+      duration: 5,
+    });
+
+    gsap.from(".nav-content", {
+      y: -100,
+      duration: 2.5,
+      delay: 1,
+    });
+  });
 
   const resetUrl = () => {
     setTimeout(() => {
@@ -21,8 +44,8 @@ const Homepage = () => {
 
   return (
     <>
-      <article id="site-body" className={`${!loaded ? "hidden" : ""}`}>
-        <nav id="navbar" className={`${!loaded ? "hidden" : ""}`}>
+      <article id="site-body" ref={bodyRef}>
+        <nav id="navbar" ref={navRef}>
           <div className="nav-content">
             <span>
               <a
@@ -49,13 +72,11 @@ const Homepage = () => {
           </div>
         </nav>
 
-        <section id="welcome-section" className={`${!loaded ? "hidden" : ""}`}>
-          <Fade>
-            <div className="title">
-              <h1>Rebecca Shoptaw</h1>
-              <h2>Frontend Developer</h2>
-            </div>
-          </Fade>
+        <section id="welcome-section" ref={welcomeRef}>
+          <div className="title">
+            <h1>Rebecca Shoptaw</h1>
+            <h2>Frontend Developer</h2>
+          </div>
         </section>
 
         <div id="about-ref" className="locator"></div>
