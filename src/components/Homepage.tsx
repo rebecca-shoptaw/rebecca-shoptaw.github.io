@@ -13,19 +13,17 @@ const Homepage = () => {
   useGSAP(() => {
     gsap.from("#welcome-section", {
       duration: 2.5,
-      delay: 1,
       scale: 1.3,
     });
 
     gsap.from(".nav-content", {
       y: -100,
       duration: 2.5,
-      delay: 1,
     });
 
     gsap.from("#site-body", {
       opacity: 0,
-      duration: 4,
+      duration: 2.5,
       delay: 0.5,
     });
   });
