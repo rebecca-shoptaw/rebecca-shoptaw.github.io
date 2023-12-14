@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
