@@ -68,7 +68,7 @@ The site also uses a few custom hooks to avoid unnecessary repetitions in the co
 ## Next Steps
 
 - [ ] Redo styling using SASS
-- [ ] Use meta and Schema.org tags to improve SEO
+- [x] Use meta and Schema.org tags to improve SEO
 - [x] Reorganize app using custom hooks and sub-components
 - [x] Use GSAP to create a fun intro animation
 - [ ] Shift scroll animations from `react-awesome-reveal` to GSAP

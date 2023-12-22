@@ -7,7 +7,13 @@ const ProjectTile = (props: ProjectTileProps) => {
 
   return (
     <Fade>
-      <div className="project-tile tile" id={project.id} key={project.id}>
+      <div
+        className="project-tile tile"
+        id={project.id}
+        key={project.id}
+        itemScope
+        itemType="https://schema.org/WebSite"
+      >
         <div className="img-wrapper">
           <a href={project.id != "portfolio" ? `/${project.id}/` : `/`}>
             <img
