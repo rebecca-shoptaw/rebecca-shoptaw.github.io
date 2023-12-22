@@ -98,4 +98,4 @@ Rebecca Shoptaw -
 [SASS-icon]: https://img.shields.io/badge/-Sass-20232A?style=for-the-badge&logo=sass&logoColor=CC6699
 [SASS-url]: https://sass-lang.com/
 [GSAP-icon]: https://img.shields.io/badge/-GSAP-20232A?style=for-the-badge&logo=greensock&logoColor=88CE02
-[GSAP-url]: https://sass-lang.com/
+[GSAP-url]: https://gsap.com/
