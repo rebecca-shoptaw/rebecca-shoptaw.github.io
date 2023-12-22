@@ -1,4 +1,4 @@
-export interface ProjectsArr {
+export type ProjectInfo = {
   id: string;
   title: string;
   link?: string;
@@ -9,15 +9,29 @@ export interface ProjectsArr {
   description_italics?: string;
   wip?: boolean;
   offline?: boolean;
-}
+};
 
-export interface SocialArr {
+export type SocialInfo = {
   id: string;
   icon_class: string;
   link: string;
   title: string;
-}
+};
 
-export interface ProjectTileProps {
-  project: ProjectsArr;
-}
+export type ProjectTileProps = {
+  project: ProjectInfo;
+};
+
+export type SocialLinkProps = {
+  social: SocialInfo;
+};
+
+export type BioSnippetProps = {
+  text: string;
+};
+
+export type NavItemInfo = {
+  title: string;
+  class: string;
+  ref: string;
+};

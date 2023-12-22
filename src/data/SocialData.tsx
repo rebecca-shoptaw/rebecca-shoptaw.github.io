@@ -1,7 +1,7 @@
-import { SocialArr } from "../types/Types";
-import links from "./SiteLinks";
+import { SocialInfo } from "../types/Types";
+import { RESUME_PATH } from "./SiteLinks";
 
-const SOCIAL_LINKS: SocialArr[] = [
+const SOCIAL_LINKS: SocialInfo[] = [
   {
     id: `mail`,
     icon_class: `envelope`,
@@ -17,7 +17,7 @@ const SOCIAL_LINKS: SocialArr[] = [
   {
     id: `resume`,
     icon_class: `file-earmark-person`,
-    link: links.RESUME_PATH,
+    link: RESUME_PATH,
     title: `Resume`,
   },
   {

@@ -1,20 +1,15 @@
-import links from "../data/SiteLinks";
+import { Fade } from "react-awesome-reveal";
+import { GIT_LINK } from "../data/SiteLinks";
 import { ProjectTileProps } from "../types/Types";
 
-const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
+const ProjectTile = (props: ProjectTileProps) => {
+  const { project } = props;
+
   return (
-    <div>
+    <Fade>
       <div className="project-tile tile" id={project.id} key={project.id}>
         <div className="img-wrapper">
-          <a
-            href={
-              !project.offline
-                ? project.id != "portfolio"
-                  ? `/${project.id}/`
-                  : `/`
-                : "javascript:void(0)"
-            }
-          >
+          <a href={project.id != "portfolio" ? `/${project.id}/` : `/`}>
             <img
               id={`${project.id}-img`}
               src={`./${project.id}.png`}
@@ -30,7 +25,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
               href={
                 project.id != "portfolio"
                   ? `/${project.id}/`
-                  : `${links.GIT_LINK}/${project.id}`
+                  : `${GIT_LINK}/${project.id}`
               }
               className="project-link"
             >
@@ -53,7 +48,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
 
         <div className="visit-btns btns-wrap">
           <a
-            href={`${links.GIT_LINK}/${project.id}/`}
+            href={`${GIT_LINK}/${project.id}/`}
             target="_blank"
             className="button code"
           >
@@ -67,7 +62,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({ project }) => {
           </a>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 
