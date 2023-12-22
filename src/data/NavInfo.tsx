@@ -4,16 +4,16 @@ export const NavInfo: NavItemInfo[] = [
   {
     title: "About",
     class: "nav-link",
-    ref: "about-ref",
+    ref: "#about-ref",
   },
   {
     title: "Work",
     class: "nav-link",
-    ref: "projects-ref",
+    ref: "#projects-ref",
   },
   {
     title: "Contact",
     class: "contact-link",
-    ref: "contact-ref",
+    ref: "#contact-ref",
   },
 ];
