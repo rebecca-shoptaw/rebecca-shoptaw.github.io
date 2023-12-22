@@ -56,13 +56,13 @@ const ProjectTile = (props: ProjectTileProps) => {
           <a
             href={`${GIT_LINK}/${project.id}/`}
             target="_blank"
-            className="button code"
+            className="button-default"
           >
             Code
           </a>
           <a
             href={project.id != "portfolio" ? `/${project.id}/` : `/`}
-            className="button live"
+            className="button-live"
           >
             Live
           </a>

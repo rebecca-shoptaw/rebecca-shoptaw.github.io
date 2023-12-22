@@ -13,7 +13,7 @@ const Homepage = () => {
     <>
       <Nav />
       <main>
-        <section id="welcome-section">
+        <section id="welcome-section" className="section-wrap">
           <section className="title">
             <h1>Rebecca Shoptaw</h1>
             <h2>Frontend Developer</h2>

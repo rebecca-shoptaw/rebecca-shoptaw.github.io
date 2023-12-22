@@ -1,1 +1,4 @@
-@import 'abstracts/colors', 'abstracts/mixins', 'components/base', 'components/project-tile'
+@import "abstracts/colors", "abstracts/mixins", "abstracts/transitions",
+  "elements/base", "elements/nav", "elements/section-defaults",
+  "elements/sections/contact-section", "elements/sections/projects-section",
+  "elements/sections/welcome-section", "elements/sections/about-section";

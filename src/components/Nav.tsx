@@ -13,7 +13,7 @@ const Nav = () => {
             href="#welcome-section"
             onClick={resetUrl}
           >
-            <h1>Rebecca Shoptaw</h1>
+            Rebecca Shoptaw
           </a>
         </span>
         <span>

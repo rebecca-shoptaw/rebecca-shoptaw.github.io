@@ -1,0 +1,16 @@
+.bio {
+  @include flex(row, left, left, space-between);
+  @include part-width-centered;
+  gap: 15px;
+  padding: 20px;
+
+  #bio-img {
+    width: 200px;
+    height: 267px;
+    margin-top: 15px;
+  }
+
+  #bio-text {
+    margin-top: 10px;
+  }
+}

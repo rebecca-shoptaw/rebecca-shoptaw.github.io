@@ -8,7 +8,7 @@ const About = () => {
   const resetUrl = useReset();
 
   return (
-    <section id="about">
+    <section id="about" className="section-wrap">
       <div className="section-body">
         <h1 className="section-title">About</h1>
         <div className="bio tile">
@@ -20,11 +20,11 @@ const About = () => {
             </section>
             <Fade className="btns-wrap">
               <div className="visit-btns">
-                <a className="button" href={RESUME_PATH} target="_blank">
+                <a className="button-default" href={RESUME_PATH} target="_blank">
                   Resume
                 </a>
                 <a
-                  className="button live"
+                  className="button-live"
                   href="#contact-ref"
                   onClick={resetUrl}
                 >

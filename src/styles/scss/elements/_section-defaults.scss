@@ -1,0 +1,55 @@
+.section-wrap {
+  @include full-width;
+  height: auto;
+  min-width: 281px;
+
+  .section-body {
+    background-color: $semi-transparent;
+    margin: 0px 30px;
+    padding-bottom: 40px;
+
+    .section-title {
+      @include part-width-centered;
+      
+      color: $full-white;
+      padding-top: 10px;
+      border-bottom: 0.5px solid $off-white;
+      font-size: 25px;
+      text-align: center;
+      line-height: 2em;
+    }
+  }
+
+  a:hover {
+    @include transparent-underline;
+  }
+}
+
+.tile {
+  background-color: $fully-transparent;
+  color: $off-white;
+
+  > * {
+    color: $off-white;
+  }
+
+  img,
+  .letter-wrap {
+    @include off-white-border;
+  }
+
+  &:hover {
+    background-color: $mostly-opaque;
+    color: $full-white;
+
+    > * {
+      color: $full-white;
+      border-color: $full-white;
+    }
+
+    img {
+      @include full-white-border;
+      filter: brightness(1.1);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+$anim-time: 0.3s;
+
+@mixin animate-any($props) {
+  transition-property: $props;
+  transition-duration: $anim-time;
+}
+
+@mixin animate-underline {
+  @include transparent-underline;
+  transition: text-decoration-color $anim-time;
+}
+
+@mixin animate-brightness {
+  transition: filter $anim-time;
+}

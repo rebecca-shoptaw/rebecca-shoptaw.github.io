@@ -1,0 +1,60 @@
+.project-links {
+  @include flex(row, left, stretch, center);
+  @include full-width;
+  flex-wrap: wrap;
+  margin: 0px 15px;
+}
+
+.project-tile {
+  @include animate-any(background-color);
+  background-color: $fully-transparent;
+  color: $full-white;
+  width: 380px;
+  height: auto;
+  @include flex(column, auto, auto, auto);
+  gap: 10px;
+  padding: 40px;
+
+  &:hover {
+    background-color: $mostly-opaque;
+    .project-link,
+    .description {
+      color: $full-white;
+    }
+  }
+
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .wip {
+    margin-top: -20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .project-link {
+    @include transparent-underline;
+    @include animate-any("text-decoration-color, color");
+    color: $off-white;
+    line-height: 2em;
+    font-size: 17px;
+
+    &:hover {
+      text-decoration: underline $full-white;
+      color: $full-white;
+    }
+  }
+
+  .description {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .visit-btns {
+    @include flex(row, auto, auto, auto);
+    @include full-width;
+    gap: 10px;
+  }
+}

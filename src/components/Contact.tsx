@@ -4,7 +4,7 @@ import SOCIAL_LINKS from "../data/SocialData";
 
 const Contact = () => {
   return (
-    <section id="contact">
+    <section id="contact" className="section-wrap">
       <section className="section-body">
         <h1 className="section-title">Contact</h1>
         <div id="contact-body" className="tile">
