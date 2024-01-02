@@ -99,7 +99,7 @@ html {
 }
 
 nav, body {
-  background-image: url("src/assets/homepage-background.jpg");
+  background-image: url("/homepage-background.jpg");
   background-color: #aaa;
   background-blend-mode: multiply;
   background-size: 130%;
@@ -294,6 +294,7 @@ nav .nav-content .welcome-link:hover {
 
 #contact {
   height: calc(100vh - 135px);
+  margin-bottom: 5vh;
 }
 #contact .section-body {
   height: auto;
