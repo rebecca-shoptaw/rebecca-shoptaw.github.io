@@ -1,22 +1,17 @@
 .project-links {
   @include flex(row, left, stretch, center);
-  @include full-width;
+  width: 100%;
   flex-wrap: wrap;
-  margin: 0px 15px;
 }
 
 .project-tile {
-  @include animate-any(background-color);
-  background-color: $fully-transparent;
-  color: $full-white;
   width: 380px;
   height: auto;
-  @include flex(column, auto, auto, auto);
+  @include flex(column, center, auto, auto);
   gap: 10px;
   padding: 40px;
 
   &:hover {
-    background-color: $mostly-opaque;
     .project-link,
     .description {
       color: $full-white;
@@ -27,6 +22,10 @@
     width: 300px;
     height: 200px;
     object-fit: cover;
+  }
+
+  img.offline:hover {
+    cursor: default;
   }
 
   .wip {
@@ -50,11 +49,6 @@
   .description {
     margin-right: 10px;
     font-size: 14px;
-  }
-
-  .visit-btns {
-    @include flex(row, auto, auto, auto);
-    @include full-width;
-    gap: 10px;
+    flex-grow: 1;
   }
 }

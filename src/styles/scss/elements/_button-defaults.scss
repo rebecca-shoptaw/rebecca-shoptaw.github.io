@@ -1,0 +1,36 @@
+.button-nofill {
+  @include button($off-white, $off-white, transparent);
+  @include animate-any(filter);
+  @include transparent-underline;
+
+  &:hover {
+    @include transparent-underline;
+    color: $full-white;
+    filter: brightness(3);
+  }
+}
+
+.button-fill {
+  @include button(#000, $off-white, $off-white);
+  @include animate-any(filter);
+  @include transparent-underline;
+
+  &:hover {
+    @include transparent-underline;
+    color: #000;
+    filter: brightness(1.5);
+  }
+}
+
+.btns-wrap {
+  @include full-width;
+  gap: 10px;
+}
+
+.bio .btns-wrap {
+  @include flex(row, auto, auto, auto);
+}
+
+.project-tile .btns-wrap {
+  @include flex(column, auto, auto, auto);
+}

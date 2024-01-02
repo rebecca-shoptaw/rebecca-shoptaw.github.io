@@ -12,19 +12,19 @@ const About = () => {
       <div className="section-body">
         <h1 className="section-title">About</h1>
         <div className="bio tile">
-          <span id="bio-block">
+          <section id="bio-block">
             <section className="bio-text">
               {BIO_TEXT.map((snippet, index) => (
                 <BioSnippet key={index} text={snippet} />
               ))}
             </section>
-            <Fade className="btns-wrap">
-              <div className="visit-btns">
-                <a className="button-default" href={RESUME_PATH} target="_blank">
+            <Fade>
+              <div className="btns-wrap">
+                <a className="button-nofill" href={RESUME_PATH} target="_blank">
                   Resume
                 </a>
                 <a
-                  className="button-live"
+                  className="button-fill"
                   href="#contact-ref"
                   onClick={resetUrl}
                 >
@@ -32,7 +32,7 @@ const About = () => {
                 </a>
               </div>
             </Fade>
-          </span>
+          </section>
           <Fade>
             <img
               id="bio-img"

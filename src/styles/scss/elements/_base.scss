@@ -1,3 +1,5 @@
+$locator-margin: 100px;
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,27 +24,5 @@ body {
 .locator {
   @include full-width;
   height: 0px;
-  margin-bottom: 100px;
-}
-
-.button-default {
-  @include button($off-white, $off-white, transparent);
-  @include animate-any("filter, color");
-  @include transparent-underline;
-
-  &:hover {
-    @include transparent-underline;
-    color: $full-white;
-    filter: brightness(3);
-  }
-}
-
-.button-live {
-  @include button(#000, $off-white, $off-white);
-  @include animate-any(filter);
-
-  &:hover {
-    color: #000;
-    filter: brightness(1.5);
-  }
+  margin-bottom: $locator-margin;
 }

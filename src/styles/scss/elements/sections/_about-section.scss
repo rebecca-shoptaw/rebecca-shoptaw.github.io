@@ -1,5 +1,5 @@
 .bio {
-  @include flex(row, left, left, space-between);
+  @include flex(row, left, flex-start, space-between);
   @include part-width-centered;
   gap: 15px;
   padding: 20px;
@@ -10,7 +10,7 @@
     margin-top: 15px;
   }
 
-  #bio-text {
+  .bio-text {
     margin-top: 10px;
   }
 }

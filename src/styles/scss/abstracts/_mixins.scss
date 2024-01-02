@@ -55,3 +55,7 @@
   font-size: 14px;
   line-height: 1.8em;
 }
+
+@mixin temp-border {
+  border: 1px solid #fff;
+}

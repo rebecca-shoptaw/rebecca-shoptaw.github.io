@@ -2,6 +2,7 @@
   @include full-width;
   height: auto;
   min-width: 281px;
+  margin-bottom: calc(25px - $locator-margin);
 
   .section-body {
     background-color: $semi-transparent;
@@ -10,7 +11,6 @@
 
     .section-title {
       @include part-width-centered;
-      
       color: $full-white;
       padding-top: 10px;
       border-bottom: 0.5px solid $off-white;
@@ -26,16 +26,22 @@
 }
 
 .tile {
+  @include animate-any(background-color);
   background-color: $fully-transparent;
   color: $off-white;
 
   > * {
+    @include animate-any(color);
     color: $off-white;
   }
 
   img,
   .letter-wrap {
     @include off-white-border;
+  }
+
+  img {
+    @include animate-any(filter);
   }
 
   &:hover {

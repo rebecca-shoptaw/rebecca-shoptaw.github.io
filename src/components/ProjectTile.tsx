@@ -15,10 +15,19 @@ const ProjectTile = (props: ProjectTileProps) => {
         itemType="https://schema.org/WebSite"
       >
         <div className="img-wrapper">
-          <a href={project.id != "portfolio" ? `/${project.id}/` : `/`}>
+          <a
+            href={
+              !project.offline
+                ? project.id != "portfolio"
+                  ? `/${project.id}/`
+                  : `/`
+                : ""
+            }
+          >
             <img
               id={`${project.id}-img`}
               src={`./${project.id}.png`}
+              className={project.offline ? "offline" : ""}
               alt={project.img_alt}
               loading="lazy"
             />
@@ -29,9 +38,11 @@ const ProjectTile = (props: ProjectTileProps) => {
           <p>
             <a
               href={
-                project.id != "portfolio"
-                  ? `/${project.id}/`
-                  : `${GIT_LINK}/${project.id}`
+                !project.offline
+                  ? project.id != "portfolio"
+                    ? `/${project.id}/`
+                    : `${GIT_LINK}/${project.id}`
+                  : ""
               }
               className="project-link"
             >
@@ -52,21 +63,23 @@ const ProjectTile = (props: ProjectTileProps) => {
           </p>
         </div>
 
-        <div className="visit-btns btns-wrap">
-          <a
-            href={`${GIT_LINK}/${project.id}/`}
-            target="_blank"
-            className="button-default"
-          >
-            Code
-          </a>
-          <a
-            href={project.id != "portfolio" ? `/${project.id}/` : `/`}
-            className="button-live"
-          >
-            Live
-          </a>
-        </div>
+        {!project.offline && (
+          <div className="btns-wrap">
+            <a
+              href={`${GIT_LINK}/${project.id}/`}
+              target="_blank"
+              className="button-nofill"
+            >
+              Code
+            </a>
+            <a
+              href={project.id != "portfolio" ? `/${project.id}/` : `/`}
+              className="button-fill"
+            >
+              Live
+            </a>
+          </div>
+        )}
       </div>
     </Fade>
   );
