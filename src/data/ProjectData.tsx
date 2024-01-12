@@ -2,13 +2,6 @@ import { ProjectInfo } from "../types/Types";
 
 const projects: ProjectInfo[] = [
   {
-    id: `open-editions`,
-    title: `Open Editions`,
-    img_alt: `Audiobook playlist with romantic painting in the background.`,
-    description: `A minimalist and aesthetically pleasing audiobook player, which combines public domain audiobook recordings of classic novels with customized cover images . Built with Typescript, React and the Librivox API.`,
-    wip: true,
-  },
-  {
     id: `triolingo`,
     title: `Triolingo`,
     img_alt: `Duolingo-esque interface with a gray cat.`,
@@ -17,11 +10,10 @@ const projects: ProjectInfo[] = [
     wip: true,
   },
   {
-    id: "calmtube",
-    title: "CalmTube",
-    img_alt: "Simple black search interface.",
-    description:
-      "A minimalist YouTube re-design with a light/dark mode and no distractions. Built with Typescript, React, and the YouTube Data API.",
+    id: `open-editions`,
+    title: `Open Editions`,
+    img_alt: `Audiobook playlist with romantic painting in the background.`,
+    description: `A minimalist and aesthetically pleasing audiobook player, which combines public domain audiobook recordings of classic novels with customized cover images . Built with Typescript, React and the Librivox API.`,
     wip: true,
   },
   {
@@ -30,6 +22,23 @@ const projects: ProjectInfo[] = [
     img_alt: `Black and white interface with drawings of cats playing instruments.`,
     description: `An all-cat jazz band. Built with Typescript and React.`,
   },
+  {
+    id: `ask-oscar-wilde`,
+    title: `Ask Oscar Wilde`,
+    img_alt: `Submission and quote boxes on a William Morris print.`,
+    description: `A dynamic site in which Oscar Wilde aphorisms appear in
+          response to user predicaments. Built with Typescript, React and GSAP.`,
+  },
+
+  {
+    id: "calmtube",
+    title: "CalmTube",
+    img_alt: "Simple black search interface.",
+    description:
+      "A minimalist YouTube re-design with a light/dark mode and no distractions. Built with Typescript, React, and the YouTube Data API.",
+    wip: true,
+  },
+
   {
     id: `pomodoro`,
     title: `Pomodoro`,
@@ -45,13 +54,7 @@ const projects: ProjectInfo[] = [
     wip: true,
     offline: true,
   },
-  {
-    id: `ask-oscar-wilde`,
-    title: `Ask Oscar Wilde`,
-    img_alt: `Submission and quote boxes on a William Morris print.`,
-    description: `A dynamic site in which Oscar Wilde aphorisms appear in
-          response to user predicaments.`,
-  },
+
   {
     id: `deco-calculator`,
     title: `Deco Calculator`,
@@ -62,7 +65,7 @@ const projects: ProjectInfo[] = [
     id: `tabula-rasa`,
     title: `Tabula Rasa`,
     img_alt: `Simple white text entry and preview windows.`,
-    description: `A minimal and elegant responsive markdown previewer.`,
+    description: `A minimal and elegant responsive markdown previewer. Built with Typescript and React.`,
   },
 
   {
