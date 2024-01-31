@@ -1,8 +1,7 @@
 import { Fade } from "react-awesome-reveal";
 import { useReset } from "../hooks/useReset";
 import { RESUME_PATH } from "../data/SiteLinks";
-import { BIO_TEXT } from "../data/BioText";
-import BioSnippet from "./BioSnippet";
+import BioText from "./BioText";
 
 const About = () => {
   const resetUrl = useReset();
@@ -13,11 +12,7 @@ const About = () => {
         <h1 className="section-title">About</h1>
         <div className="bio tile">
           <section id="bio-block">
-            <section className="bio-text">
-              {BIO_TEXT.map((snippet, index) => (
-                <BioSnippet key={index} text={snippet} />
-              ))}
-            </section>
+            <BioText />
             <Fade>
               <div className="btns-wrap">
                 <a className="button-nofill" href={RESUME_PATH} target="_blank">
