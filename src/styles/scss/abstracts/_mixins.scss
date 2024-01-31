@@ -23,6 +23,11 @@
   text-decoration: underline $transparent-white;
 }
 
+@mixin subtle-underline {
+  text-decoration: underline 0.1px #ffffff88;
+  text-underline-offset: 3px;
+}
+
 @mixin full-width {
   width: 100%;
 }

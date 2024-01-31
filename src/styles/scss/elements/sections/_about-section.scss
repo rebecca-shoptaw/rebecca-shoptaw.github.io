@@ -12,5 +12,21 @@
 
   .bio-text {
     margin-top: 10px;
+
+    a {
+      @include animate-any('underline, color');
+      @include subtle-underline;
+      color: $off-white;
+
+      &:hover {
+        text-decoration: underline $transparent-white 0.5px;
+      }
+    }
+
+    .bold {
+      font-weight: 800;
+    }
   }
+
+  
 }

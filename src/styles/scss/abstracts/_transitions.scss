@@ -10,6 +10,10 @@ $anim-time: 0.3s;
   transition: text-decoration-color $anim-time;
 }
 
+@mixin animate-underline-disappear {
+  transition: text-decoration-color $anim-time;
+}
+
 @mixin animate-brightness {
   transition: filter $anim-time;
 }

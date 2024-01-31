@@ -226,7 +226,7 @@ nav .nav-content .welcome-link:hover {
   background-color: rgba(0, 0, 0, 0.9333333333);
   color: #fff;
 }
-.tile:hover > * {
+.tile:hover > *, .tile:hover .inline-link {
   color: #fff;
   border-color: #fff;
 }
@@ -431,6 +431,19 @@ nav .nav-content .welcome-link:hover {
 }
 .bio .bio-text {
   margin-top: 10px;
+}
+.bio .bio-text a {
+  transition-property: "underline, color";
+  transition-duration: 0.3s;
+  text-decoration: underline 0.1px rgba(255, 255, 255, 0.5333333333);
+  text-underline-offset: 3px;
+  color: #ddd;
+}
+.bio .bio-text a:hover {
+  text-decoration: underline rgba(255, 255, 255, 0) 0.5px;
+}
+.bio .bio-text .bold {
+  font-weight: 800;
 }
 
 /*# sourceMappingURL=styles.css.map */
