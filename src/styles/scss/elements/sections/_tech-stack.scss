@@ -1,0 +1,17 @@
+.tech-section {
+  @include flex(column, center, center, auto);
+  margin-bottom: 30px;
+}
+
+.tech-logos {
+  @include flex(row, auto, auto, auto);
+  gap: 10px;
+  margin-top: -15px;
+
+  .logo {
+    @include animate-any(opacity);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

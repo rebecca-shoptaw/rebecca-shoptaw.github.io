@@ -69,9 +69,24 @@
   }
 
   .bio {
-    flex-direction: column-reverse !important;
     align-items: center !important;
     font-size: 15px;
+
+    .bio-img-text {
+      flex-direction: column-reverse !important;
+    }
+
+    .tech-section {
+      align-items: center;
+    }
+
+    .tech-logos {
+      margin-top: -5px;
+    }
+
+    .btns-locator {
+      max-width: 90% !important;
+    }
   }
 
   .project-links {

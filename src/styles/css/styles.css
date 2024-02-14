@@ -56,9 +56,20 @@
     flex-direction: column !important;
   }
   .bio {
-    flex-direction: column-reverse !important;
     align-items: center !important;
     font-size: 15px;
+  }
+  .bio .bio-img-text {
+    flex-direction: column-reverse !important;
+  }
+  .bio .tech-section {
+    align-items: center;
+  }
+  .bio .tech-logos {
+    margin-top: -5px;
+  }
+  .bio .btns-locator {
+    max-width: 90% !important;
   }
   .project-links {
     margin: 0px !important;
@@ -192,9 +203,9 @@ nav .nav-content .welcome-link:hover {
 .section-wrap .section-body .section-title {
   width: 95%;
   margin: 0 auto;
+  border-bottom: 0.5px solid #ddd;
   color: #fff;
   padding-top: 10px;
-  border-bottom: 0.5px solid #ddd;
   font-size: 25px;
   text-align: center;
   line-height: 2em;
@@ -226,13 +237,21 @@ nav .nav-content .welcome-link:hover {
   background-color: rgba(0, 0, 0, 0.9333333333);
   color: #fff;
 }
-.tile:hover > *, .tile:hover .inline-link {
+.tile:hover > *,
+.tile:hover .inline-link {
   color: #fff;
   border-color: #fff;
 }
 .tile:hover img {
   border: 1px solid #fff;
   filter: brightness(1.1);
+}
+
+.divider {
+  border-bottom: 0.5px solid #ddd;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0.5;
 }
 
 .button-nofill {
@@ -415,10 +434,10 @@ nav .nav-content .welcome-link:hover {
 
 .bio {
   display: flex;
-  flex-direction: row;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: auto;
+  align-items: center;
+  justify-content: center;
   width: 95%;
   margin: 0 auto;
   gap: 15px;
@@ -428,6 +447,15 @@ nav .nav-content .welcome-link:hover {
   width: 200px;
   height: 267px;
   margin-top: 15px;
+}
+.bio .bio-img-text {
+  display: flex;
+  flex-direction: row;
+  text-align: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 700px;
 }
 .bio .bio-text {
   margin-top: 10px;
@@ -444,6 +472,43 @@ nav .nav-content .welcome-link:hover {
 }
 .bio .bio-text .bold {
   font-weight: 800;
+}
+.bio .btns-locator {
+  max-width: 300px;
+  margin: 20px auto;
+}
+.bio .btns-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: auto;
+  align-items: auto;
+  justify-content: auto;
+}
+
+.tech-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: auto;
+  margin-bottom: 30px;
+}
+
+.tech-logos {
+  display: flex;
+  flex-direction: row;
+  text-align: auto;
+  align-items: auto;
+  justify-content: auto;
+  gap: 10px;
+  margin-top: -15px;
+}
+.tech-logos .logo {
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+.tech-logos .logo:hover {
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=styles.css.map */
