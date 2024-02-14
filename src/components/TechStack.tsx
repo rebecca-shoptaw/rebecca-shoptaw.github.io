@@ -12,7 +12,7 @@ const TechStack = () => {
           <Fade>
             <section className="tech-logos">
               {section.elements.map((elem) => (
-                <a href={elem.url} target="_blank">
+                <a href={elem.url} target="_blank" title={elem.title}>
                   <svg
                     role="img"
                     key={elem.title}
