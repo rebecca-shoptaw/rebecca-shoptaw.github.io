@@ -1,6 +1,4 @@
 import { Fade } from "react-awesome-reveal";
-import TechStack from "./TechStack";
-
 const BioText = () => {
   return (
     <section className="bio-text">
