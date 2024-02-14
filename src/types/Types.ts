@@ -35,3 +35,15 @@ export type NavItemInfo = {
   class: string;
   ref: string;
 };
+
+export type TechElement = {
+  title: string;
+  path: string;
+  color: string,
+  url: string;
+};
+
+export type TechStackSection = {
+  header: string;
+  elements: TechElement[];
+};
