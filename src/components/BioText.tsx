@@ -11,8 +11,8 @@ const BioText = () => {
       </Fade>
       <Fade>
         <p>
-          I'm currently working as a freelance frontend engineer and on the
-          Internet Archive's open-source{" "}
+          I'm currently building modern, seamless artist portfolios at filmfolio
+          and working on the Internet Archive's{" "}
           <a
             className="inline-link"
             href="https://github.com/internetarchive/openlibrary"
