@@ -39,11 +39,17 @@ export type NavItemInfo = {
 export type TechElement = {
   title: string;
   path: string;
-  color: string,
+  color: string;
   url: string;
 };
 
 export type TechStackSection = {
   header: string;
   elements: TechElement[];
+};
+
+export type ExperienceItem = {
+  logo: string;
+  title: string;
+  description: string;
 };
