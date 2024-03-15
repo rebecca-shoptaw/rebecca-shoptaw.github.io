@@ -11,8 +11,7 @@ const BioText = () => {
       </Fade>
       <Fade>
         <p>
-          I'm currently building modern, seamless artist portfolios at filmfolio
-          and working on the Internet Archive's{" "}
+          Currently working freelance and on the Internet Archive's{" "}
           <a
             className="inline-link"
             href="https://github.com/internetarchive/openlibrary"
@@ -20,7 +19,7 @@ const BioText = () => {
           >
             Open Library
           </a>{" "}
-          project.{" "}
+          project.
         </p>
       </Fade>
     </section>
