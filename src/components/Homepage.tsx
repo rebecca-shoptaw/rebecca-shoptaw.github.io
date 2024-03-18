@@ -16,7 +16,7 @@ const Homepage = () => {
         <section id="welcome-section" className="section-wrap">
           <section className="title">
             <h1>Rebecca Shoptaw</h1>
-            <h2>Frontend Engineer</h2>
+            <h2>Software Engineer</h2>
           </section>
         </section>
         <div id="about-ref" className="locator"></div>
