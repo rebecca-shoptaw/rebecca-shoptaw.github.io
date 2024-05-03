@@ -71,6 +71,10 @@
   .bio .btns-locator {
     max-width: 90% !important;
   }
+  .tech-section-wrap {
+    margin: 0px !important;
+    width: 100% !important;
+  }
   .project-links {
     margin: 0px !important;
   }

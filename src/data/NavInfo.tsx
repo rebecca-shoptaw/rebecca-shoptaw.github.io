@@ -7,6 +7,11 @@ export const NavInfo: NavItemInfo[] = [
     ref: "#about-ref",
   },
   {
+    title: "Tech",
+    class: "nav-link",
+    ref: "#techstack-ref",
+  },
+  {
     title: "Work",
     class: "nav-link",
     ref: "#projects-ref",
