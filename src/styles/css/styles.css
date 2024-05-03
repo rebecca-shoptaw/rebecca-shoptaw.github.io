@@ -485,6 +485,11 @@ nav .nav-content .welcome-link:hover {
   justify-content: auto;
 }
 
+.tech-section-wrap {
+  padding: 20px 0px;
+  margin: 0px 30px;
+}
+
 .tech-section {
   display: flex;
   flex-direction: column;
@@ -501,7 +506,6 @@ nav .nav-content .welcome-link:hover {
   align-items: auto;
   justify-content: auto;
   gap: 10px;
-  margin-top: -15px;
 }
 .tech-logos .logo {
   transition-property: opacity;

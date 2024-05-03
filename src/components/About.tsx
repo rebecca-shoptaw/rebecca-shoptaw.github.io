@@ -2,7 +2,6 @@ import { Fade } from "react-awesome-reveal";
 import { useReset } from "../hooks/useReset";
 import { RESUME_PATH } from "../data/SiteLinks";
 import BioText from "./BioText";
-import TechStack from "./TechStack";
 
 const About = () => {
   const resetUrl = useReset();
@@ -38,10 +37,6 @@ const About = () => {
                 </a>
               </div>
             </Fade>
-            <Fade>
-              <div className="divider" />
-            </Fade>
-            <TechStack />
           </section>
         </div>
       </div>

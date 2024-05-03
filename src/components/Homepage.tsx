@@ -4,6 +4,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 
 import { useAnimation } from "../hooks/useAnimation";
+import TechStack from "./TechStack";
 
 const Homepage = () => {
   const animateIntro = useAnimation();
@@ -21,6 +22,8 @@ const Homepage = () => {
         </section>
         <div id="about-ref" className="locator"></div>
         <About />
+        <div id="techstack-ref" className="locator"></div>
+        <TechStack />
         <div id="projects-ref" className="locator"></div>
         <Projects />
         <div id="contact-ref" className="locator"></div>

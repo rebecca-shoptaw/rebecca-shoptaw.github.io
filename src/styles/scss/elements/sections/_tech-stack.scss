@@ -1,3 +1,8 @@
+.tech-section-wrap {
+  padding: 20px 0px;
+  margin: 0px 30px;
+}
+
 .tech-section {
   @include flex(column, center, center, auto);
   margin-bottom: 30px;
@@ -6,7 +11,6 @@
 .tech-logos {
   @include flex(row, auto, auto, auto);
   gap: 10px;
-  margin-top: -15px;
 
   .logo {
     @include animate-any(opacity);
