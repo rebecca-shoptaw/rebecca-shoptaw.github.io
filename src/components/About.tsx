@@ -24,10 +24,6 @@ const About = () => {
                 />
               </Fade>
             </section>
-            <Fade>
-              <div className="divider" />
-            </Fade>
-            <TechStack />
             <Fade className="btns-locator">
               <div className="btns-wrap">
                 <a className="button-nofill" href={RESUME_PATH} target="_blank">
@@ -42,6 +38,10 @@ const About = () => {
                 </a>
               </div>
             </Fade>
+            <Fade>
+              <div className="divider" />
+            </Fade>
+            <TechStack />
           </section>
         </div>
       </div>

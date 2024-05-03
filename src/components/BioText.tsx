@@ -4,14 +4,15 @@ const BioText = () => {
     <section className="bio-text">
       <Fade>
         <p>
-          Hello! My name is Rebecca and I'm an NYC-based software engineer and
-          filmmaker with a track record of realizing ambitious projects with
-          both rapid speed 🚀 and minute precision 🔎
+          Hello! My name is Rebecca and I'm an NYC-based software engineer with
+          a track record of realizing ambitious projects with both rapid speed
+          🚀 and minute precision 🔎
         </p>
       </Fade>
       <Fade>
         <p>
-          Currently working freelance and on the Internet Archive's{" "}
+          I am currently an Engineering Fellow and Frontend/Internationalization
+          Lead on the Internet Archive's{" "}
           <a
             className="inline-link"
             href="https://github.com/internetarchive/openlibrary"
@@ -19,7 +20,18 @@ const BioText = () => {
           >
             Open Library
           </a>{" "}
-          project.
+          project. 👩‍💻📚
+          <br></br>
+          <br></br>
+          You can see my latest contributions{" "}
+          <a
+            className="inline-link"
+            href="https://github.com/internetarchive/openlibrary/issues?q=author%3Arebecca-shoptaw"
+            target="_blank"
+          >
+            here
+          </a>
+          .
         </p>
       </Fade>
     </section>
