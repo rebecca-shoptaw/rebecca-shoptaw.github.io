@@ -1,11 +1,14 @@
 .tech-section-wrap {
-  padding: 20px 0px;
-  margin: 0px 30px;
+  display: grid;
+  justify-content: center;
+  gap: 10px;
 }
 
 .tech-section {
-  @include flex(column, center, center, auto);
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
 }
 
 .tech-logos {
