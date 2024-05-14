@@ -1,44 +1,13 @@
 .bio {
-  @include flex(column, auto, center, center);
-  gap: 15px;
-  padding: 20px;
-
-  #bio-img {
-    width: 200px;
-    height: 267px;
-    margin-top: 15px;
+  .bold {
+    font-weight: 800;
   }
 
-  .bio-img-text {
-    @include flex(row, auto, center, center);
-    gap: 20px;
-    max-width: 700px;
+  li::marker {
+    color: $text-muted;
   }
 
-  .bio-text {
-    margin-top: 10px;
-
-    a {
-      @include animate-any("underline, color");
-      @include subtle-underline;
-      color: $off-white;
-
-      &:hover {
-        text-decoration: underline $transparent-white 0.5px;
-      }
-    }
-
-    .bold {
-      font-weight: 800;
-    }
-  }
-
-  .btns-locator {
-    max-width: 300px;
-    margin: 20px auto;
-  }
-
-  .btns-wrap {
-    @include flex(column, auto, auto, auto);
+  strong {
+    font-weight: 700;
   }
 }

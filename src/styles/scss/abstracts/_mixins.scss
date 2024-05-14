@@ -1,15 +1,3 @@
-@mixin off-white-text {
-  color: $off-white;
-}
-
-@mixin off-white-border {
-  border: 1px solid $off-white;
-}
-
-@mixin full-white-border {
-  border: 1px solid $full-white;
-}
-
 @mixin transparent-underline {
   text-decoration: underline $transparent-white;
 }

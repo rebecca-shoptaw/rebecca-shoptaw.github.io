@@ -1,38 +1,48 @@
+import { BioInfo, BioValues } from "../data/BioLists";
+
 const About = () => {
   return (
     <section id="about" className="section-wrap">
       <div className="section-body">
         <h1 className="section-title">About</h1>
 
-        <section className="bio-text">
+        <section className="bio-text bio">
           <p>
             Hello! My name is Rebecca and I'm an NYC-based software engineer
             with a track record of realizing ambitious projects with rapid speed
-            🚀 and minute precision 🔎.
+            and minute precision.
           </p>
-
-          <p>
-            I am currently an Engineering Fellow and
-            Frontend/Internationalization Lead on the Internet Archive's{" "}
-            <a
-              className="inline-link"
-              href="https://github.com/internetarchive/openlibrary"
-              target="_blank"
-            >
-              Open Library
-            </a>{" "}
-            project. 👩‍💻📚
-            <br></br>
-            <br></br>
-            You can see my latest contributions{" "}
-            <a
-              className="inline-link"
-              href="https://github.com/internetarchive/openlibrary/issues?q=author%3Arebecca-shoptaw"
-              target="_blank"
-            >
-              here
-            </a>
-          </p>
+          <ul>
+            {BioInfo.map((item) => (
+              <li key={item.icon} className="bio_list_item">
+                {item.icon} <strong>{item.title}</strong> -{" "}
+                {item.link ? (
+                  <a href={item.link} target="_blank" className="inline-link">
+                    {item.text}
+                  </a>
+                ) : (
+                  item.text
+                )}
+              </li>
+            ))}
+          </ul>
+          <p>I'm a big believer in:</p>
+          <ul>
+            {BioValues.map((item) => (
+              <li key={item.icon} className="bio_list_item">
+                {item.icon} <strong>{item.title}</strong> - {item.text}
+              </li>
+            ))}
+          </ul>
+          You can find my latest Internet Archive contributions{" "}
+          <a
+            className="inline-link"
+            href="https://github.com/internetarchive/openlibrary/issues?q=author%3Arebecca-shoptaw"
+            target="_blank"
+          >
+            here
+          </a>
+          , and my recent projects and experience are featured below.
         </section>
       </div>
     </section>

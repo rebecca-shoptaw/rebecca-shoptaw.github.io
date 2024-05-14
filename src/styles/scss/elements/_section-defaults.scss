@@ -12,8 +12,7 @@
 
     .section-title {
       border-bottom: 1px solid $border-color-muted;
-      padding-top: 10px;
-      font-size: 25px;
+      font-size: 21px;
       text-align: center;
       line-height: 2em;
       margin-bottom: 16px;
@@ -35,11 +34,6 @@
     color: $off-white;
   }
 
-  img,
-  .letter-wrap {
-    @include off-white-border;
-  }
-
   img {
     @include animate-any(filter);
   }
@@ -47,14 +41,7 @@
   &:hover {
     color: $full-white;
 
-    > *,
-    .inline-link {
-      color: $full-white;
-      border-color: $full-white;
-    }
-
     img {
-      @include full-white-border;
       filter: brightness(1.1);
     }
   }
