@@ -7,22 +7,15 @@ html {
 * {
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
-}
-
-%body-setup {
-  @include background-design;
-  @include off-white-text;
-  @include full-width;
+  color: $text-default;
 }
 
 body {
-  @extend %body-setup;
+  background: linear-gradient($background-color-dark, $background-color-blue);
   margin: 0;
   padding: 0;
 }
 
-.locator {
-  @include full-width;
-  height: 0px;
-  margin-bottom: $locator-margin;
+main {
+  padding-top: 24px;
 }

@@ -1,6 +1,5 @@
 .bio {
   @include flex(column, auto, center, center);
-  @include part-width-centered;
   gap: 15px;
   padding: 20px;
 

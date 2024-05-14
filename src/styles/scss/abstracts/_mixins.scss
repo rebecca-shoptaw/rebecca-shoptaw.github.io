@@ -1,22 +1,9 @@
-@mixin background-design {
-  background-image: url("/homepage-background.jpg");
-  background-color: $background-multiply;
-  background-blend-mode: multiply;
-  background-size: 130%;
-  background-position: 0% 3%;
-  background-attachment: fixed;
-}
-
 @mixin off-white-text {
   color: $off-white;
 }
 
 @mixin off-white-border {
   border: 1px solid $off-white;
-}
-
-@mixin off-white-border-bottom {
-  border-bottom: 0.5px solid $off-white;
 }
 
 @mixin full-white-border {
@@ -36,23 +23,12 @@
   width: 100%;
 }
 
-@mixin part-width-centered {
-  width: 95%;
-  margin: 0 auto;
-}
-
 @mixin flex($direction, $text, $align, $justify) {
   display: flex;
   flex-direction: $direction;
   text-align: $text;
   align-items: $align;
   justify-content: $justify;
-}
-
-@mixin nav-link-default {
-  @include transparent-underline;
-  color: $full-white;
-  text-underline-offset: 3px;
 }
 
 @mixin button($text, $border, $background-color) {

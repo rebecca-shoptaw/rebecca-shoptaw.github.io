@@ -2,21 +2,21 @@
   @include full-width;
   height: auto;
   min-width: 281px;
-  margin-bottom: calc(25px - $locator-margin);
+  margin-bottom: 28px;
 
   .section-body {
-    background-color: $semi-transparent;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-medium;
     margin: 0px 30px;
-    padding-bottom: 40px;
+    padding: 24px;
 
     .section-title {
-      @include part-width-centered;
-      @include off-white-border-bottom;
-      color: $full-white;
+      border-bottom: 1px solid $border-color-muted;
       padding-top: 10px;
       font-size: 25px;
       text-align: center;
       line-height: 2em;
+      margin-bottom: 16px;
     }
   }
 
@@ -45,7 +45,6 @@
   }
 
   &:hover {
-    background-color: $mostly-opaque;
     color: $full-white;
 
     > *,
