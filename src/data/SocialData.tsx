@@ -1,5 +1,5 @@
 import { SocialInfo } from "../types/Types";
-import { RESUME_PATH } from "./SiteLinks";
+import { RESUME_PATH } from "./constants";
 
 const SOCIAL_LINKS: SocialInfo[] = [
   {

@@ -53,3 +53,10 @@ export type ExperienceItem = {
   title: string;
   description: string;
 };
+
+export type BioItem = {
+  icon: string;
+  title: string;
+  text: string;
+  link?: string;
+};
