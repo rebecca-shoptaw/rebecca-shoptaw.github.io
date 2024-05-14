@@ -1,32 +1,15 @@
-import Nav from "./Nav";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
-
-import { useAnimation } from "../hooks/useAnimation";
 import TechStack from "./TechStack";
 
 const Homepage = () => {
-  const animateIntro = useAnimation();
-  animateIntro();
-
   return (
     <>
-      <Nav />
       <main>
-        <section id="welcome-section" className="section-wrap">
-          <section className="title">
-            <h1>Rebecca Shoptaw</h1>
-            <h2>Software Engineer</h2>
-          </section>
-        </section>
-        <div id="about-ref" className="locator"></div>
         <About />
-        <div id="techstack-ref" className="locator"></div>
         <TechStack />
-        <div id="projects-ref" className="locator"></div>
         <Projects />
-        <div id="contact-ref" className="locator"></div>
         <Contact />
       </main>
     </>
