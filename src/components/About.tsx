@@ -1,4 +1,4 @@
-import { BioInfo, BioValues } from "../data/BioLists";
+import { BioValues } from "../data/BioLists";
 
 const About = () => {
   return (
@@ -12,20 +12,7 @@ const About = () => {
             with a track record of realizing ambitious projects with rapid speed
             and minute precision.
           </p>
-          <ul>
-            {BioInfo.map((item) => (
-              <li key={item.icon} className="bio_list_item">
-                {item.icon} <strong>{item.title}</strong> -{" "}
-                {item.link ? (
-                  <a href={item.link} target="_blank" className="inline-link">
-                    {item.text}
-                  </a>
-                ) : (
-                  item.text
-                )}
-              </li>
-            ))}
-          </ul>
+          <p>Engineering fellow @ Internet Archive</p>
           <p>I'm a big believer in:</p>
           <ul>
             {BioValues.map((item) => (

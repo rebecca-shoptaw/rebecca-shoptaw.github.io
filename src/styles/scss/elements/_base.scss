@@ -19,8 +19,12 @@ body {
   padding: 0;
 }
 
-main {
+#site-body {
   padding-top: 24px;
+}
+
+main {
+  margin-left: $sidenav-width;
 }
 
 .muted-text {
