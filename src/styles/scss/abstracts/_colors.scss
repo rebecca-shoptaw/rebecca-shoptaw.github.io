@@ -21,3 +21,7 @@ $btn-default-hover: #292e36;
 $border-radius-medium: 0.375rem;
 
 $sidenav-width: 300px;
+
+$image-width: 175px;
+$bio-width: 35vw;
+$box-width: calc($image-width + $bio-width + 24px);

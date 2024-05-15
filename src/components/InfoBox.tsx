@@ -26,9 +26,9 @@ const InfoBox = () => {
           </div>
         </section>
         <div className="divider"></div>
-        <ul className="infobox-icons">
+        <ul className="infobox-icons icon-list">
           {InfoBoxList.map((item) => (
-            <li className="infobox-icon" key={item.id}>
+            <li className="infobox-icon list-icon" key={item.id}>
               {item.icon}{" "}
               {item.link ? (
                 <a href={item.link} target="_blank" className="infobox-link">

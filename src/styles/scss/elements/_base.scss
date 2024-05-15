@@ -37,10 +37,33 @@ main {
 
 .inline-link {
   @include animate-any(color);
-  color: $text-muted;
+  color: $text-default;
   text-decoration: none;
 
   &:hover {
-    color: $text-default;
+    color: $text-muted;
+  }
+}
+
+.icon-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  svg {
+    fill: $text-muted;
+  }
+}
+
+.list-icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+
+  > * {
+    margin-bottom: 0px;
+    font-size: 13px;
   }
 }

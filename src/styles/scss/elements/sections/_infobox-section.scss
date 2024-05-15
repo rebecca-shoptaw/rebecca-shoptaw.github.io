@@ -1,6 +1,4 @@
-$image-width: 175px;
-$bio-width: 35vw;
-$box-width: calc($image-width + $bio-width + 24px);
+
 
 #infobox {
   @include animate-any(all);
@@ -15,24 +13,6 @@ $box-width: calc($image-width + $bio-width + 24px);
     border: 1px solid $border-color;
   }
 
-  .infobox-icons {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  .infobox-icon {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
-
-    > * {
-      margin-bottom: 0px;
-      font-size: 13px;
-    }
-  }
-
   .infobox-link {
     @include animate-any(color);
     text-decoration: none;
@@ -41,10 +21,6 @@ $box-width: calc($image-width + $bio-width + 24px);
     &:hover {
       color: $text-muted;
     }
-  }
-
-  svg {
-    fill: $text-muted;
   }
 
   button {

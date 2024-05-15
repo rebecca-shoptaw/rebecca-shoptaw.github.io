@@ -8,6 +8,14 @@
     margin: 0px 30px;
     padding: 24px;
 
+    &.floating {
+      border: 0px;
+
+      .section-title {
+        border-bottom: 0px;
+      }
+    }
+
     .section-title {
       border-bottom: 1px solid $border-color-muted;
       font-size: 21px;

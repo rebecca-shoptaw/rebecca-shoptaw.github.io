@@ -55,7 +55,7 @@ export type ExperienceItem = {
 };
 
 export type BioItem = {
-  icon: string;
+  icon: JSX.Element;
   title: string;
   text: string;
   link?: string;
