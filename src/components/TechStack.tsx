@@ -3,33 +3,33 @@ import { TechData } from "../data/TechData";
 const TechStack = () => {
   return (
     <section id="techstack" className="section-wrap">
-      <div className="section-body">
-        <h1 className="section-title">Tech Stack</h1>
-        <div className="tech-section-wrap tile">
+      <div className="section-body floating">
+        <h2 className="section-title">A few things I use:</h2>
+        <section className="tech-lists">
           {TechData.map((section, index) => (
-            <section className="tech-section" key={index}>
-              <section className="tech-logos">
-                {section.elements.map((elem) => (
-                  <a href={elem.url} target="_blank" title={elem.title}>
+            <ul className="icon-list" key={index}>
+              <p className="tech-list-header">{section.header}</p>
+              {section.elements.map((elem) => (
+                <a href={elem.url} target="_blank" title={elem.title}>
+                  <li className="list-icon">
                     <svg
                       role="img"
                       key={elem.title}
                       className="logo"
-                      fill={elem.color}
-                      width="20px"
+                      width="16px"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <title>{elem.title}</title>
                       <path d={elem.path} />
                     </svg>
-                  </a>
-                ))}
-              </section>
-              <p className="muted-text">[{section.header}]</p>
-            </section>
+                    <span className="tech-name">{elem.title}</span>
+                  </li>
+                </a>
+              ))}
+            </ul>
           ))}
-        </div>
+        </section>
       </div>
     </section>
   );

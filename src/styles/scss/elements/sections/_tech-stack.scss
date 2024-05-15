@@ -1,24 +1,27 @@
-.tech-section-wrap {
-  display: grid;
-  justify-content: center;
-  gap: 10px;
-}
-
-.tech-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 100px;
-}
-
-.tech-logos {
-  @include flex(row, auto, auto, auto);
-  gap: 10px;
-
-  .logo {
+#techstack {
+  .logo,
+  .tech-name {
     @include animate-any(opacity);
-    &:hover {
+    color: $text-muted;
+  }
+
+  a:hover {
+    .logo,
+    .tech-name {
       opacity: 0.7;
     }
+  }
+
+  .tech-lists {
+    width: $box-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+
+  .tech-list-header {
+    margin-bottom: 3px;
   }
 }

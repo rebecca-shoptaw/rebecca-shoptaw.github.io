@@ -142,11 +142,32 @@ main {
 .inline-link {
   transition-property: color;
   transition-duration: 0.3s;
-  color: #848d97;
+  color: #e6edf3;
   text-decoration: none;
 }
 .inline-link:hover {
-  color: #e6edf3;
+  color: #848d97;
+}
+
+.icon-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.icon-list svg {
+  fill: #848d97;
+}
+
+.list-icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.list-icon > * {
+  margin-bottom: 0px;
+  font-size: 13px;
 }
 
 .section-wrap {
@@ -158,6 +179,12 @@ main {
   border-radius: 0.375rem;
   margin: 0px 30px;
   padding: 24px;
+}
+.section-wrap .section-body.floating {
+  border: 0px;
+}
+.section-wrap .section-body.floating .section-title {
+  border-bottom: 0px;
 }
 .section-wrap .section-body .section-title {
   border-bottom: 1px solid rgba(48, 54, 61, 0.7019607843);
@@ -387,40 +414,38 @@ main {
   font-size: 20px;
 }
 
-.bio li::marker {
-  color: #848d97;
+#about ul {
+  width: calc(175px + 35vw + 24px);
+  margin: 0 auto;
 }
-.bio strong {
-  font-weight: 700;
+#about li,
+#about li > * {
+  font-size: 14px;
 }
-
-.tech-section-wrap {
-  display: grid;
-  justify-content: center;
-  gap: 10px;
-}
-
-.tech-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 100px;
+#about li {
+  margin-bottom: 8px;
 }
 
-.tech-logos {
-  display: flex;
-  flex-direction: row;
-  text-align: auto;
-  align-items: auto;
-  justify-content: auto;
-  gap: 10px;
-}
-.tech-logos .logo {
+#techstack .logo,
+#techstack .tech-name {
   transition-property: opacity;
   transition-duration: 0.3s;
+  color: #848d97;
 }
-.tech-logos .logo:hover {
+#techstack a:hover .logo,
+#techstack a:hover .tech-name {
   opacity: 0.7;
+}
+#techstack .tech-lists {
+  width: calc(175px + 35vw + 24px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+#techstack .tech-list-header {
+  margin-bottom: 3px;
 }
 
 #infobox {
@@ -437,21 +462,6 @@ main {
   transition-duration: 0.3s;
   border: 1px solid #30363d;
 }
-#infobox .infobox-icons {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-#infobox .infobox-icon {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-}
-#infobox .infobox-icon > * {
-  margin-bottom: 0px;
-  font-size: 13px;
-}
 #infobox .infobox-link {
   transition-property: color;
   transition-duration: 0.3s;
@@ -460,9 +470,6 @@ main {
 }
 #infobox .infobox-link:hover {
   color: #848d97;
-}
-#infobox svg {
-  fill: #848d97;
 }
 #infobox button {
   margin-top: 24px;
