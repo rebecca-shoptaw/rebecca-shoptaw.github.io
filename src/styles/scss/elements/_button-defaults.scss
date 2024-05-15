@@ -34,3 +34,18 @@
 .project-tile .btns-wrap {
   @include flex(column, auto, auto, auto);
 }
+
+.btn-default {
+  @include animate-any(background-color);
+  color: $btn-default-fg;
+  background-color: $btn-default-bg;
+  font-weight: 500;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  outline: none;
+  padding: 3px 12px;
+
+  &:hover {
+    background-color: $btn-default-hover;
+  }
+}

@@ -1,0 +1,133 @@
+$image-width: 175px;
+$bio-width: 35vw;
+$box-width: calc($image-width + $bio-width + 24px);
+
+#infobox {
+  @include animate-any(all);
+  .section-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    @include animate-any("size, border-radius");
+    border: 1px solid $border-color;
+  }
+
+  .infobox-icons {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .infobox-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+
+    > * {
+      margin-bottom: 0px;
+      font-size: 13px;
+    }
+  }
+
+  .infobox-link {
+    @include animate-any(color);
+    text-decoration: none;
+    color: $text-default;
+
+    &:hover {
+      color: $text-muted;
+    }
+  }
+
+  svg {
+    fill: $text-muted;
+  }
+
+  button {
+    margin-top: 24px;
+  }
+}
+
+.infobox--full {
+  margin-left: $sidenav-width;
+
+  .infobox-top {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  img {
+    width: $image-width;
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .info-bio {
+    width: $bio-width;
+  }
+
+  .infobox-icons,
+  .divider,
+  button {
+    width: $box-width;
+  }
+}
+
+.infobox--side {
+  position: fixed;
+  width: $sidenav-width;
+
+  .section-body {
+    width: calc($sidenav-width - 24px);
+  }
+
+  .infobox-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: -8px;
+    padding-bottom: 0px;
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+
+  h1 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: $text-muted;
+    font-size: 12px;
+  }
+
+  .info-bio {
+    display: none;
+  }
+
+  .btn-link,
+  .divider,
+  button {
+    width: 100%;
+  }
+}

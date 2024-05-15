@@ -1,6 +1,4 @@
 .section-wrap {
-  @include full-width;
-  height: auto;
   min-width: 281px;
   margin-bottom: 28px;
 
@@ -48,7 +46,7 @@
 }
 
 .divider {
-  border-bottom: 0.5px solid $off-white;
+  border-bottom: 1px solid $border-color-muted;
   padding-top: 20px;
   margin-bottom: 20px;
   opacity: 0.5;

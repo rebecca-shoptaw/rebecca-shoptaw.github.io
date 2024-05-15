@@ -31,6 +31,10 @@ main {
   color: $text-muted;
 }
 
+.bold {
+  font-weight: 800;
+}
+
 .inline-link {
   @include animate-any(color);
   color: $text-muted;
