@@ -15,6 +15,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@gsap/react": "^2.0.2",
+    "@primer/octicons-react": "^19.9.0",
     "@studio-freight/lenis": "^1.0.29",
     "gh-pages": "^6.0.0",
     "gsap": "^3.12.3",
