@@ -1,8 +1,15 @@
 import { BioValues } from "../data/BioLists";
+import useScrollPosition from "../hooks/useScrollPosition";
 
 const About = () => {
+  const pastHero = useScrollPosition(400);
+
   return (
-    <section id="about" className="section-wrap">
+    <section
+      id="about"
+      className="section-wrap"
+      style={pastHero ? { marginTop: "550px" } : {}}
+    >
       <div className="section-body">
         <h1 className="section-title">About</h1>
 

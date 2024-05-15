@@ -2,12 +2,12 @@ import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import TechStack from "./TechStack";
-import SideNav from "./SideNav";
+import InfoBox from "./InfoBox";
 
 const Homepage = () => {
   return (
     <div id="site-body">
-      <SideNav />
+      <InfoBox />
       <main>
         <About />
         <TechStack />
