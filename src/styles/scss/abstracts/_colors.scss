@@ -8,6 +8,7 @@ $fully-transparent: #00000000;
 $transparent-white: #ffffff00;
 
 $text-default: #e6edf3;
+$fg-text-muted: #8d96a0;
 $text-muted: #848d97;
 $border-color: #30363d;
 $border-color-muted: #30363db3;
@@ -25,3 +26,5 @@ $sidenav-width: 300px;
 $image-width: 175px;
 $bio-width: 35vw;
 $box-width: calc($image-width + $bio-width + 24px);
+
+$anim-time: 0.3s;

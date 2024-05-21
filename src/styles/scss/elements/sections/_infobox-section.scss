@@ -1,7 +1,6 @@
-
-
 #infobox {
   @include animate-any(all);
+
   .section-body {
     display: flex;
     flex-direction: column;
@@ -28,7 +27,8 @@
   }
 }
 
-.infobox--full {
+.infobox--full,
+.infobox--spacer {
   margin-left: $sidenav-width;
 
   .infobox-top {
@@ -106,4 +106,8 @@
   button {
     width: 100%;
   }
+}
+
+.infobox--spacer {
+  opacity: 0;
 }

@@ -475,32 +475,41 @@ main {
   margin-top: 24px;
 }
 
-.infobox--full {
+.infobox--full,
+.infobox--spacer {
   margin-left: 300px;
 }
-.infobox--full .infobox-top {
+.infobox--full .infobox-top,
+.infobox--spacer .infobox-top {
   display: flex;
   flex-direction: row;
   gap: 24px;
   align-items: flex-start;
 }
-.infobox--full img {
+.infobox--full img,
+.infobox--spacer img {
   width: 175px;
 }
-.infobox--full h1 {
+.infobox--full h1,
+.infobox--spacer h1 {
   font-size: 18px;
   font-weight: 800;
 }
-.infobox--full h2 {
+.infobox--full h2,
+.infobox--spacer h2 {
   font-size: 14px;
   font-weight: 400;
 }
-.infobox--full .info-bio {
+.infobox--full .info-bio,
+.infobox--spacer .info-bio {
   width: 35vw;
 }
 .infobox--full .infobox-icons,
 .infobox--full .divider,
-.infobox--full button {
+.infobox--full button,
+.infobox--spacer .infobox-icons,
+.infobox--spacer .divider,
+.infobox--spacer button {
   width: calc(175px + 35vw + 24px);
 }
 
@@ -540,6 +549,10 @@ main {
 .infobox--side .divider,
 .infobox--side button {
   width: 100%;
+}
+
+.infobox--spacer {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
