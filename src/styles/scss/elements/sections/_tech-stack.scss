@@ -1,8 +1,7 @@
 #techstack {
   .logo,
   .tech-name {
-    @include animate-any(opacity);
-    color: $text-muted;
+    @include inline-link;
   }
 
   a:hover {

@@ -1,54 +1,64 @@
-.project-links {
-  @include flex(row, left, stretch, center);
-  width: 100%;
-  flex-wrap: wrap;
+.octicon-issue-opened {
+  fill: $fg-color-open;
 }
 
-.project-tile {
-  width: 380px;
-  height: auto;
-  @include flex(column, center, auto, auto);
-  gap: 10px;
-  padding: 40px;
+.octicon-issue-closed {
+  fill: $fg-color-done;
+}
 
-  &:hover {
-    .project-link,
-    .description {
-      color: $full-white;
+.project-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding-left: 12px;
+  padding-bottom: 3px;
+
+  a {
+    @include full-color-link;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.project-body {
+  @include standard-border-rounded;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .project-header {
+    font-weight: 600;
+    border-bottom: 1px solid $border-color-muted;
+    margin-bottom: -6px;
+  }
+
+  .project-visuals {
+    padding: 12px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .project-visual {
+    width: 50%;
+
+    img {
+      @include standard-border-rounded;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
     }
-  }
 
-  img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  img.offline:hover {
-    cursor: default;
-  }
-
-  .wip {
-    margin-top: -20px !important;
-    margin-bottom: 20px !important;
-  }
-
-  .project-link {
-    @include transparent-underline;
-    @include animate-any("text-decoration-color, color");
-    color: $off-white;
-    line-height: 2em;
-    font-size: 17px;
-
-    &:hover {
-      text-decoration: underline $full-white;
-      color: $full-white;
+    code span {
+      font-family: monospace;
+      font-size: 11px;
     }
-  }
 
-  .description {
-    margin-right: 10px;
-    font-size: 14px;
-    flex-grow: 1;
+    a {
+      @include inline-link;
+    }
   }
 }

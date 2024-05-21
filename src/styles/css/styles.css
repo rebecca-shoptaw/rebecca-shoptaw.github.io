@@ -333,59 +333,75 @@ main {
   color: #fff;
 }
 
-.project-links {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  align-items: stretch;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
+.octicon-issue-opened {
+  fill: #f0883e;
 }
 
-.project-tile {
-  width: 380px;
-  height: auto;
+.octicon-issue-closed {
+  fill: #ab7df8;
+}
+
+.project-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding-left: 12px;
+  padding-bottom: 3px;
+}
+.project-title a {
+  transition-property: color;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  color: #e6edf3;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.project-title a:hover {
+  color: #848d97;
+}
+
+.project-body {
+  border: 1px solid #30363d;
+  border-radius: 0.375rem;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: auto;
-  justify-content: auto;
-  gap: 10px;
-  padding: 40px;
+  gap: 8px;
 }
-.project-tile:hover .project-link,
-.project-tile:hover .description {
-  color: #fff;
+.project-body .project-header {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(48, 54, 61, 0.7019607843);
+  margin-bottom: -6px;
 }
-.project-tile img {
-  width: 300px;
-  height: 200px;
+.project-body .project-visuals {
+  padding: 12px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.project-body .project-visual {
+  width: 50%;
+}
+.project-body .project-visual img {
+  border: 1px solid #30363d;
+  border-radius: 0.375rem;
+  width: 100%;
+  aspect-ratio: 16/9;
   object-fit: cover;
 }
-.project-tile img.offline:hover {
-  cursor: default;
+.project-body .project-visual code span {
+  font-family: monospace;
+  font-size: 11px;
 }
-.project-tile .wip {
-  margin-top: -20px !important;
-  margin-bottom: 20px !important;
-}
-.project-tile .project-link {
-  text-decoration: underline rgba(255, 255, 255, 0);
-  transition-property: "text-decoration-color, color";
+.project-body .project-visual a {
+  transition-property: opacity;
   transition-duration: 0.3s;
-  color: #ddd;
-  line-height: 2em;
-  font-size: 17px;
+  color: #848d97;
 }
-.project-tile .project-link:hover {
-  text-decoration: underline #fff;
-  color: #fff;
-}
-.project-tile .description {
-  margin-right: 10px;
-  font-size: 14px;
-  flex-grow: 1;
+.project-body .project-visual a:hover {
+  opacity: 0.7;
 }
 
 #welcome-section {
@@ -431,6 +447,10 @@ main {
   transition-property: opacity;
   transition-duration: 0.3s;
   color: #848d97;
+}
+#techstack .logo:hover,
+#techstack .tech-name:hover {
+  opacity: 0.7;
 }
 #techstack a:hover .logo,
 #techstack a:hover .tech-name {

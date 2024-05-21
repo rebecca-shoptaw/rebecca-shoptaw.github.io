@@ -13,13 +13,7 @@
   }
 
   .infobox-link {
-    @include animate-any(color);
-    text-decoration: none;
-    color: $text-default;
-
-    &:hover {
-      color: $text-muted;
-    }
+    @include full-color-link;
   }
 
   button {
