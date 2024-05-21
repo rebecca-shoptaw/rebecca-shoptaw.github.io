@@ -11,7 +11,13 @@ const ProjectConsiderations = ({
       {considerations.map((item, index) => (
         <div key={index} className="consideration-item list-icon">
           {item.wip ? <DotFillIcon size={16} /> : <CheckIcon size={16} />}
-          <p>{item.text}</p>
+          {item.link ? (
+            <a href={item.link} target="_blank">
+              {item.text}
+            </a>
+          ) : (
+            <p>{item.text}</p>
+          )}
         </div>
       ))}
     </section>

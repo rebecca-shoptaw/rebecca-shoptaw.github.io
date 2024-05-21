@@ -85,6 +85,11 @@
   align-items: flex-start;
   padding-bottom: 8px;
 
+  a {
+    @include inline-link;
+    color: $fg-text-muted;
+  }
+
   svg {
     margin-top: 3px;
   }

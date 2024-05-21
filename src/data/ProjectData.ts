@@ -1,4 +1,4 @@
-export type Consideration = { wip?: boolean; text: string };
+export type Consideration = { wip?: boolean; text: string; link?: string };
 export type ProjectInfo = {
   id: string;
   title: string;
@@ -23,16 +23,20 @@ export const projects: ProjectInfo[] = [
     considerations: [
       {
         text: "If a badly formatted email, username or password is entered, an error message should appear",
+        link: "https://github.com/internetarchive/openlibrary/pull/9190",
       },
       {
         text: "If an email or username that is already taken on the Internet Archive or Open Library is entered, an error message should appear",
+        link: "https://github.com/internetarchive/openlibrary/pull/9223",
       },
       {
         text: "If a user tries to submit a form with missing or badly formatted entries, the submission should fail",
+        link: "https://github.com/internetarchive/openlibrary/pull/9245",
       },
       {
         wip: true,
         text: "If a user tries to submit a form with a taken email address or username, the submission should fail",
+        link: "https://github.com/internetarchive/openlibrary/pull/9267",
       },
       {
         wip: true,
@@ -43,7 +47,8 @@ export const projects: ProjectInfo[] = [
         text: "We should add more thorough tests for the form and remove any unused code",
       },
     ],
-    roles: "Project lead, code author (all project code)",
+    roles:
+      "Project lead, code author (Realtime Validation, Submission Prevention, UI Overhaul, Final Refactor)",
   },
   {
     id: "newContributorGuide",
@@ -57,19 +62,25 @@ export const projects: ProjectInfo[] = [
     considerations: [
       {
         text: `Guide should include easy-to-follow new section re: how to stay up to date and/or check whether you're up to date`,
+        link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#working-on-your-branch",
       },
       {
         text: `"Creating a Pull Request" section should be rewritten to be more general and include all necessary steps for contributing a change`,
+        link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#making-changes-and-creating-a-pull-request",
       },
       {
         text: `New troubleshooting section should cover all common git-related errors and include its own table of contents for easy navigation`,
-      }, {
+        link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#troubleshooting-your-pull-request",
+      },
+      {
         wip: true,
-        text: `Reminder and link to guide should be added to every new feature proposal`
-      }, {
+        text: `Reminder and link to guide should be added to every new feature proposal`,
+        link: "https://github.com/internetarchive/openlibrary/pull/9273",
+      },
+      {
         wip: true,
-        text: `Reminder and link to guide should be added to issue page How-To guide`
-      }
+        text: `Reminder and link to guide should be added to issue page How-To guide`,
+      },
     ],
     roles: `Proposal author, code author (form update), guide editor ("Working on Your Branch", "Making Changes and Creating a Pull Request"), guide author ("Troubleshooting Your Pull Request")`,
   },

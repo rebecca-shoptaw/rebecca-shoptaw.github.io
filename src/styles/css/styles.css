@@ -420,6 +420,15 @@ main {
   align-items: flex-start;
   padding-bottom: 8px;
 }
+.consideration-item a {
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  color: #848d97;
+  color: #8d96a0;
+}
+.consideration-item a:hover {
+  opacity: 0.7;
+}
 .consideration-item svg {
   margin-top: 3px;
 }
