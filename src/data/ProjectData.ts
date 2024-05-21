@@ -8,6 +8,7 @@ export type ProjectInfo = {
   problem: string;
   solution: string;
   considerations?: Consideration[];
+  roles: string;
 };
 
 export const projects: ProjectInfo[] = [
@@ -42,6 +43,7 @@ export const projects: ProjectInfo[] = [
         text: "We should add more thorough tests for the form and remove any unused code",
       },
     ],
+    roles: "Project lead, code author",
   },
 ];
 

@@ -38,6 +38,8 @@ const ProjectTile = ({ project }: { project: ProjectInfo }) => {
             <ProjectConsiderations considerations={project.considerations} />
           </>
         )}
+        <p className="project-header">Role(s)</p>
+        <p className="project-info-text">{project.roles}</p>
       </section>
     </section>
   );
