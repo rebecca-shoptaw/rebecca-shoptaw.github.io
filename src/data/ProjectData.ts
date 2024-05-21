@@ -14,7 +14,7 @@ export type ProjectInfo = {
 export const projects: ProjectInfo[] = [
   {
     id: `registration`,
-    title: "Registration UI/UX Overhaul",
+    title: "Overhaul Registration User Interface (UI) and User Experience (UX)",
     type: "issue",
     wip: true,
     link: "https://github.com/internetarchive/openlibrary/issues/7694",
@@ -43,7 +43,35 @@ export const projects: ProjectInfo[] = [
         text: "We should add more thorough tests for the form and remove any unused code",
       },
     ],
-    roles: "Project lead, code author",
+    roles: "Project lead, code author (all project code)",
+  },
+  {
+    id: "newContributorGuide",
+    title: "Improve Resources for New Contributors",
+    type: "issue",
+    wip: true,
+    link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#troubleshooting-your-pull-request",
+    problem:
+      "A lot of new contributors to the Internet Archive's Open Library site have been getting confusing errors as a result of failing to keep their copy of the site's code up to date. After helping a number of different people follow similar steps to solve the problem, I realized what we needed was an expanded guide that we could give new developers as a resource and hopefully use to stop these problems before they begin.",
+    solution: `Flesh out the relevant developer "Cheat Sheet" with extensive information re: staying up to date and a full troubleshooting guide. Increase visibility by adding a reminder to stay up to date to the bottom of every new feature proposal.`,
+    considerations: [
+      {
+        text: `Guide should include easy-to-follow new section re: how to stay up to date and/or check whether you're up to date`,
+      },
+      {
+        text: `"Creating a Pull Request" section should be rewritten to be more general and include all necessary steps for contributing a change`,
+      },
+      {
+        text: `New troubleshooting section should cover all common git-related errors and include its own table of contents for easy navigation`,
+      }, {
+        wip: true,
+        text: `Reminder and link to guide should be added to every new feature proposal`
+      }, {
+        wip: true,
+        text: `Reminder and link to guide should be added to issue page How-To guide`
+      }
+    ],
+    roles: `Proposal author, code author (form update), guide editor ("Working on Your Branch", "Making Changes and Creating a Pull Request"), guide author ("Troubleshooting Your Pull Request")`,
   },
 ];
 

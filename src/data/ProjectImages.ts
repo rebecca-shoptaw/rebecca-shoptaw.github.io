@@ -10,4 +10,9 @@ export const images: { [key: string]: ProjectImage } = {
     caption: "Registration project overview",
     link: "https://github.com/internetarchive/openlibrary/issues/7694",
   },
+  newContributorGuide: {
+    src: "contributorGuide.png",
+    caption: "New troubleshooting guide",
+    link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#troubleshooting-your-pull-request",
+  },
 };
