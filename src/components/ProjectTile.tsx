@@ -1,84 +1,38 @@
-import { GIT_LINK } from "../data/constants";
-import { ProjectTileProps } from "../types/Types";
+import { ProjectInfo } from "../data/ProjectData";
+import ProjectImage from "./ProjectImage";
+import ProjectSnippet from "./ProjectSnippet";
+import {
+  IssueOpenedIcon,
+  IssueClosedIcon,
+  RepoIcon,
+} from "@primer/octicons-react";
 
-const ProjectTile = (props: ProjectTileProps) => {
-  const { project } = props;
-
+const ProjectTile = ({ project }: { project: ProjectInfo }) => {
   return (
-    <div
-      className="project-tile tile"
-      id={project.id}
-      key={project.id}
-      itemScope
-      itemType="https://schema.org/WebSite"
-    >
-      <div className="img-wrapper">
-        <a
-          href={
-            !project.offline
-              ? project.id != "portfolio"
-                ? `/${project.id}/`
-                : `/`
-              : ""
-          }
-        >
-          <img
-            id={`${project.id}-img`}
-            src={`./${project.id}.png`}
-            className={project.offline ? "offline" : ""}
-            alt={project.img_alt}
-            loading="lazy"
-          />
-        </a>
-      </div>
-
-      <div className="description">
-        <p>
-          <a
-            href={
-              !project.offline
-                ? project.id != "portfolio"
-                  ? `/${project.id}/`
-                  : `${GIT_LINK}/${project.id}`
-                : ""
-            }
-            className="project-link"
-          >
-            {project.title}
-          </a>
-
-          {project.wip ? (
-            <div>
-              <i className="wip">Work in Progress</i>
-            </div>
+    <section className="project-tile" id={project.id}>
+      <section className="project-title">
+        {project.type === "issue" &&
+          (project.wip ? (
+            <IssueOpenedIcon size={16} />
           ) : (
-            <br></br>
-          )}
-
-          {project.description}
-
-          <i className="project-italics">{project.description_italics}</i>
-        </p>
-      </div>
-
-      {!project.offline && (
-        <div className="btns-wrap">
-          <a
-            href={`${GIT_LINK}/${project.id}/`}
-            target="_blank"
-            className="button-nofill"
-          >
-            Code
-          </a>
-          <a
-            href={project.id != "portfolio" ? `/${project.id}/` : `/`}
-            className="button-fill"
-          >
-            Live
-          </a>
-        </div>
-      )}
-    </div>
+            <IssueClosedIcon size={16} />
+          ))}
+        {project.type === "repo" && <RepoIcon size={16} />}
+        <a href={project.link} target="_blank">
+          {project.title}
+        </a>
+      </section>
+      <section className="project-body">
+        <p className="project-header">The Problem</p>
+        <p>{project.problem}</p>
+        <p className="project-header">The Solution</p>
+        {project.solution}
+        <section className="project-visuals">
+          <ProjectImage id={project.id} />
+          <ProjectSnippet id={project.id} />
+        </section>
+      </section>
+    </section>
   );
 };
 
