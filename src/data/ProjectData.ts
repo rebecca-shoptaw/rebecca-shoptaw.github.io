@@ -1,6 +1,28 @@
-import { ProjectInfo } from "../types/Types";
+export type Consideration = { wip?: boolean; text: string };
+export type ProjectInfo = {
+  id: string;
+  title: string;
+  type: string;
+  wip?: boolean;
+  link: string;
+  problem: string;
+  solution: string;
+  considerations?: Consideration[];
+};
 
-const projects: ProjectInfo[] = [
+export const projects: ProjectInfo[] = [
+  {
+    id: `registration`,
+    title: "Registration UI/UX Overhaul",
+    type: "issue",
+    wip: true,
+    link: "https://github.com/internetarchive/openlibrary/issues/7694",
+    problem: `The Open Library registration form is most new users' first interaction with the site, and it is clunky, non-intuitive, and does not notify users of errors until after the form has been submitted.`,
+    solution: `Add custom real-time form validation, prevent submissions with bad data, and implement a full form re-design.`,
+  },
+];
+
+export const originalProjects = [
   {
     id: `triolingo`,
     title: `Triolingo`,
@@ -82,5 +104,3 @@ const projects: ProjectInfo[] = [
     description: `The portfolio site you're currently on. Built with React, Typescript, and HTML/CSS.`,
   },
 ];
-
-export default projects;
