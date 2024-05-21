@@ -1,5 +1,5 @@
-import { InfoBoxList } from "../data/InfoBoxData";
 import useScrollPosition from "../hooks/useScrollPosition";
+import InfoBoxIcons from "./InfoBoxIcons";
 
 const InfoBox = () => {
   const pastHero = useScrollPosition(400);
@@ -26,20 +26,7 @@ const InfoBox = () => {
           </div>
         </section>
         <div className="divider"></div>
-        <ul className="infobox-icons icon-list">
-          {InfoBoxList.map((item) => (
-            <li className="infobox-icon list-icon" key={item.id}>
-              {item.icon}{" "}
-              {item.link ? (
-                <a href={item.link} target="_blank" className="infobox-link">
-                  {item.text}
-                </a>
-              ) : (
-                item.text
-              )}
-            </li>
-          ))}
-        </ul>
+        <InfoBoxIcons />
         <a
           className="btn-link"
           href="mailto:rebecca@rebeccashoptaw.dev"
