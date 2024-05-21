@@ -12,7 +12,7 @@ const useScrollPosition = (target: number) => {
   const handleScroll = () =>
     window.scrollY <= target ? setPastTarget(false) : setPastTarget(true);
 
-  return pastTarget
+  return pastTarget;
 };
 
-export default useScrollPosition
+export default useScrollPosition;
