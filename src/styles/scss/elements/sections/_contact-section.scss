@@ -1,12 +1,7 @@
 #contact {
-  .section-body {
-    padding-bottom: 15px;
-  }
-
   #contact-body {
     @include flex(column, center, center, space-between);
     gap: 20px;
-    margin: 0 2.5%;
     padding: 25px 10px;
   }
 

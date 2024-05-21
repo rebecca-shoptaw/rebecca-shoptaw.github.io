@@ -1,4 +1,5 @@
 import { ProjectInfo } from "../data/ProjectData";
+import ProjectConsiderations from "./ProjectConsiderations";
 import ProjectImage from "./ProjectImage";
 import ProjectSnippet from "./ProjectSnippet";
 import {
@@ -9,7 +10,7 @@ import {
 
 const ProjectTile = ({ project }: { project: ProjectInfo }) => {
   return (
-    <section className="project-tile" id={project.id}>
+    <section id={project.id}>
       <section className="project-title">
         {project.type === "issue" &&
           (project.wip ? (
@@ -24,13 +25,19 @@ const ProjectTile = ({ project }: { project: ProjectInfo }) => {
       </section>
       <section className="project-body">
         <p className="project-header">The Problem</p>
-        <p>{project.problem}</p>
+        <p className="project-info-text">{project.problem}</p>
         <p className="project-header">The Solution</p>
-        {project.solution}
+        <p className="project-info-text">{project.solution}</p>
         <section className="project-visuals">
           <ProjectImage id={project.id} />
           <ProjectSnippet id={project.id} />
         </section>
+        {project.considerations && (
+          <>
+            <p className="project-header">Considerations</p>
+            <ProjectConsiderations considerations={project.considerations} />
+          </>
+        )}
       </section>
     </section>
   );

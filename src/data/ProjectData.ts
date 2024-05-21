@@ -17,8 +17,31 @@ export const projects: ProjectInfo[] = [
     type: "issue",
     wip: true,
     link: "https://github.com/internetarchive/openlibrary/issues/7694",
-    problem: `The Open Library registration form is most new users' first interaction with the site, and it is clunky, non-intuitive, and does not notify users of errors until after the form has been submitted.`,
-    solution: `Add custom real-time form validation, prevent submissions with bad data, and implement a full form re-design.`,
+    problem: `The Internet Archive's Open Library registration form is many new users' first interaction with the site, and currently it is clunky and non-intuitive, and does not notify users of errors in their submission until after the form has been submitted.`,
+    solution: `Add custom real-time error messages, prevent submissions with bad entries, and implement a full form redesign.`,
+    considerations: [
+      {
+        text: "If a badly formatted email, username or password is entered, an error message should appear",
+      },
+      {
+        text: "If an email or username that is already taken on the Internet Archive or Open Library is entered, an error message should appear",
+      },
+      {
+        text: "If a user tries to submit a form with missing or badly formatted entries, the submission should fail",
+      },
+      {
+        wip: true,
+        text: "If a user tries to submit a form with a taken email address or username, the submission should fail",
+      },
+      {
+        wip: true,
+        text: "The form should be redesigned to be appealing and intuitive",
+      },
+      {
+        wip: true,
+        text: "We should add more thorough tests for the form and remove any unused code",
+      },
+    ],
   },
 ];
 

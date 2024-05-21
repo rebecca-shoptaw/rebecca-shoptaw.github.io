@@ -161,7 +161,6 @@ main {
 .list-icon {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
 }
@@ -298,9 +297,6 @@ main {
   background-color: #292e36;
 }
 
-#contact .section-body {
-  padding-bottom: 15px;
-}
 #contact #contact-body {
   display: flex;
   flex-direction: column;
@@ -308,7 +304,6 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  margin: 0 2.5%;
   padding: 25px 10px;
 }
 #contact #letter {
@@ -339,6 +334,14 @@ main {
 
 .octicon-issue-closed {
   fill: #ab7df8;
+}
+
+.octicon-dot-fill {
+  fill: #d29922;
+}
+
+.octicon-check {
+  fill: #58a6ff;
 }
 
 .project-title {
@@ -375,8 +378,12 @@ main {
   border-bottom: 1px solid rgba(48, 54, 61, 0.7019607843);
   margin-bottom: -6px;
 }
+.project-body .project-info-text {
+  color: #8d96a0;
+}
 .project-body .project-visuals {
   padding: 12px 0px;
+  margin-top: -20px;
   display: flex;
   flex-direction: row;
   gap: 12px;
@@ -402,6 +409,22 @@ main {
 }
 .project-body .project-visual a:hover {
   opacity: 0.7;
+}
+
+.considerations {
+  padding-left: 12px;
+}
+
+.consideration-item {
+  align-items: flex-start;
+  padding-bottom: 8px;
+}
+.consideration-item svg {
+  margin-top: 3px;
+}
+.consideration-item p {
+  color: #8d96a0;
+  flex-grow: 1;
 }
 
 #welcome-section {
@@ -440,6 +463,9 @@ main {
 }
 #about li {
   margin-bottom: 8px;
+}
+#about .list-icon-title {
+  white-space: nowrap;
 }
 
 #techstack .logo,

@@ -6,6 +6,14 @@
   fill: $fg-color-done;
 }
 
+.octicon-dot-fill {
+  fill: $fg-color-wip;
+}
+
+.octicon-check {
+  fill: $fg-color-success;
+}
+
 .project-title {
   display: flex;
   flex-direction: row;
@@ -35,8 +43,13 @@
     margin-bottom: -6px;
   }
 
+  .project-info-text {
+    color: $fg-text-muted;
+  }
+
   .project-visuals {
     padding: 12px 0px;
+    margin-top: -20px;
     display: flex;
     flex-direction: row;
     gap: 12px;
@@ -60,5 +73,22 @@
     a {
       @include inline-link;
     }
+  }
+}
+
+.considerations {
+  padding-left: 12px;
+}
+
+.consideration-item {
+  align-items: flex-start;
+  padding-bottom: 8px;
+
+  svg {
+    margin-top: 3px;
+  }
+  p {
+    color: $fg-text-muted;
+    flex-grow: 1;
   }
 }
