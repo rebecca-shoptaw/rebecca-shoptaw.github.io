@@ -18,7 +18,8 @@ const About = () => {
         <ul className="icon-list">
           {BioValues.map((item) => (
             <li key={item.title} className="bio_list_item list-icon">
-              {item.icon} {item.title} -{" "}
+              {item.icon}{" "}
+              <span className="list-icon-title">{item.title} - </span>
               <span className="text-muted">{item.text}</span>
             </li>
           ))}
