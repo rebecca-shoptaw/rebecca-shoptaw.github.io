@@ -11,7 +11,7 @@ const TechStack = () => {
             <ul className="icon-list" key={index}>
               <p className="tech-list-header">{section.header}</p>
               {section.elements.map((elem) => (
-                <TechStackItem elem={elem} />
+                <TechStackItem key={elem.title} elem={elem} />
               ))}
             </ul>
           ))}

@@ -2,7 +2,7 @@ import { TechElement } from "../types/Types";
 
 const TechStackItem = ({ elem }: { elem: TechElement }) => {
   return (
-    <a href={elem.url} key={elem.title} target="_blank" title={elem.title}>
+    <a href={elem.url} target="_blank" title={elem.title}>
       <li className="list-icon">
         <svg
           role="img"
