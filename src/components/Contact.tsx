@@ -12,7 +12,6 @@ const Contact = () => {
               id="letter"
               src="./contact.jpg"
               alt="Painting of a woman writing a letter"
-              loading="lazy"
             />
           </div>
 
