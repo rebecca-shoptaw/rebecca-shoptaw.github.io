@@ -1,7 +1,10 @@
 $locator-margin: 100px;
 
 html {
+  background-color: $background-color-dark;
   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
 }
 
 * {
@@ -15,8 +18,8 @@ html {
 
 body {
   background: linear-gradient($background-color-dark, $background-color-blue);
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 #site-body {

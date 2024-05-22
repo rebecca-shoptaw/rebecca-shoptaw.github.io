@@ -1,132 +1,124 @@
-@media only screen and (min-width: 1168px) {
-  body,
-  nav {
-    background-position: 0% 12% !important;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  body,
-  nav {
-    background-size: 140% !important;
-    background-position: 0px 0px !important;
+@media only screen and (max-width: 870px) {
+  main,
+  .infobox--full {
+    margin-left: 0px !important;
   }
 
-  .nav-content {
-    flex-direction: column !important;
-    justify-content: center !important;
-    padding-top: 15px !important;
+  #infobox.infobox--side {
+    top: 0 !important;
+    position: fixed !important;
   }
 
-  .nav-links {
-    margin-top: -10px !important;
-    margin-bottom: 5px !important;
-    font-size: 16px !important;
-    padding: 0px !important;
-    gap: 15px;
+  .infobox--side {
+    background-color: $background-color-dark;
+    width: 100vw !important;
+    position: fixed;
 
-    .nav-link {
-      padding: 0px;
+    .section-body {
+      width: 100% !important;
+      margin: 0 !important;
+      border-left: 0px !important;
+      border-right: 0px !important;
+      border-top: 0px !important;
+      border-radius: 0px !important;
+      display: flex;
+      flex-direction: row !important;
+      padding: 10px 24px !important;
     }
-  }
-
-  .contact-link {
-    transition: text-decoration-color $anim-time !important;
-    border: none !important;
-    padding: 0px;
-    margin: 0px -5px !important;
-
-    &:hover {
-      text-decoration: underline $full-white !important;
-    }
-  }
-
-  .title {
-    width: 250px !important;
-
-    h1 {
-      font-size: 23px !important;
-    }
-
-    h2 {
-      font-size: 16px !important;
-    }
-  }
-
-  .locator {
-    margin-bottom: 105px !important;
-  }
-
-  .section-body {
-    margin-bottom: calc(25px - 105px) !important;
-  }
-
-  .tile {
-    width: 100% !important;
-    .btns-wrap {
-      flex-direction: column !important;
-    }
-  }
-
-  .bio {
-    align-items: center !important;
-    font-size: 15px;
-
-    .bio-img-text {
-      flex-direction: column-reverse !important;
-    }
-
-    .tech-section {
-      align-items: center;
-    }
-
-    .tech-logos {
-      margin-top: -5px;
-    }
-
-    .btns-locator {
-      max-width: 90% !important;
-    }
-  }
-
-  .tech-section-wrap {
-    margin: 0px !important;
-    width: 100% !important;
-  }
-
-  .project-links {
-    margin: 0px !important;
-  }
-
-  .project-tile {
-    display: flex !important;
-    flex-direction: column !important;
 
     img {
-      width: 100% !important;
-      height: auto !important;
+      width: 45px !important;
+      height: 45px !important;
     }
 
-    .description {
-      text-align: center;
+    .infobox-top {
+      flex-direction: row !important;
+      align-items: center;
+      margin-bottom: 0px !important;
+    }
+
+    .divider {
+      display: none;
+    }
+
+    .infobox-icons {
+      display: none;
+    }
+
+    .btn-link {
+      display: none;
+    }
+
+    .contact-btns {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 8px;
+      align-items: center !important;
+
+      .btn-default {
+        margin-top: 0px !important;
+        font-size: 12px !important;
+      }
+
+      svg {
+        width: 12px !important;
+      }
     }
   }
 
   #contact {
-    height: calc(100vh - 105px) !important;
-
-    i {
-      font-size: 25px !important;
-    }
-  }
-
-  #contact-body {
-    margin: 0px !important;
+    padding-bottom: calc(100vh - 410px) !important;
   }
 }
 
-@media only screen and (min-width: 818px) {
-  .project-tile {
-    height: 550px !important;
+@media only screen and (max-width: 500px) {
+  .site-subtitle {
+    display: none !important;
+  }
+
+  .project-visuals {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding-bottom: 24px !important;
+
+    .project-visual {
+      width: 100% !important;
+    }
+  }
+
+  .infobox--full {
+    .infobox-top {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center;
+      img {
+        width: 150px !important;
+      }
+      .info-bio {
+        width: 100% !important;
+      }
+    }
+
+    .infobox-icons {
+      width: 100% !important;
+    }
+
+    .btn-default,
+    .btn-link {
+      width: 100%;
+    }
+  }
+
+  .tech-lists {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: -24px !important;
+
+    .icon-list {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+    }
   }
 }

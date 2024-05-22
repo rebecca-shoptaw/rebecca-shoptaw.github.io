@@ -1,5 +1,5 @@
 #contact {
-  padding-bottom: calc(100vh - 370px);
+  padding-bottom: calc(100vh - 340px);
 
   #contact-body {
     @include flex(column, center, center, space-between);
@@ -13,20 +13,10 @@
     width: 200px;
   }
 
-  .contact-btns svg {
-    fill: $btn-default-fg;
-  }
-
   .contact-btns {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-
-  .contact-btns-top {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
   }
 
   .contact-btn {

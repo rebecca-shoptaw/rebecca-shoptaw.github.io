@@ -19,8 +19,10 @@ const About = () => {
           {BioValues.map((item) => (
             <li key={item.title} className="bio_list_item list-icon">
               {item.icon}{" "}
-              <span className="list-icon-title">{item.title} - </span>
-              <span className="text-muted">{item.text}</span>
+              <p>
+                <span className="list-icon-title">{item.title} - </span>
+                <span className="text-muted">{item.text}</span>
+              </p>
             </li>
           ))}
         </ul>

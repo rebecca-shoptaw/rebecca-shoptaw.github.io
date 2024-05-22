@@ -1,4 +1,5 @@
 import useScrollPosition from "../hooks/useScrollPosition";
+import ContactBtns from "./ContactBtns";
 import InfoBoxIcons from "./InfoBoxIcons";
 
 const InfoBox = () => {
@@ -13,8 +14,8 @@ const InfoBox = () => {
         <section className="infobox-top">
           <img src="https://images.squarespace-cdn.com/content/v1/58c9909ce58c627a188f8a64/ad9e7ee7-964e-4151-96a6-e99d81353fd2/20201007.JPG?format=2500w"></img>
           <div className="info-wrap">
-            <h1>Rebecca Shoptaw</h1>
-            <h2>Full-stack software engineer.</h2>
+            <h1 className="site-title">Rebecca Shoptaw</h1>
+            <h2 className="site-subtitle">Full-stack software engineer.</h2>
             <p className="info-bio text-muted">
               Efficient and pragmatic full-stack software engineer who has
               successfully shipped more than 25 high-impact features and fixes
@@ -34,6 +35,7 @@ const InfoBox = () => {
         >
           <button className="btn-default">Contact</button>
         </a>
+        <ContactBtns />
       </section>
     </section>
   );

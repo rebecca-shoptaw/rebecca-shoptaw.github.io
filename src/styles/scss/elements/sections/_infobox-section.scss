@@ -19,10 +19,13 @@
   button {
     margin-top: 24px;
   }
+
+  .contact-btns {
+    display: none;
+  }
 }
 
-.infobox--full,
-.infobox--spacer {
+.infobox--full {
   margin-left: $sidenav-width;
 
   .infobox-top {
@@ -95,7 +98,6 @@
     display: none;
   }
 
-  .btn-link,
   .divider,
   button {
     width: 100%;

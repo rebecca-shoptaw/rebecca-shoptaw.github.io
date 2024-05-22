@@ -1,111 +1,110 @@
-@media only screen and (min-width: 1168px) {
-  body,
-  nav {
-    background-position: 0% 12% !important;
+@media only screen and (max-width: 870px) {
+  main,
+  .infobox--full {
+    margin-left: 0px !important;
+  }
+  #infobox.infobox--side {
+    top: 0 !important;
+    position: fixed !important;
+  }
+  .infobox--side {
+    background-color: #0c1117;
+    width: 100vw !important;
+    position: fixed;
+  }
+  .infobox--side .section-body {
+    width: 100% !important;
+    margin: 0 !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    border-top: 0px !important;
+    border-radius: 0px !important;
+    display: flex;
+    flex-direction: row !important;
+    padding: 10px 24px !important;
+  }
+  .infobox--side img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  .infobox--side .infobox-top {
+    flex-direction: row !important;
+    align-items: center;
+    margin-bottom: 0px !important;
+  }
+  .infobox--side .divider {
+    display: none;
+  }
+  .infobox--side .infobox-icons {
+    display: none;
+  }
+  .infobox--side .btn-link {
+    display: none;
+  }
+  .infobox--side .contact-btns {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px;
+    align-items: center !important;
+  }
+  .infobox--side .contact-btns .btn-default {
+    margin-top: 0px !important;
+    font-size: 12px !important;
+  }
+  .infobox--side .contact-btns svg {
+    width: 12px !important;
+  }
+  #contact {
+    padding-bottom: calc(100vh - 410px) !important;
   }
 }
 @media only screen and (max-width: 500px) {
-  body,
-  nav {
-    background-size: 140% !important;
-    background-position: 0px 0px !important;
+  .site-subtitle {
+    display: none !important;
   }
-  .nav-content {
+  .project-visuals {
     flex-direction: column !important;
-    justify-content: center !important;
-    padding-top: 15px !important;
+    gap: 24px !important;
+    padding-bottom: 24px !important;
   }
-  .nav-links {
-    margin-top: -10px !important;
-    margin-bottom: 5px !important;
-    font-size: 16px !important;
-    padding: 0px !important;
-    gap: 15px;
-  }
-  .nav-links .nav-link {
-    padding: 0px;
-  }
-  .contact-link {
-    transition: text-decoration-color 0.3s !important;
-    border: none !important;
-    padding: 0px;
-    margin: 0px -5px !important;
-  }
-  .contact-link:hover {
-    text-decoration: underline #fff !important;
-  }
-  .title {
-    width: 250px !important;
-  }
-  .title h1 {
-    font-size: 23px !important;
-  }
-  .title h2 {
-    font-size: 16px !important;
-  }
-  .locator {
-    margin-bottom: 105px !important;
-  }
-  .section-body {
-    margin-bottom: -80px !important;
-  }
-  .tile {
+  .project-visuals .project-visual {
     width: 100% !important;
   }
-  .tile .btns-wrap {
+  .infobox--full .infobox-top {
     flex-direction: column !important;
-  }
-  .bio {
     align-items: center !important;
-    font-size: 15px;
-  }
-  .bio .bio-img-text {
-    flex-direction: column-reverse !important;
-  }
-  .bio .tech-section {
-    align-items: center;
-  }
-  .bio .tech-logos {
-    margin-top: -5px;
-  }
-  .bio .btns-locator {
-    max-width: 90% !important;
-  }
-  .tech-section-wrap {
-    margin: 0px !important;
-    width: 100% !important;
-  }
-  .project-links {
-    margin: 0px !important;
-  }
-  .project-tile {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  .project-tile img {
-    width: 100% !important;
-    height: auto !important;
-  }
-  .project-tile .description {
     text-align: center;
   }
-  #contact {
-    height: calc(100vh - 105px) !important;
+  .infobox--full .infobox-top img {
+    width: 150px !important;
   }
-  #contact i {
-    font-size: 25px !important;
+  .infobox--full .infobox-top .info-bio {
+    width: 100% !important;
   }
-  #contact-body {
-    margin: 0px !important;
+  .infobox--full .infobox-icons {
+    width: 100% !important;
   }
-}
-@media only screen and (min-width: 818px) {
-  .project-tile {
-    height: 550px !important;
+  .infobox--full .btn-default,
+  .infobox--full .btn-link {
+    width: 100%;
+  }
+  .tech-lists {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: -24px !important;
+  }
+  .tech-lists .icon-list {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
   }
 }
 html {
+  background-color: #0c1117;
   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
 }
 
 * {
@@ -119,8 +118,8 @@ html {
 
 body {
   background: linear-gradient(#0c1117, #091524);
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 #site-body {
@@ -171,7 +170,6 @@ main {
 
 .section-wrap {
   min-width: 281px;
-  margin-bottom: 28px;
 }
 .section-wrap .section-body {
   border: 1px solid #30363d;
@@ -194,28 +192,6 @@ main {
 }
 .section-wrap a:hover {
   text-decoration: underline rgba(255, 255, 255, 0);
-}
-
-.tile {
-  transition-property: background-color;
-  transition-duration: 0.3s;
-  background-color: rgba(0, 0, 0, 0);
-  color: #ddd;
-}
-.tile > * {
-  transition-property: color;
-  transition-duration: 0.3s;
-  color: #ddd;
-}
-.tile img {
-  transition-property: filter;
-  transition-duration: 0.3s;
-}
-.tile:hover {
-  color: #fff;
-}
-.tile:hover img {
-  filter: brightness(1.1);
 }
 
 .divider {
@@ -300,8 +276,22 @@ main {
   outline: none;
 }
 
+.contact-btns svg {
+  fill: #c9d1d9;
+}
+
+.contact-btns-top {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.contact-btns > * {
+  white-space: nowrap;
+}
+
 #contact {
-  padding-bottom: calc(100vh - 370px);
+  padding-bottom: calc(100vh - 340px);
 }
 #contact #contact-body {
   display: flex;
@@ -318,18 +308,10 @@ main {
   border-radius: 0.375rem;
   width: 200px;
 }
-#contact .contact-btns svg {
-  fill: #c9d1d9;
-}
 #contact .contact-btns {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-#contact .contact-btns-top {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
 }
 #contact .contact-btn {
   width: 100%;
@@ -537,42 +519,36 @@ main {
 #infobox button {
   margin-top: 24px;
 }
+#infobox .contact-btns {
+  display: none;
+}
 
-.infobox--full,
-.infobox--spacer {
+.infobox--full {
   margin-left: 300px;
 }
-.infobox--full .infobox-top,
-.infobox--spacer .infobox-top {
+.infobox--full .infobox-top {
   display: flex;
   flex-direction: row;
   gap: 24px;
   align-items: flex-start;
 }
-.infobox--full img,
-.infobox--spacer img {
+.infobox--full img {
   width: 175px;
 }
-.infobox--full h1,
-.infobox--spacer h1 {
+.infobox--full h1 {
   font-size: 18px;
   font-weight: 800;
 }
-.infobox--full h2,
-.infobox--spacer h2 {
+.infobox--full h2 {
   font-size: 14px;
   font-weight: 400;
 }
-.infobox--full .info-bio,
-.infobox--spacer .info-bio {
+.infobox--full .info-bio {
   width: 35vw;
 }
 .infobox--full .infobox-icons,
 .infobox--full .divider,
-.infobox--full button,
-.infobox--spacer .infobox-icons,
-.infobox--spacer .divider,
-.infobox--spacer button {
+.infobox--full button {
   width: calc(175px + 35vw + 24px);
 }
 
@@ -608,7 +584,6 @@ main {
 .infobox--side .info-bio {
   display: none;
 }
-.infobox--side .btn-link,
 .infobox--side .divider,
 .infobox--side button {
   width: 100%;

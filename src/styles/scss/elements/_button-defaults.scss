@@ -54,3 +54,17 @@
     outline: none;
   }
 }
+
+.contact-btns svg {
+  fill: $btn-default-fg;
+}
+
+.contact-btns-top {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.contact-btns > * {
+  white-space: nowrap;
+}

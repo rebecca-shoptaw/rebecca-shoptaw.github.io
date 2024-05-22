@@ -1,6 +1,6 @@
 .section-wrap {
   min-width: 281px;
-  margin-bottom: 28px;
+
   .section-body {
     border: 1px solid $border-color;
     border-radius: $border-radius-medium;
@@ -26,29 +26,6 @@
 
   a:hover {
     @include transparent-underline;
-  }
-}
-
-.tile {
-  @include animate-any(background-color);
-  background-color: $fully-transparent;
-  color: $off-white;
-
-  > * {
-    @include animate-any(color);
-    color: $off-white;
-  }
-
-  img {
-    @include animate-any(filter);
-  }
-
-  &:hover {
-    color: $full-white;
-
-    img {
-      filter: brightness(1.1);
-    }
   }
 }
 
