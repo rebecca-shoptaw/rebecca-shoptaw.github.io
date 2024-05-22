@@ -48,4 +48,9 @@
   &:hover {
     background-color: $btn-default-hover;
   }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
 }

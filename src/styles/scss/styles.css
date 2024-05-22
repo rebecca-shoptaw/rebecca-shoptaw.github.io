@@ -32,7 +32,8 @@
     margin: 0px -5px !important;
   }
   .contact-link:hover {
-    text-decoration: underline #fff !important;
+    -webkit-text-decoration: underline #fff !important;
+            text-decoration: underline #fff !important;
   }
   .title {
     width: 250px !important;
@@ -193,7 +194,8 @@ main {
   margin-bottom: 16px;
 }
 .section-wrap a:hover {
-  text-decoration: underline rgba(255, 255, 255, 0);
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0);
+          text-decoration: underline rgba(255, 255, 255, 0);
 }
 
 .tile {
@@ -235,10 +237,12 @@ main {
   line-height: 1.8em;
   transition-property: filter;
   transition-duration: 0.3s;
-  text-decoration: underline rgba(255, 255, 255, 0);
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0);
+          text-decoration: underline rgba(255, 255, 255, 0);
 }
 .button-nofill:hover {
-  text-decoration: underline rgba(255, 255, 255, 0);
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0);
+          text-decoration: underline rgba(255, 255, 255, 0);
   color: #fff;
   filter: brightness(3);
 }
@@ -253,10 +257,12 @@ main {
   line-height: 1.8em;
   transition-property: filter;
   transition-duration: 0.3s;
-  text-decoration: underline rgba(255, 255, 255, 0);
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0);
+          text-decoration: underline rgba(255, 255, 255, 0);
 }
 .button-fill:hover {
-  text-decoration: underline rgba(255, 255, 255, 0);
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0);
+          text-decoration: underline rgba(255, 255, 255, 0);
   color: #000;
   filter: brightness(1.5);
 }
@@ -300,9 +306,6 @@ main {
   outline: none;
 }
 
-#contact {
-  padding-bottom: calc(100vh - 370px);
-}
 #contact #contact-body {
   display: flex;
   flex-direction: column;
@@ -331,10 +334,6 @@ main {
   flex-direction: row;
   gap: 8px;
 }
-#contact .contact-btn {
-  width: 100%;
-}
-
 .octicon-issue-opened {
   fill: #f0883e;
 }
@@ -404,7 +403,8 @@ main {
   border-radius: 0.375rem;
   width: 100%;
   aspect-ratio: 16/9;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .project-body .project-visual code span {
   font-family: monospace;
@@ -594,7 +594,8 @@ main {
 .infobox--side img {
   width: 70px;
   height: 70px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50px;
 }
 .infobox--side h1 {
@@ -616,6 +617,4 @@ main {
 
 .infobox--spacer {
   opacity: 0;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

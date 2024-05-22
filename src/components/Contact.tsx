@@ -1,12 +1,10 @@
-import SocialLink from "./SocialLink";
-import SOCIAL_LINKS from "../data/SocialData";
+import ContactBtns from "./ContactBtns";
 
 const Contact = () => {
   return (
     <section id="contact" className="section-wrap">
-      <section className="section-body">
-        <h1 className="section-title">Contact</h1>
-        <div id="contact-body" className="tile">
+      <section className="section-body floating">
+        <div id="contact-body">
           <div className="letter-wrap">
             <img
               id="letter"
@@ -15,11 +13,7 @@ const Contact = () => {
             />
           </div>
 
-          <div className="social-icons">
-            {SOCIAL_LINKS.map((social) => (
-              <SocialLink key={social.id} social={social} />
-            ))}
-          </div>
+          <ContactBtns />
         </div>
       </section>
     </section>

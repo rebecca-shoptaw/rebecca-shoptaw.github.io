@@ -1,27 +1,35 @@
 #contact {
+  padding-bottom: calc(100vh - 370px);
+
   #contact-body {
     @include flex(column, center, center, space-between);
     gap: 20px;
-    padding: 25px 10px;
+    margin-top: -48px;
+    padding: 0px 10px;
   }
 
   #letter {
-    width: 150px;
+    @include standard-border-rounded;
+    width: 200px;
   }
 
-  .social-icons {
-    @include flex(row, auto, center, auto);
-    gap: 20px;
-    padding: 4px 10px;
+  .contact-btns svg {
+    fill: $btn-default-fg;
+  }
 
-    i {
-      @include animate-any(color);
-      color: $off-white;
-      font-size: 20px;
+  .contact-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-      &:hover {
-        color: #fff;
-      }
-    }
+  .contact-btns-top {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .contact-btn {
+    width: 100%;
   }
 }
