@@ -48,7 +48,7 @@ export const projects: ProjectInfo[] = [
       },
     ],
     roles:
-      "Project lead, code author (Realtime Validation, Submission Prevention, UI Overhaul, Final Refactor)",
+      "Project lead, code author (real-time errors, submission prevention, redesign, refactor)",
   },
   {
     id: "newContributorGuide",
@@ -57,7 +57,7 @@ export const projects: ProjectInfo[] = [
     wip: true,
     link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#troubleshooting-your-pull-request",
     problem:
-      "A lot of new contributors to the Internet Archive's Open Library site have been getting confusing errors as a result of failing to keep their copy of the site's code up to date. After helping a number of different people follow similar steps to solve the problem, I realized what we needed was an expanded guide that we could give new developers as a resource and hopefully use to stop these problems before they begin.",
+      "A lot of new contributors to the Internet Archive's Open Library site have been getting confusing errors as a result of failing to keep their copy of the site's code up to date. \n\n After helping a number of different people follow similar steps to solve the problem, I realized what we needed was an expanded guide that we could give new developers as a resource and hopefully use to stop these problems before they begin.",
     solution: `Flesh out the relevant developer "Cheat Sheet" with extensive information re: staying up to date and a full troubleshooting guide. Increase visibility by adding a reminder to stay up to date to the bottom of every new feature proposal.`,
     considerations: [
       {
@@ -82,7 +82,7 @@ export const projects: ProjectInfo[] = [
         text: `Reminder and link to guide should be added to issue page How-To guide`,
       },
     ],
-    roles: `Proposal author, code author (form update), guide editor ("Working on Your Branch", "Making Changes and Creating a Pull Request"), guide author ("Troubleshooting Your Pull Request")`,
+    roles: `Proposal author, code author (proposal addition), guide editor, guide author (troubleshooting section)`,
   },
 ];
 
