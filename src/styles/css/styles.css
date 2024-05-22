@@ -11,6 +11,8 @@
     background-color: #0c1117;
     width: 100vw !important;
     position: fixed;
+    box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.5);
+    z-index: 3;
   }
   .infobox--side .section-body {
     width: 100% !important;
@@ -58,7 +60,7 @@
     padding-bottom: calc(100vh - 410px) !important;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 515px) {
   .site-subtitle {
     display: none !important;
   }
@@ -306,6 +308,7 @@ main {
 #contact #letter {
   border: 1px solid #30363d;
   border-radius: 0.375rem;
+  box-shadow: 0 18px 10px rgba(0, 0, 0, 0.3), 0 8px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3);
   width: 200px;
 }
 #contact .contact-btns {
@@ -516,6 +519,15 @@ main {
 #infobox .infobox-link:hover {
   color: #848d97;
 }
+#infobox .infobox-link span {
+  transition-property: color;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  color: #e6edf3;
+}
+#infobox .infobox-link span:hover {
+  color: #848d97;
+}
 #infobox button {
   margin-top: 24px;
 }
@@ -545,6 +557,7 @@ main {
 }
 .infobox--full .info-bio {
   width: 35vw;
+  color: #8d96a0;
 }
 .infobox--full .infobox-icons,
 .infobox--full .divider,
@@ -555,6 +568,9 @@ main {
 .infobox--side {
   position: fixed;
   width: 300px;
+}
+.infobox--side .full-infobox-only {
+  display: none;
 }
 .infobox--side .section-body {
   width: 276px;
@@ -587,10 +603,6 @@ main {
 .infobox--side .divider,
 .infobox--side button {
   width: 100%;
-}
-
-.infobox--spacer {
-  opacity: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

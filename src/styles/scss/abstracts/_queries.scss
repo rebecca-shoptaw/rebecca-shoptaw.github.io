@@ -13,6 +13,8 @@
     background-color: $background-color-dark;
     width: 100vw !important;
     position: fixed;
+    box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.5);
+    z-index: 3;
 
     .section-body {
       width: 100% !important;
@@ -71,7 +73,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 515px) {
   .site-subtitle {
     display: none !important;
   }

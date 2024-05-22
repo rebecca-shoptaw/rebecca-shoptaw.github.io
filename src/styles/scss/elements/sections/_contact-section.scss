@@ -10,6 +10,7 @@
 
   #letter {
     @include standard-border-rounded;
+    @include standard-box-shadow;
     width: 200px;
   }
 
