@@ -14,6 +14,10 @@
 
   .infobox-link {
     @include full-color-link;
+
+    span {
+      @include full-color-link;
+    }
   }
 
   button {
@@ -51,6 +55,7 @@
 
   .info-bio {
     width: $bio-width;
+    color: $fg-text-muted;
   }
 
   .infobox-icons,
@@ -63,6 +68,10 @@
 .infobox--side {
   position: fixed;
   width: $sidenav-width;
+
+  .full-infobox-only {
+    display: none;
+  }
 
   .section-body {
     width: calc($sidenav-width - 24px);
@@ -102,8 +111,4 @@
   button {
     width: 100%;
   }
-}
-
-.infobox--spacer {
-  opacity: 0;
 }

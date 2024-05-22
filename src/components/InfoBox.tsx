@@ -16,7 +16,7 @@ const InfoBox = () => {
           <div className="info-wrap">
             <h1 className="site-title">Rebecca Shoptaw</h1>
             <h2 className="site-subtitle">Full-stack software engineer.</h2>
-            <p className="info-bio text-muted">
+            <p className="info-bio">
               Efficient and pragmatic full-stack software engineer who has
               successfully shipped more than 25 high-impact features and fixes
               for an Internet Archive site with over 30 million monthly visitors
