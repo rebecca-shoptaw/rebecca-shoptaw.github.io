@@ -73,7 +73,6 @@ export const projects: ProjectInfo[] = [
         link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#troubleshooting-your-pull-request",
       },
       {
-        wip: true,
         text: `Reminder and link to guide should be added to every new feature proposal`,
         link: "https://github.com/internetarchive/openlibrary/pull/9273",
       },
@@ -136,7 +135,7 @@ export const projects: ProjectInfo[] = [
         link: "https://github.com/rebecca-shoptaw/triolingo/blob/master/src/components/GameOverButtons.tsx",
       },
     ],
-    roles: "Lead designer and developer",
+    roles: "Designer and developer",
   },
   {
     id: "openEditions",
@@ -159,7 +158,97 @@ export const projects: ProjectInfo[] = [
         text: "The audiobook component should be fully reusable, so that it can display any book",
       },
     ],
-    roles: "Lead designer and developer",
+    roles: "Designer and developer",
+  },
+  {
+    id: "portfolio",
+    title: "Engineering Portfolio Redesign",
+    type: "repo",
+    wip: true,
+    link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io",
+    problem:
+      "The previous version of my portfolio site was fun, but I wanted to switch it out for a cleaner design centered around more full walkthroughs of a few of my recent projects.",
+    solution:
+      "Took inspiration from the GitHub user interface to design and build a new version of the site with a clean, modern look, full project case studies, and an always-visible, responsive infobox.",
+    considerations: [
+      {
+        text: "Site should be highly modular so that it's very simple to add and update project info",
+        link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/data/ProjectData.ts",
+      },
+      {
+        text: "Infobox should start as a regular site section, then move to be either a side panel or a header on scroll, depending on screen size",
+        link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/components/InfoBox.tsx",
+      },
+      {
+        text: "Project considerations should link to a relevant site where applicable",
+        link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/components/ProjectConsiderations.tsx",
+      },
+      {
+        text: "Project images and snippets should open in a larger modal on click",
+        link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/utils/utils.ts",
+      },
+      {
+        wip: true,
+        text: "Site accessibility should be improved throughout, by adding descriptive alt text where possible",
+      },
+      {
+        wip: true,
+        text: "Site should have a simple experience section either before or after projects",
+      },
+    ],
+    roles: "Designer and developer",
+  },
+  {
+    id: "askOscar",
+    title: "Oscar Wilde Magic 8 Ball",
+    type: "repo",
+    wip: false,
+    link: "https://rebeccashoptaw.dev/ask-oscar-wilde/",
+    problem:
+      "When facing a personal or professional problem, I was unable to consult famed writer and essayist Oscar Wilde (1854-1900).",
+    solution:
+      "Designed and built a site where users can submit their predicaments and receive Mr. Wilde's advice.",
+    considerations: [
+      {
+        text: "If a user hits submit without entering a predicament, Oscar should prompt them to do so",
+        link: "https://github.com/rebecca-shoptaw/ask-oscar-wilde/blob/master/src/hooks/useNewQuote.tsx",
+      },
+      {
+        text: "The appearance and disappearance of quotes should be fully animated",
+        link: "https://github.com/rebecca-shoptaw/ask-oscar-wilde/blob/master/src/hooks/useAnimation.tsx",
+      },
+      {
+        text: "Users should be able to submit by hitting enter",
+        link: "https://github.com/rebecca-shoptaw/ask-oscar-wilde/blob/master/src/components/AskOscar.tsx",
+      },
+    ],
+    roles: "Designer and developer",
+  },
+  {
+    id: "catBand",
+    title: "All-Cat Jazz Band",
+    type: "repo",
+    wip: false,
+    link: "/cat-band",
+    problem:
+      "There is not nearly enough cat representation in the online jazz scene.",
+    solution:
+      "Designed and built an all-cat jazz band where each cat plays a different instrument, and users can start and stop each of the cats.",
+    considerations: [
+      {
+        text: "Each cat should randomly select between a number of different possible jazz loops so that the music is different every time",
+        link: "https://github.com/rebecca-shoptaw/cat-band/blob/master/src/components/Cat.tsx",
+      },
+      {
+        text: "Cat data should be stored separately so that the same component can be reused for each cat",
+        link: "https://github.com/rebecca-shoptaw/cat-band/blob/master/src/components/Cat.tsx",
+      },
+      {
+        text: "Users should be able to start/stop cats by hitting the relevant keys on their keyboard",
+        link: "https://github.com/rebecca-shoptaw/cat-band/blob/master/src/components/CatBand.tsx#L45-L50",
+      },
+    ],
+    roles: "Designer and developer",
   },
 ];
 

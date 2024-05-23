@@ -165,4 +165,111 @@ export const snippets: { [key: string]: Snippet } = {
     caption: "Lesson.tsx",
     link: "https://github.com/rebecca-shoptaw/triolingo/blob/master/src/components/Lesson.tsx",
   },
+  portfolio: {
+    text: `{
+      id: "portfolio",
+      title: "Engineering Portfolio Redesign",
+      type: "repo",
+      wip: true,
+      link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io",
+      problem:
+        "The previous version of my portfolio site was fun, but I wanted to switch it out for a cleaner design centered around more full walkthroughs of a few of my recent projects.",
+      solution:
+        "Took inspiration from the GitHub user interface to design and build a new version of the site with a clean, modern look, full project case studies, and an always-visible, responsive infobox.",
+      considerations: [
+        {
+          text: "Site should be highly modular so that it's very simple to add and update project info",
+          link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/data/ProjectData.ts",
+        },
+        {
+          text: "Infobox should start as a regular site section, then move to be either a side panel or a header on scroll, depending on screen size",
+          link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/components/InfoBox.tsx",
+        },
+        {
+          text: "Project considerations should link to a relevant site where applicable",
+          link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/components/ProjectConsiderations.tsx",
+        },
+        {
+          text: "Project images should open in a larger modal on click",
+          link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/utils/utils.ts",
+        },
+        {
+          wip: true,
+          text: "Site accessibility should be improved throughout, by adding descriptive alt text where possible",
+        },
+        {
+          wip: true,
+          text: "Site should have a simple experience section either before or after projects",
+        },
+      ],
+      roles: "Designer and developer",
+    },`,
+    language: "typescript",
+    caption: "ProjectData.ts",
+    link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io/blob/main/src/data/ProjectData.ts",
+  },
+  askOscar: {
+    text: `import { useState } from "react";
+    import oscarQuotes from "../data/OscarQuotes";
+    import { useAnimation } from "./useAnimation";
+    
+    export const useNewQuote = (input: string) => {
+      const [quote, setQuote] = useState("Tell me about your troubles.");
+      const animateNewQuote = useAnimation();
+      const handleReset = () => {
+        setQuote("With what else may I assist you?");
+        animateNewQuote("#new-predicament-btn");
+      };
+    
+      const handleInput = () => {
+        if (input == "") {
+          setQuote("Why won't you tell me what ails you??");
+        } else {
+          setQuote(oscarQuotes[Math.floor(Math.random() * oscarQuotes.length)]);
+        }
+        animateNewQuote("#new-quote-btn");
+      };
+    
+      return { quote, handleInput, handleReset };
+    };`,
+    language: "typescript",
+    caption: "useNewQuote.ts",
+    link: "https://github.com/rebecca-shoptaw/ask-oscar-wilde/blob/master/src/hooks/useNewQuote.tsx",
+  },
+  catBand: {
+    text: `const Cat: React.FC<CatCompProps> = ({cat, playing, handleClick}) => {
+      const audio = document.getElementById(cat.id) as HTMLAudioElement;
+      if (audio) {
+        if (audio.paused && playing) {
+          audio.src = cat.arr[Math.floor(Math.random() * cat.arr.length)];
+          audio.play();
+        } else if (!audio.paused && !playing) {
+          audio.pause();
+        }
+      }
+  
+    return (
+      <button
+        id={\`\${cat.role}-button\`}
+        key={cat.id}
+        type="button"
+        className={\`drum-pad \${playing ? "playing" : "paused"}\`}
+        onClick={handleClick}
+      >
+        <img
+          id={\`\${cat.role}-cat\`}
+          className="cat"
+          src={\`./\${cat.role}_cat.jpg\`}
+        />
+        <audio id={cat.id} className="clip" src={cat.arr[0]} loop></audio>
+        <p>{cat.id}</p>
+      </button>
+    );
+  };
+  
+  export default Cat;`,
+    language: "tsx",
+    caption: "Cat.tsx",
+    link: "https://github.com/rebecca-shoptaw/cat-band/blob/master/src/components/Cat.tsx",
+  },
 };

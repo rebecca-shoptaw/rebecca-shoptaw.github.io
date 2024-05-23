@@ -25,5 +25,24 @@ export const images: { [key: string]: ProjectImage } = {
     caption: "Live site",
     link: "/open-editions",
   },
-  triolingo: { src: "triolingo.gif", caption: "Live site", link: "/triolingo" },
+  triolingo: {
+    src: "triolingo.gif",
+    caption: "Live site",
+    link: "/triolingo",
+  },
+  portfolio: {
+    src: "portfolio.gif",
+    caption: "Live site",
+    link: "/",
+  },
+  askOscar: {
+    src: "askOscar.gif",
+    caption: "Live site",
+    link: "/ask-oscar-wilde",
+  },
+  catBand: {
+    src: "catBand.gif",
+    caption: "Live site",
+    link: "/cat-band",
+  },
 };
