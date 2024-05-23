@@ -2,6 +2,8 @@ import { ProjectInfo } from "../data/ProjectData";
 import ProjectConsiderations from "./ProjectConsiderations";
 import ProjectImage from "./ProjectImage";
 import ProjectSnippet from "./ProjectSnippet";
+import ProjectText from "./ProjectText";
+
 import {
   IssueOpenedIcon,
   IssueClosedIcon,
@@ -24,10 +26,8 @@ const ProjectTile = ({ project }: { project: ProjectInfo }) => {
         </a>
       </section>
       <section className="project-body">
-        <p className="project-header">The Problem</p>
-        <p className="project-info-text">{project.problem}</p>
-        <p className="project-header">The Solution</p>
-        <p className="project-info-text">{project.solution}</p>
+        <ProjectText header="The Problem" text={project.problem} />
+        <ProjectText header="The Solution" text={project.solution} />
         <section className="project-visuals">
           <ProjectImage id={project.id} />
           <ProjectSnippet id={project.id} />
@@ -38,8 +38,7 @@ const ProjectTile = ({ project }: { project: ProjectInfo }) => {
             <ProjectConsiderations considerations={project.considerations} />
           </>
         )}
-        <p className="project-header">Role(s)</p>
-        <p className="project-info-text">{project.roles}</p>
+        <ProjectText header="Role(s)" text={project.roles} />
       </section>
     </section>
   );
