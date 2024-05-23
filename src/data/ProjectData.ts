@@ -3,7 +3,7 @@ export type ProjectInfo = {
   id: string;
   title: string;
   type: string;
-  wip?: boolean;
+  wip: boolean;
   link: string;
   problem: string;
   solution: string;
@@ -112,6 +112,29 @@ export const projects: ProjectInfo[] = [
     ],
     roles: "Proposal author, code author, project lead (bulk re-formatting)",
   },
+  {
+    id: "openEditions",
+    title: "Analogue-esque Audiobook Site",
+    type: "repo",
+    wip: false,
+    link: "https://github.com/rebecca-shoptaw/open-editions",
+    problem:
+      "I love listening to public domain audiobooks of classic novels but I find most existing audiobook interfaces cluttered and non-edition-specific, and I miss the aesthetic and simplicity of physical books.",
+    solution:
+      "Built an aesthetically pleasing audiobook player designed to mimic the feeling of reading a physical book. \n \n I've been mostly focused on my work with Internet Archive lately, but if/when I return to the site I plan to use the LibriVox API to make the full catalog available, redesign and simplify the landing page, improve modularity internally, use URLs to access book pages, and replace local covers with covers drawn from the Chicago Art Institute API.",
+    considerations: [
+      {
+        text: "Users should be able to hide all book info to focus on listening",
+      },
+      {
+        text: "Each book should have a customized cover as its background image, repositioned as needed",
+      },
+      {
+        text: "The audiobook component should be fully reusable, so that it can display any book",
+      },
+    ],
+    roles: "Lead designer & developer",
+  },
 ];
 
 export const originalProjects = [
@@ -196,3 +219,7 @@ export const originalProjects = [
     description: `The portfolio site you're currently on. Built with React, Typescript, and HTML/CSS.`,
   },
 ];
+
+// When facing a personal or professional problem, I was unable to consult famed writer and essayist Oscar Wilde ().
+
+// I noticed that there was a shocking lack of cat representation in the online jazz scene.

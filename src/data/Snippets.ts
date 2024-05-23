@@ -100,4 +100,37 @@ export const snippets: { [key: string]: Snippet } = {
     caption: "i18n/_init_.py",
     link: "https://github.com/internetarchive/openlibrary/pull/8900",
   },
+  openEditions: {
+    text: `export type BookProps = {
+      title: string;
+      id: number;
+      author: string;
+      pub_year: number;
+      url: string;
+      cover: string;
+      cover_size?: string;
+      cover_position?: string;
+      reader?: string;
+      reader_url: string;
+    };
+    
+    export type AudiobookPageProps = {
+      book:BookProps,
+      stopListening:() => void;
+    }
+    
+    export type HomepageProps = {
+      setActiveBook:React.Dispatch<React.SetStateAction<BookProps>>;
+      startListening:() => void;
+    }
+    
+    export type FeaturedBookProps = {
+      book:BookProps,
+      setActiveBook:React.Dispatch<React.SetStateAction<BookProps>>;
+      startListening:() => void;
+    }`,
+    language: "typescript",
+    caption: "types.ts",
+    link: "https://github.com/rebecca-shoptaw/open-editions/blob/master/src/types/types.ts",
+  },
 };

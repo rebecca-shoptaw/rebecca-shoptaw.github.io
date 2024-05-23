@@ -20,4 +20,9 @@ export const images: { [key: string]: ProjectImage } = {
     caption: "Translation automation demo",
     link: "https://github.com/internetarchive/openlibrary/pull/8900",
   },
+  openEditions: {
+    src: "openEditions.gif",
+    caption: "Live site",
+    link: "https://rebeccashoptaw.dev/open-editions/",
+  },
 };

@@ -328,6 +328,10 @@ main {
   fill: #ab7df8;
 }
 
+.octicon-repo {
+  fill: #4493f8;
+}
+
 .octicon-dot-fill {
   fill: #d29922;
 }
