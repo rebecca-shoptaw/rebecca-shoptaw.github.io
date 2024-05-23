@@ -113,6 +113,32 @@ export const projects: ProjectInfo[] = [
     roles: "Proposal author, code author, project lead (bulk re-formatting)",
   },
   {
+    id: "triolingo",
+    title: "Gamified Vocab Practice Site",
+    type: "repo",
+    wip: false,
+    link: "https://rebeccashoptaw.dev/triolingo/",
+    problem:
+      "I was helping a few middle school students study for the vocab portion of the SSAT exam, and was struggling to find resources for them to practice with that were actually fun.",
+    solution:
+      "Built a Duolingo-esque gamified site that uses a 500+ word vocab practice set to generate unique, gamified practice sessions. \n\n I've been mostly focused on my work with the Internet Archive lately, but if/when I return to this project, I plan to expand it so that the game design can be reused for multiple different subjects and levels.",
+    considerations: [
+      {
+        text: "Each session should use a smaller subset of the total vocab list, so that students reinforce their memories by seeing each word multiple times",
+        link: "https://github.com/rebecca-shoptaw/triolingo/blob/master/src/hooks/useQuestionData.tsx",
+      },
+      {
+        text: "If a student fails the session, they should have the opportunity to practice again with the same vocab subset",
+        link: "https://github.com/rebecca-shoptaw/triolingo/blob/master/src/components/GameOverButtons.tsx",
+      },
+      {
+        text: "If a student passes the session, they should have the opportunity to practice again with the same subset or try a new set",
+        link: "https://github.com/rebecca-shoptaw/triolingo/blob/master/src/components/GameOverButtons.tsx",
+      },
+    ],
+    roles: "Lead designer and developer",
+  },
+  {
     id: "openEditions",
     title: "Analogue-esque Audiobook Site",
     type: "repo",
@@ -133,7 +159,7 @@ export const projects: ProjectInfo[] = [
         text: "The audiobook component should be fully reusable, so that it can display any book",
       },
     ],
-    roles: "Lead designer & developer",
+    roles: "Lead designer and developer",
   },
 ];
 

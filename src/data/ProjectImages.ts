@@ -23,6 +23,7 @@ export const images: { [key: string]: ProjectImage } = {
   openEditions: {
     src: "openEditions.gif",
     caption: "Live site",
-    link: "https://rebeccashoptaw.dev/open-editions/",
+    link: "/open-editions",
   },
+  triolingo: { src: "triolingo.gif", caption: "Live site", link: "/triolingo" },
 };

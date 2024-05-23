@@ -133,4 +133,36 @@ export const snippets: { [key: string]: Snippet } = {
     caption: "types.ts",
     link: "https://github.com/rebecca-shoptaw/open-editions/blob/master/src/types/types.ts",
   },
+  triolingo: {
+    text: `const Lesson = (props: LessonProps) => {
+      const { questionInfo, answers } = useQuestionData(props.data);
+      const { numAns, numCorrect, numIncorrect, resetScore, incrementNums } =
+        useScoreKeeping();
+    
+      return (
+        <main id="question-view">
+          <LessonHeader
+            numAns={numAns}
+            numIncorrect={numIncorrect}
+            handleGameEnd={props.handleGameEnd}
+          />
+          <LessonQuestion
+            speakerPath={TRIO_PATH}
+            question={questionInfo.question}
+          />
+          <section className="ans-box">
+            {answers.map((answer, index) => (
+              <LessonAnswerButton key={index + 1} answer={answer} num={index + 1} />
+            ))}
+          </section>
+          <LessonFooter />
+        </main>
+      );
+    };
+    
+    export default Lesson;`,
+    language: "tsx",
+    caption: "Lesson.tsx",
+    link: "https://github.com/rebecca-shoptaw/triolingo/blob/master/src/components/Lesson.tsx",
+  },
 };
