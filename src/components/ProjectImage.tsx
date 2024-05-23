@@ -1,5 +1,5 @@
 import { images } from "../data/ProjectImages";
-import { showImageModal } from "../utils/utils";
+import { showModal } from "../utils/utils";
 
 const ProjectImage = ({ id }: { id: string }) => {
   const image = images[id];
@@ -8,7 +8,7 @@ const ProjectImage = ({ id }: { id: string }) => {
 
   return (
     <div className="project-visual">
-      <img onClick={() => showImageModal(modalId)} src={src} />
+      <img onClick={() => showModal(modalId)} src={src} />
       <dialog id={modalId} className={id}>
         <img className="image-modal" src={src} />
       </dialog>

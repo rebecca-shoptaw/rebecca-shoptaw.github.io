@@ -10,7 +10,7 @@ export const downloadResume = () => {
   document.body.removeChild(link);
 };
 
-export const showImageModal = (modalId: string) => {
+export const showModal = (modalId: string) => {
   const modal = document.getElementById(modalId) as HTMLDialogElement;
   if (modal) {
     modal.showModal();
@@ -27,6 +27,6 @@ export const showImageModal = (modalId: string) => {
       }
     });
   } else {
-    window.onload = () => showImageModal(modalId);
+    window.onload = () => showModal(modalId);
   }
 };

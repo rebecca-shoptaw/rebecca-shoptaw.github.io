@@ -410,6 +410,7 @@ main {
   aspect-ratio: 16/9;
   object-fit: cover;
 }
+.project-body .project-visual code:hover,
 .project-body .project-visual img:hover {
   cursor: pointer;
 }
