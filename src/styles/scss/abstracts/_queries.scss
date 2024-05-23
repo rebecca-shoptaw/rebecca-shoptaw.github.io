@@ -68,16 +68,6 @@
     }
   }
 
-  #contact {
-    padding-bottom: calc(100vh - 410px) !important;
-  }
-}
-
-@media only screen and (max-width: 515px) {
-  .site-subtitle {
-    display: none !important;
-  }
-
   .project-visuals {
     flex-direction: column !important;
     gap: 24px !important;
@@ -86,6 +76,16 @@
     .project-visual {
       width: 100% !important;
     }
+  }
+
+  #contact {
+    padding-bottom: calc(100vh - 410px) !important;
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  .site-subtitle {
+    display: none !important;
   }
 
   .infobox--full {
@@ -114,13 +114,27 @@
   .tech-lists {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 12px !important;
-    margin-bottom: -24px !important;
+    gap: 24px !important;
+    text-align: center;
+
+    p {
+      padding-bottom: 8px;
+    }
 
     .icon-list {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
       width: 300px;
+      padding-bottom: 24px;
+    }
+
+    .list-icon {
+      gap: 3px;
+      margin-bottom: -12px;
     }
   }
 }

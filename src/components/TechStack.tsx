@@ -8,12 +8,14 @@ const TechStack = () => {
         <h2 className="section-title">A few things I use:</h2>
         <section className="tech-lists">
           {TechData.map((section, index) => (
-            <ul className="icon-list" key={index}>
+            <div>
               <p className="tech-list-header">{section.header}</p>
-              {section.elements.map((elem) => (
-                <TechStackItem key={elem.title} elem={elem} />
-              ))}
-            </ul>
+              <ul className="icon-list" key={index}>
+                {section.elements.map((elem) => (
+                  <TechStackItem key={elem.title} elem={elem} />
+                ))}
+              </ul>
+            </div>
           ))}
         </section>
       </div>

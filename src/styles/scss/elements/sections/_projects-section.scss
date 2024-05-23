@@ -52,6 +52,10 @@
     color: $fg-text-muted;
   }
 
+  .project-info-text:last-of-type {
+    margin-bottom: 0px;
+  }
+
   .project-visuals {
     padding: 12px 0px;
     margin-top: -20px;

@@ -18,6 +18,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 48px;
+
+    p {
+      font-weight: 600;
+    }
   }
 
   .tech-list-header {

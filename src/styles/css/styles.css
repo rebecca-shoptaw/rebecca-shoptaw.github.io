@@ -56,14 +56,6 @@
   .infobox--side .contact-btns svg {
     width: 12px !important;
   }
-  #contact {
-    padding-bottom: calc(100vh - 410px) !important;
-  }
-}
-@media only screen and (max-width: 515px) {
-  .site-subtitle {
-    display: none !important;
-  }
   .project-visuals {
     flex-direction: column !important;
     gap: 24px !important;
@@ -71,6 +63,14 @@
   }
   .project-visuals .project-visual {
     width: 100% !important;
+  }
+  #contact {
+    padding-bottom: calc(100vh - 410px) !important;
+  }
+}
+@media only screen and (max-width: 515px) {
+  .site-subtitle {
+    display: none !important;
   }
   .infobox--full .infobox-top {
     flex-direction: column !important;
@@ -93,13 +93,25 @@
   .tech-lists {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 12px !important;
-    margin-bottom: -24px !important;
+    gap: 24px !important;
+    text-align: center;
+  }
+  .tech-lists p {
+    padding-bottom: 8px;
   }
   .tech-lists .icon-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
     width: 300px;
+    padding-bottom: 24px;
+  }
+  .tech-lists .list-icon {
+    gap: 3px;
+    margin-bottom: -12px;
   }
 }
 html {
@@ -378,6 +390,9 @@ main {
 .project-body .project-info-text {
   color: #8d96a0;
 }
+.project-body .project-info-text:last-of-type {
+  margin-bottom: 0px;
+}
 .project-body .project-visuals {
   padding: 12px 0px;
   margin-top: -20px;
@@ -526,6 +541,9 @@ dialog::backdrop {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 48px;
+}
+#techstack .tech-lists p {
+  font-weight: 600;
 }
 #techstack .tech-list-header {
   margin-bottom: 3px;
