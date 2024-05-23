@@ -64,6 +64,10 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     code span {
@@ -74,6 +78,37 @@
     a {
       @include inline-link;
     }
+  }
+}
+
+dialog {
+  @include standard-border-rounded;
+  display: block;
+  transform: scale(0);
+  width: 90vw;
+  padding: 0;
+  background-color: $background-color-dark;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  max-width: 960px;
+
+  &[open] {
+    transition: transform $anim-time;
+    transform: scale(1);
+  }
+
+  img {
+    width: 100% !important;
+    border: none !important;
+    object-fit: cover;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &::backdrop {
+    background-color: #00000099;
   }
 }
 

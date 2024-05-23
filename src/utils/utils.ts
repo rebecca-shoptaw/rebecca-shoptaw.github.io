@@ -9,3 +9,24 @@ export const downloadResume = () => {
   link.click();
   document.body.removeChild(link);
 };
+
+export const showImageModal = (modalId: string) => {
+  const modal = document.getElementById(modalId) as HTMLDialogElement;
+  if (modal) {
+    modal.showModal();
+
+    modal.addEventListener("click", function (event) {
+      const rect = modal.getBoundingClientRect();
+      const isInModal =
+        rect.top <= event.clientY &&
+        event.clientY <= rect.top + rect.height &&
+        rect.left <= event.clientX &&
+        event.clientX <= rect.left + rect.width;
+      if (!isInModal) {
+        modal.close();
+      }
+    });
+  } else {
+    window.onload = () => showImageModal(modalId);
+  }
+};
