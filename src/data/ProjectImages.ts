@@ -15,4 +15,9 @@ export const images: { [key: string]: ProjectImage } = {
     caption: "New troubleshooting guide",
     link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#troubleshooting-your-pull-request",
   },
+  i18n: {
+    src: "i18n.gif",
+    caption: "Translation automation demo",
+    link: "https://github.com/internetarchive/openlibrary/pull/8900",
+  },
 };

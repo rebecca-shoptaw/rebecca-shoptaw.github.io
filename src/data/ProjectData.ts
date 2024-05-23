@@ -82,7 +82,35 @@ export const projects: ProjectInfo[] = [
         text: `Reminder and link to guide should be added to issue page How-To guide`,
       },
     ],
-    roles: `Proposal author, code author (proposal addition), guide editor, guide author (troubleshooting section)`,
+    roles: `Proposal author, code author (feature form addition), guide editor, guide author (troubleshooting section)`,
+  },
+  {
+    id: "i18n",
+    title: "Internationalization Project",
+    type: "issue",
+    wip: false,
+    link: "https://github.com/internetarchive/openlibrary/pull/8900",
+    problem:
+      "New onscreen text is frequently added to the Open Library site, but could only be translated once a new translation template was manually generated, which could happen as infrequently as every 3-6 months. This hampered the site's accessibility for non-English speakers, who would encounter random English phrases throughout the site.",
+    solution:
+      "Wrote a program that auto-generates a new template each time a developer's change involves adding or modifying on-screen text, which means that no new text is now added without also being added to the translation template. Also oversaw a bulk re-formatting of a lot of previously untranslated text to make it detectable for the template.",
+    considerations: [
+      {
+        text: "Template should only update if changes to the text have been made",
+      },
+      {
+        text: "Developers should be able to force a template update manually",
+      },
+      {
+        text: "The Creation Date field should be standardized to avoid merge conflicts",
+        link: "https://github.com/internetarchive/openlibrary/pull/9210",
+      },
+      {
+        text: "The automation project should be accompanied with a bulk re-formatting of currently untranslated text",
+        link: "https://github.com/internetarchive/openlibrary/issues/8904",
+      },
+    ],
+    roles: "Proposal author, code author, project lead (bulk re-formatting)",
   },
 ];
 
