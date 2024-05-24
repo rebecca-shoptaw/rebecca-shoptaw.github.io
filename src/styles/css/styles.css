@@ -563,7 +563,6 @@ dialog::backdrop {
 #infobox img {
   transition-property: "size, border-radius";
   transition-duration: 0.3s;
-  border: 1px solid #30363d;
 }
 #infobox .infobox-link {
   transition-property: color;
@@ -594,12 +593,15 @@ dialog::backdrop {
   margin-left: 300px;
 }
 .infobox--full .infobox-top {
+  width: calc(175px + 35vw + 24px);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 24px;
   align-items: flex-start;
 }
 .infobox--full img {
+  border: 1px solid #30363d;
+  border-radius: 0.375rem;
   width: 175px;
 }
 .infobox--full h1 {
@@ -609,9 +611,6 @@ dialog::backdrop {
 .infobox--full h2 {
   font-size: 14px;
   font-weight: 400;
-}
-.infobox--full .info-bio {
-  width: 35vw;
   color: #8d96a0;
 }
 .infobox--full .infobox-icons,

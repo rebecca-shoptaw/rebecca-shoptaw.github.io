@@ -30,3 +30,9 @@ export const showModal = (modalId: string) => {
     window.onload = () => showModal(modalId);
   }
 };
+
+export const resetUrl = () => {
+  setTimeout(() => {
+    window.history.pushState({}, "", "/");
+  });
+};

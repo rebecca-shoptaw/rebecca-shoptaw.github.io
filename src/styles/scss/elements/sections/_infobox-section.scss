@@ -9,7 +9,6 @@
 
   img {
     @include animate-any("size, border-radius");
-    border: 1px solid $border-color;
   }
 
   .infobox-link {
@@ -33,13 +32,15 @@
   margin-left: $sidenav-width;
 
   .infobox-top {
+    width: $box-width;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 24px;
     align-items: flex-start;
   }
 
   img {
+    @include standard-border-rounded;
     width: $image-width;
   }
 
@@ -51,10 +52,6 @@
   h2 {
     font-size: 14px;
     font-weight: 400;
-  }
-
-  .info-bio {
-    width: $bio-width;
     color: $fg-text-muted;
   }
 

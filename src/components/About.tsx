@@ -1,8 +1,9 @@
 import { BioValues } from "../data/BioLists";
 import useScrollPosition from "../hooks/useScrollPosition";
+import { SCROLL_POSITION } from "../data/constants";
 
 const About = () => {
-  const pastHero = useScrollPosition(400);
+  const pastHero = useScrollPosition(SCROLL_POSITION);
   const infoBoxHeight = document
     .getElementById("infobox")
     ?.getBoundingClientRect().height;
@@ -11,7 +12,7 @@ const About = () => {
     <section
       id="about"
       className="section-wrap"
-      style={pastHero && infoBoxHeight ? { marginTop: infoBoxHeight + 30 } : {}}
+      style={pastHero && infoBoxHeight ? { marginTop: infoBoxHeight + 24 } : {}}
     >
       <div className="section-body floating">
         <h2 className="section-title">A few things I believe in:</h2>

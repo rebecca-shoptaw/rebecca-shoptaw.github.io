@@ -8,9 +8,9 @@ const TechStack = () => {
         <h2 className="section-title">A few things I use:</h2>
         <section className="tech-lists">
           {TechData.map((section, index) => (
-            <div>
+            <div key={index}>
               <p className="tech-list-header">{section.header}</p>
-              <ul className="icon-list" key={index}>
+              <ul className="icon-list">
                 {section.elements.map((elem) => (
                   <TechStackItem key={elem.title} elem={elem} />
                 ))}
