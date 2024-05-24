@@ -79,3 +79,14 @@
   box-shadow: 0 18px 10px $shadow-color, 0 8px 8px $shadow-color,
     0 2px 4px $shadow-color;
 }
+
+@mixin icon-list-parent {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+@mixin icon-list-inline-child {
+  margin-bottom: 0px;
+  margin-top: -2px;
+}

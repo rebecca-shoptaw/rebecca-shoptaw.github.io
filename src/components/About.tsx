@@ -12,13 +12,13 @@ const About = () => {
     <section
       id="about"
       className="section-wrap"
-      style={pastHero && infoBoxHeight ? { marginTop: infoBoxHeight + 24 } : {}}
+      style={pastHero && infoBoxHeight ? { marginTop: infoBoxHeight } : {}}
     >
       <div className="section-body floating">
         <h2 className="section-title">A few things I believe in:</h2>
         <ul className="icon-list">
           {BioValues.map((item) => (
-            <li key={item.title} className="bio_list_item list-icon">
+            <li key={item.title} className="bio_list_item">
               {item.icon}{" "}
               <p>
                 <span className="list-icon-title">{item.title} - </span>

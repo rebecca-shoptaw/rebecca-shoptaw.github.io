@@ -16,4 +16,13 @@
   .list-icon-title {
     white-space: nowrap;
   }
+
+  .bio_list_item {
+    @include icon-list-parent;
+    padding-bottom: 8px;
+
+    p {
+      @include icon-list-inline-child;
+    }
+  }
 }
