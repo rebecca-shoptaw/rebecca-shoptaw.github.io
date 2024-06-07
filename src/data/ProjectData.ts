@@ -34,13 +34,13 @@ export const projects: ProjectInfo[] = [
         link: "https://github.com/internetarchive/openlibrary/pull/9245",
       },
       {
-        wip: true,
         text: "If a user tries to submit a form with a taken email address or username, the submission should fail",
         link: "https://github.com/internetarchive/openlibrary/pull/9267",
       },
       {
         wip: true,
         text: "The form should be redesigned to be appealing and intuitive",
+        link: "https://github.com/internetarchive/openlibrary/pull/9350",
       },
       {
         wip: true,
@@ -54,7 +54,7 @@ export const projects: ProjectInfo[] = [
     id: "newContributorGuide",
     title: "Improve Resources for New Contributors",
     type: "issue",
-    wip: true,
+    wip: false,
     link: "https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#troubleshooting-your-pull-request",
     problem:
       "A lot of new contributors to the Internet Archive's Open Library site have been getting confusing errors as a result of failing to keep their copy of the site's code up to date. \n\n After helping a number of different people follow similar steps to solve the problem, I realized what we needed was an expanded guide that we could give new developers as a resource and hopefully use to stop these problems before they begin.",
@@ -77,7 +77,6 @@ export const projects: ProjectInfo[] = [
         link: "https://github.com/internetarchive/openlibrary/pull/9273",
       },
       {
-        wip: true,
         text: `Reminder and link to guide should be added to issue page How-To guide`,
       },
     ],
