@@ -26,6 +26,14 @@ const ProjectTile = ({ project }: { project: ProjectInfo }) => {
         </a>
       </section>
       <section className="project-body">
+        {project.company == "ia" && (
+          <a
+            href="https://github.com/internetarchive/openlibrary/issues?q=author%3Arebecca-shoptaw"
+            target="_blank"
+          >
+            <img className="project-company-logo" src="/ia-logo.png" />
+          </a>
+        )}
         <ProjectText header="The Problem" text={project.problem} />
         <ProjectText header="The Solution" text={project.solution} />
         <section className="project-visuals">

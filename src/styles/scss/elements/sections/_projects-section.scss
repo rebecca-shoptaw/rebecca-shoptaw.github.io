@@ -35,15 +35,24 @@
 .project-body {
   @include standard-border-rounded;
   padding: 12px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 48px;
+  position: relative;
 
   .project-header {
     font-weight: 600;
     border-bottom: 1px solid $border-color-muted;
     margin-bottom: -6px;
+  }
+
+  .project-company-logo {
+    width: 25px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
   }
 
   .project-info-text {

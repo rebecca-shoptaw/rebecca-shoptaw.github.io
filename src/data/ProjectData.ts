@@ -9,6 +9,7 @@ export type ProjectInfo = {
   solution: string;
   considerations?: Consideration[];
   roles: string;
+  company?: string;
 };
 
 export const projects: ProjectInfo[] = [
@@ -38,17 +39,18 @@ export const projects: ProjectInfo[] = [
         link: "https://github.com/internetarchive/openlibrary/pull/9267",
       },
       {
-        wip: true,
         text: "The form should be redesigned to be appealing and intuitive",
         link: "https://github.com/internetarchive/openlibrary/pull/9350",
       },
       {
         wip: true,
         text: "We should add more thorough tests for the form and remove any unused code",
+        link: "https://github.com/internetarchive/openlibrary/issues/9467",
       },
     ],
     roles:
       "Project lead, code author (real-time errors, submission prevention, redesign, refactor)",
+    company: "ia",
   },
   {
     id: "newContributorGuide",
@@ -81,6 +83,7 @@ export const projects: ProjectInfo[] = [
       },
     ],
     roles: `Proposal author, code author (feature form addition), guide editor, guide author (troubleshooting section)`,
+    company: "ia",
   },
   {
     id: "i18n",
@@ -109,6 +112,7 @@ export const projects: ProjectInfo[] = [
       },
     ],
     roles: "Proposal author, code author, project lead (bulk re-formatting)",
+    company: "ia",
   },
   {
     id: "triolingo",

@@ -379,15 +379,23 @@ main {
   border: 1px solid #30363d;
   border-radius: 0.375rem;
   padding: 12px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 48px;
+  position: relative;
 }
 .project-body .project-header {
   font-weight: 600;
   border-bottom: 1px solid rgba(48, 54, 61, 0.7019607843);
   margin-bottom: -6px;
+}
+.project-body .project-company-logo {
+  width: 25px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
 }
 .project-body .project-info-text {
   color: #8d96a0;
