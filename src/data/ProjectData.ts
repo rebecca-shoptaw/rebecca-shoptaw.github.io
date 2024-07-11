@@ -41,11 +41,19 @@ export const projects: ProjectInfo[] = [
       {
         text: "The form should be redesigned to be appealing and intuitive",
         link: "https://github.com/internetarchive/openlibrary/pull/9350",
+      }, {
+        wip: true,
+        text: 'Performance should be improved by running all lightweight checks on the frontend',
+        link: 'https://github.com/internetarchive/openlibrary/pull/9485'
+      }, {
+        wip: true,
+        text: 'Form entries already marked invalid should be checked on key-up',
+        link: 'https://github.com/internetarchive/openlibrary/pull/9512'
       },
       {
         wip: true,
         text: "We should add more thorough tests for the form and remove any unused code",
-        link: "https://github.com/internetarchive/openlibrary/issues/9467",
+        link: "https://github.com/internetarchive/openlibrary/pull/9543",
       },
     ],
     roles:

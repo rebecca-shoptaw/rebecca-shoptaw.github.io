@@ -8,21 +8,36 @@ export type Snippet = {
 export const snippets: { [key: string]: Snippet } = {
   registration: {
     text: `function validateUsername() {
-     const value_username = $(this).val();
-     if (value_username !== '') {
-      $.ajax({
-        url: '/account/validate',
-        data: { username: value_username },
-        type: 'GET',
-        success: function(errors) {
-          if (errors.username) {
-            renderError('#username', '#usernameMessage', errors.username);
-          } else clearError('#username', '#usernameMessage');
-         }
+        const value_username = $(this).val();
+
+        if (value_username === '') {
+            clearError('#username', '#usernameMessage');
+            return;
+        }
+
+        if (value_username.length < USERNAME_MINLENGTH || value_username.length > USERNAME_MAXLENGTH) {
+            renderError('#username', '#usernameMessage', i18nStrings['username_length_err']);
+            return;
+        }
+
+        if (!(VALID_USERNAME_RE.test(value_username))) {
+            renderError('#username', '#usernameMessage', i18nStrings['username_char_err']);
+            return;
+        }
+
+        clearError('#username', '#usernameMessage');
+
+        $.ajax({
+            url: '/account/validate',
+            data: { username: value_username },
+            type: 'GET',
+            success: function(errors) {
+                if (errors.username) {
+                    renderError('#username', '#usernameMessage', errors.username);
+                }
+            }
         });
-      }
-      else clearError('#username', '#usernameMessage');
-  }
+    }
   
   $('#username').on('blur', validateUsername);
   $('#emailAddr').on('blur', validateEmail);

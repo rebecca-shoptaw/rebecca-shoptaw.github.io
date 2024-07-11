@@ -32,7 +32,7 @@ const InfoBox = () => {
               Frontend/Internationalization Lead.
               <br />
               <br />
-              During that time, I've shipped more than 25 features and fixes
+              During that time, I've shipped more than 40 features and fixes
               across the stack, helping both to make the site as modern,
               seamless and intuitive as possible for users, and to optimize the
               development process behind the scenes for contributors.
@@ -52,7 +52,7 @@ const InfoBox = () => {
               In my spare time, I've also built a number of new React
               applications from the ground up, such as a gamified vocab practice
               site for middle schoolers, an aesthetically pleasing audiobook
-              site, and my personal favorite, an all-cat jazz band. 🎷🐈‍⬛
+              site, and my personal favorite, an all-cat jazz band. 🎷🐈
             </p>
           </div>
         </section>
