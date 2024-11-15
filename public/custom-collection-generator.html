@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IA custom collection layout generator</title>
+    <link rel="stylesheet" media="screen" href="/css/dist-standalone.css" />
+    <link rel="icon" href="/img/favicon.png" />
+  </head>
+  <body>
+    <section id="top-matter">
+      <h2 class="title">IA Collection Layout Generator</h2>
+      <span class="note"
+        >All properties optional! Customize as much or as little as you'd
+        like.</span
+      >
+    </section>
+    <div id="controls">
+      <button class="form-btn form-btn--existing" onClick="showExistingModal()">
+        Edit Existing
+      </button>
+      <button class="form-btn form-btn--generate" onClick="populateResults()">
+        Generate
+      </button>
+    </div>
+
+    <dialog class="modal modal--existing">
+      <label for="collectionLayout">Collection_layout</label>
+      <span class="note"
+        >Find this in the metadata fields for the collection.</span
+      >
+      <input name="collectionLayout" />
+      <button
+        class="form-btn form-btn--generate"
+        onClick="populateExistingLayout()"
+      >
+        Submit
+      </button>
+      <button class="form-btn form-btn--clear" onClick="clearLayoutInput()">
+        Clear
+      </button>
+      <button class="form-btn form-btn--remove" onClick="closeExistingModal()">
+        Cancel
+      </button>
+    </dialog>
+    <section id="forms-section">
+      <form id="settings" class="component">
+        <h3>Global settings</h3>
+        <label for="overlayColor">Overlay color</label>
+        <span class="note"
+          >Used for all carousels and featured items. Defaults to no overlay if
+          black.</span
+        >
+        <input type="color" name="overlayColor" value="#000000" />
+        <label for="buttonColor">Button color</label>
+        <span class="note"
+          >Used for all buttons. We recommend a light color which is clearly
+          different from your heading background color.</span
+        >
+        <input type="color" name="buttonColor" value="#f5f5f7" />
+        <label for="headingBGColor">Heading background color</label>
+        <span class="note"
+          >Defaults to transparent. Used for all headings.</span
+        >
+        <input type="color" name="headingBGColor" value="#f5f5f7" />
+      </form>
+      <form id="header" class="component">
+        <h3>Header</h3>
+        <label for="backgroundColor">Background color</label>
+        <input type="color" name="backgroundColor" value="#f5f5f7" />
+        <label for="leftImage">Top left image URL</label>
+        <span class="note"
+          >If left and center image URLs entered, image will replace thumbnail.
+          Otherwise existing thumbnail and title will show.</span
+        >
+        <input type="url" name="leftImage" placeholder="https://..." />
+        <label for="centerImage">Center image URL</label>
+        <span class="note"
+          >If URL entered, image will replace title. Otherwise existing title
+          and thumnail will show.</span
+        >
+        <input type="url" name="centerImage" placeholder="https://..." />
+      </form>
+    </section>
+    <section id="bottom-controls-section">
+      <button
+        id="carousel-btn"
+        class="form-btn form-btn--carousel"
+        onClick="createNewForm('carousel', carouselForm)"
+      >
+        Add Carousel
+      </button>
+      <button
+        id="cards-btn"
+        class="form-btn form-btn--content-cards"
+        onClick="createNewForm('content-cards', contentCardsForm)"
+      >
+        Add Custom Cards
+      </button>
+      <button class="form-btn form-btn--generate" onClick="populateResults()">
+        Generate
+      </button>
+    </section>
+    <section id="results-section">
+      <h3>Result</h3>
+      <span class="note"
+        >Paste this into a "collection_layout" metadata field</span
+      >
+      <input type="textbox" id="result" />
+      <button class="form-btn form-btn--copy" onClick="copyResult()">
+        Copy to Clipboard
+      </button>
+      <button class="form-btn form-btn--clear" onClick="clearForms()">
+        Reset
+      </button>
+    </section>
+    <script>
+      const formSection = document.getElementById("forms-section");
+      const settingsForm = document.getElementById("settings");
+      const headerForm = document.getElementById("header");
+      const result = document.getElementById("result");
+
+      const existingModal = document.querySelector(".modal--existing");
+      const existingLayout = document.querySelector(
+        "input[name=collectionLayout]"
+      );
+
+      const populateResults = () => {
+        const results = gatherResults();
+        console.log(results);
+        result.value = JSON.stringify(results);
+        result.scrollIntoView();
+      };
+
+      const gatherResults = () => {
+        const forms = document.querySelectorAll("form.component");
+        const results = [];
+
+        forms.forEach((form) => {
+          let formResult;
+          if (form.id === "content-cards") {
+            formResult = handleContentCards(form);
+          } else {
+            formResult = getFormResult(form);
+          }
+
+          if (formResult) {
+            results.push(formResult);
+          }
+        });
+        return results;
+      };
+
+      const handleContentCards = (form) => {
+        let result = { type: form.id, cards: [] };
+        const cards = form.querySelectorAll("form.card");
+
+        cards.forEach((card) => {
+          const cardResult = getFormResult(card);
+
+          if (cardResult) {
+            result.cards.push(cardResult);
+          }
+        });
+
+        if (result.cards.length) {
+          return result;
+        }
+      };
+
+      const getFormResult = (form) => {
+        const formResult = form.id !== "card" ? { type: form.id } : {};
+
+        const data = new FormData(form);
+
+        for (let [key, value] of data.entries()) {
+          if (!value) continue;
+          if (isDefaultColor(key, value)) continue;
+
+          if (key === "items" && value) {
+            value = convertItemsList(value);
+          }
+
+          formResult[key] = value;
+        }
+
+        if (Object.keys(formResult).filter((key) => key !== "type").length) {
+          return formResult;
+        }
+      };
+
+      const isDefaultColor = (key, value) =>
+        (key === "overlayColor" && value === "#000000") ||
+        ((key === "backgroundColor" ||
+          key === "buttonColor" ||
+          key === "headingBGColor") &&
+          value === "#f5f5f7");
+
+      const convertItemsList = (list) =>
+        list.split(",").map((item) => item.trim());
+
+      const copyResult = () => {
+        result.focus();
+        result.select();
+        try {
+          var successful = document.execCommand("copy");
+          var msg = successful ? "successful" : "unsuccessful";
+          console.log("Copying text command was " + msg);
+        } catch (err) {
+          console.log("Oops, unable to copy");
+        }
+      };
+
+      const clearForms = () => {
+        const forms = document.querySelectorAll("form");
+        forms.forEach((form) => {
+          if (form.id === "card" || form.classList.contains("removable")) {
+            form.remove();
+            return;
+          }
+          form.reset();
+        });
+        result.value = "";
+        window.scrollTo(0, 0);
+      };
+
+      const remove = (elem) => {
+        elem.parentNode.remove();
+      };
+
+      const showExistingModal = () => {
+        existingModal.showModal();
+      };
+
+      const closeExistingModal = () => {
+        existingModal.close();
+      };
+
+      const clearLayoutInput = () => {
+        existingLayout.value = "";
+        existingLayout.focus();
+      };
+
+      const populateExistingLayout = () => {
+        clearForms();
+        const layout = JSON5.parse(existingLayout.value);
+        layout.forEach((element) => {
+          switch (element.type) {
+            case "settings":
+              addElementToForm(element, settingsForm);
+              break;
+            case "header":
+              addElementToForm(element, headerForm);
+              break;
+            case "carousel":
+              populateNewCarousel(element);
+              break;
+            case "content-cards":
+              populateContentCards(element);
+              break;
+            default:
+              console.log("Unexpected element");
+              break;
+          }
+        });
+        existingModal.close();
+      };
+
+      const addElementToForm = (elem, form) => {
+        const keys = Object.keys(elem).filter((key) => key !== "type");
+        keys.forEach((key) => {
+          if (form[key]) {
+            form[key].value = elem[key];
+          }
+        });
+      };
+
+      const populateNewCarousel = (elem) => {
+        const form = createNewForm("carousel", carouselForm);
+        addElementToForm(elem, form);
+      };
+
+      const populateContentCards = (elem) => {
+        const form = createNewForm("content-cards", contentCardsForm);
+        const firstCard = form.querySelector(".card");
+        elem.cards.forEach((card, index) => {
+          if (index === 0) {
+            addElementToForm(card, firstCard);
+          } else {
+            const cardForm = addContentCard(form);
+            addElementToForm(card, cardForm);
+          }
+        });
+      };
+
+      const createNewForm = (id, formContent) => {
+        const form = document.createElement("form");
+        form.id = id;
+        form.classList.add(id);
+        form.classList.add("component", "removable");
+        form.addEventListener("submit", (e) => e.preventDefault());
+
+        form.innerHTML += formContent;
+        if (form.id === "content-cards") addContentCard(form);
+
+        formSection.appendChild(form);
+        return form;
+      };
+
+      const addContentCard = (elem) => {
+        const cardsSection =
+          elem.querySelector("#cards") ??
+          elem.parentNode.querySelector("#cards");
+
+        const card = document.createElement("form");
+        card.id = "card";
+        card.classList.add("card");
+        card.onsubmit = "return false;";
+
+        card.innerHTML = contentCard;
+        cardsSection.appendChild(card);
+        return card;
+      };
+
+      const carouselForm = `<h3>Carousel</h3>
+<label for="title">Custom title</label>
+<input type="text" name="title" />
+<label for="items">IA Identifiers</label>
+<span class="note">Comma-separated list, please.</span>
+<textarea type="text" name="items"></textarea><button id="btn" class="form-btn form-btn--remove" onClick="remove(this)">Remove</button>`;
+
+      const contentCardsForm = `<h3>Content Cards Block</h3>
+<section id="cards">
+</section>
+<button class="form-btn form-btn--add-card" onClick="addContentCard(this)">New Card</button>
+<button class="form-btn form-btn--remove" onClick="remove(this)">Remove block</button>`;
+
+      const contentCard = `<label for="title">Card title</label>
+	<input type="text" name="title" />
+	<label for="description">Card description</label>
+	<textarea name="description"></textarea>
+  <label for="linkURL">Link</label>
+	<input type="url" name="linkURL" placeholder="https://..." />
+	<label for ="linkText">Link text</label>
+	<span class="note">If a URL is provided without a link text, link text will default to "Go"</span>
+  <input type="text" name="linkText" />
+  <label for="featuredItem">Featured item</label>
+	<span class="note">Optional item image to display with text</span>
+	<input type="text" name="featuredItem" placeholder="IA identifier" />
+  <label for="usePlainLink">Use plain link?</label>
+	<span class="note">Removes button styling</span>
+	<input type="text" name="usePlainLink" placeholder="Write true if desired" />
+  <button id="btn" class="form-btn form-btn--remove-card" onClick="remove(this)">Remove card</button>`;
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        background-color: #000;
+      }
+
+      body {
+        box-sizing: border-box;
+        background-color: #000;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .title {
+        margin: 0;
+        padding-bottom: 5px;
+        font-weight: 100;
+      }
+
+      #top-matter {
+        text-align: center;
+        padding: 20px;
+      }
+
+      #forms-section,
+      #bottom-controls-section,
+      #results-section,
+      .modal--existing {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        max-width: 500px;
+        min-width: 250px;
+        gap: 10px;
+        padding: 20px;
+        border: 0.5px solid #aaa;
+      }
+
+      form,
+      #content-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .removable {
+        padding: 10px;
+      }
+
+      form.card {
+        background-color: #134367;
+        padding: 10px;
+        margin: 5px 0;
+      }
+
+      input,
+      textarea {
+        margin-bottom: 10px;
+        font-family: inherit;
+        letter-spacing: inherit;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      span.note {
+        font-size: 14px;
+        color: #ccc;
+        margin: -5px 0;
+      }
+
+      #controls {
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      ::backdrop {
+        background-color: #000;
+        opacity: 0.6;
+      }
+
+      .modal[open] {
+        border-radius: 10px;
+        border: 1px solid #fff;
+        background-color: #000;
+        color: #fff;
+      }
+
+      .modal:not([open]) {
+        display: none !important;
+      }
+
+      .form-btn {
+        background-color: #000;
+        color: #fff;
+        font-family: inherit;
+        letter-spacing: inherit;
+        padding: 10px;
+        font-weight: 400;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .form-btn--copy,
+      .form-btn--existing {
+        background-color: #91c93e;
+      }
+
+      .form-btn--remove {
+        background-color: rgb(255, 0, 0);
+      }
+
+      .form-btn--add-card {
+        background-color: #fcb805;
+      }
+
+      .form-btn--remove-card {
+        background-color: #f3543d;
+      }
+
+      .form-btn--clear {
+        background-color: #fcb805;
+      }
+
+      .form-btn--generate {
+        background-color: #04b4f9;
+      }
+
+      form.carousel,
+      .form-btn--carousel {
+        background-color: rgb(25, 72, 128);
+      }
+
+      form.content-cards,
+      .form-btn--content-cards {
+        background-color: #6d83a0;
+      }
+    </style>
+  </body>
+</html>
