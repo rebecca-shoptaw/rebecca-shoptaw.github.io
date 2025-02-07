@@ -14,10 +14,10 @@ export type ProjectInfo = {
 
 export const projects: ProjectInfo[] = [
   {
-    id: `registration`,
+    id: "registration",
     title: "Overhaul Registration User Interface (UI) and User Experience (UX)",
     type: "issue",
-    wip: true,
+    wip: false,
     link: "https://github.com/internetarchive/openlibrary/issues/7694",
     problem: `The Internet Archive's Open Library registration form is many new users' first interaction with the site, and currently it is clunky and non-intuitive, and does not notify users of errors in their submission until after the form has been submitted.`,
     solution: `Add custom real-time error messages, prevent submissions with bad entries, and implement a full form redesign.`,
@@ -41,17 +41,16 @@ export const projects: ProjectInfo[] = [
       {
         text: "The form should be redesigned to be appealing and intuitive",
         link: "https://github.com/internetarchive/openlibrary/pull/9350",
-      }, {
-        wip: true,
-        text: 'Performance should be improved by running all lightweight checks on the frontend',
-        link: 'https://github.com/internetarchive/openlibrary/pull/9485'
-      }, {
-        wip: true,
-        text: 'Form entries already marked invalid should be checked on key-up',
-        link: 'https://github.com/internetarchive/openlibrary/pull/9512'
       },
       {
-        wip: true,
+        text: "Performance should be improved by running all lightweight checks on the frontend",
+        link: "https://github.com/internetarchive/openlibrary/pull/9485",
+      },
+      {
+        text: "Form entries already marked invalid should be checked on key-up",
+        link: "https://github.com/internetarchive/openlibrary/pull/9512",
+      },
+      {
         text: "We should add more thorough tests for the form and remove any unused code",
         link: "https://github.com/internetarchive/openlibrary/pull/9543",
       },
