@@ -5,7 +5,7 @@ import {
   MarkGithubIcon,
   OrganizationIcon,
 } from "@primer/octicons-react";
-import { GIT_LINK, LINKEDIN_LINK, OL_LINK, RESUME_PATH } from "./constants";
+import { GIT_LINK, LINKEDIN_LINK, IA_LINK, RESUME_PATH } from "./constants";
 
 export type InfoBoxItem = {
   id: string;
@@ -31,7 +31,7 @@ export const InfoBoxList: InfoBoxItem[] = [
     id: "job",
     icon: <OrganizationIcon size={16} />,
     text: "internet archive",
-    link: OL_LINK,
+    link: IA_LINK,
   },
   {
     id: "location",

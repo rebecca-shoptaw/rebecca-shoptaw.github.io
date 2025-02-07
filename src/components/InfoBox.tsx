@@ -19,7 +19,7 @@ const InfoBox = () => {
             <a href="#" onClick={resetUrl}>
               <h1 className="site-title">Rebecca Shoptaw</h1>
             </a>
-            <h2 className="site-subtitle">Full-stack software engineer.</h2>
+            <h2 className="site-subtitle">Full-stack software engineer</h2>
             <p className="info-bio">
               Hello! 👋 My name is Rebecca and I'm a full-stack software
               engineer who helps organizations get the new features they need
@@ -27,9 +27,9 @@ const InfoBox = () => {
               precision 🔎
               <br />
               <br />
-              I've spent the last year working on the Internet Archive, first as
-              a frontend and internationalization lead on Open Library, and then
-              as a software engineer on the core site UX time.
+              I've spent the last year at the Internet Archive, first as an
+              engineering fellow and frontend/internationalization lead on Open
+              Library, and then as a software engineer on the core site UX time.
               <br />
               <br />
               During that time, I've shipped more than 50 features and fixes
