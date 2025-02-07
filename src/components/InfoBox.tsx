@@ -27,12 +27,12 @@ const InfoBox = () => {
               precision 🔎
               <br />
               <br />
-              I've spent the last 6 months working on the Internet Archive's
-              Open Library project, where I'm now an Engineering Fellow and
-              Frontend/Internationalization Lead.
+              I've spent the last year working on the Internet Archive, first as
+              a frontend and internationalization lead on Open Library, and then
+              as a software engineer on the core site UX time.
               <br />
               <br />
-              During that time, I've shipped more than 40 features and fixes
+              During that time, I've shipped more than 50 features and fixes
               across the stack, helping both to make the site as modern,
               seamless and intuitive as possible for users, and to optimize the
               development process behind the scenes for contributors.

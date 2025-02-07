@@ -30,12 +30,7 @@ export const InfoBoxList: InfoBoxItem[] = [
   {
     id: "job",
     icon: <OrganizationIcon size={16} />,
-    text: (
-      <span>
-        internet archive
-        <span className="full-infobox-only"> - engineering fellow</span>
-      </span>
-    ),
+    text: "internet archive",
     link: OL_LINK,
   },
   {

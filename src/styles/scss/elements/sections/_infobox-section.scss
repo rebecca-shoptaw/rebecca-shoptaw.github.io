@@ -66,10 +66,6 @@
   position: fixed;
   width: $sidenav-width;
 
-  .full-infobox-only {
-    display: none;
-  }
-
   .section-body {
     width: calc($sidenav-width - 24px);
   }
