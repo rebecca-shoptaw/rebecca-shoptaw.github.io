@@ -1,3 +1,4 @@
+import { IA_LINK } from "../data/constants";
 import { ProjectInfo } from "../data/ProjectData";
 import ProjectConsiderations from "./ProjectConsiderations";
 import ProjectImage from "./ProjectImage";
@@ -27,10 +28,7 @@ const ProjectTile = ({ project }: { project: ProjectInfo }) => {
       </section>
       <section className="project-body">
         {project.company == "ia" && (
-          <a
-            href="https://github.com/internetarchive/openlibrary/issues?q=author%3Arebecca-shoptaw"
-            target="_blank"
-          >
+          <a href={IA_LINK} target="_blank">
             <img className="project-company-logo" src="/ia-logo.png" />
           </a>
         )}
