@@ -66,7 +66,10 @@
         >
         <input type="color" name="headingBGColor" value="#f5f5f7" />
         <label for="headingFont">Custom heading font</label>
-        <span class="note">Identifier for an IA item that contains the desired font file. Used for all heaidngs and buttons.</span>
+        <span class="note"
+          >Identifier for an IA item that contains the desired font file. Used
+          for all heaidngs and buttons.</span
+        >
         <input type="text" name="headingFont" />
       </form>
       <form id="header" class="component">
@@ -276,6 +279,9 @@
         keys.forEach((key) => {
           if (form[key]) {
             form[key].value = elem[key];
+          } else if (key === "description") {
+            // Convert legacy card descriptions to new card bodies
+            form["body"].value = elem["description"];
           }
         });
       };
@@ -342,8 +348,8 @@
 
       const contentCard = `<label for="title">Card title</label>
 	<input type="text" name="title" />
-	<label for="description">Card description</label>
-	<textarea name="description"></textarea>
+	<label for="body">Card body</label>
+	<textarea name="body"></textarea>
   <label for="linkURL">Link</label>
 	<input type="url" name="linkURL" placeholder="https://..." />
 	<label for ="linkText">Link text</label>
