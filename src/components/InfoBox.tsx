@@ -21,34 +21,34 @@ const InfoBox = () => {
             </a>
             <h2 className="site-subtitle">Full-stack software engineer</h2>
             <p className="info-bio">
-              Hello! 👋 My name is Rebecca and I'm a full-stack software
-              engineer who helps organizations get the new features they need
-              from idea to production with both rapid speed 🚀 and minute
-              precision 🔎
+              Hello! My name is Rebecca and I'm a full-stack software engineer
+              who specializes in breaking down complex, large-scale feature
+              requests into straightforward, iterable tasks -- then powering
+              through the tasks one by one until the feature is complete.
               <br />
               <br />
               I've spent the last year at the Internet Archive, first as an
               engineering fellow and frontend/internationalization lead on Open
-              Library, and then as a software engineer on the core site UX time.
+              Library, then as a software engineer on the core site UX team.
               <br />
               <br />
               During that time, I've shipped more than 50 features and fixes
               across the stack, helping both to make the site as modern,
               seamless and intuitive as possible for users, and to optimize the
-              development process behind the scenes for contributors.
+              development process behind the scenes for engineers.
               <br />
               <br />
               My specialty is driving new features from ideation to realization
               by: <br />
-              1. Developing a clear, efficient action plan
-              <br />
-              2. Writing clean, well-tested code
-              <br />
-              3. Consistently modifying the plan as needed to get past
-              engineering roadblocks and push the best possible solution to
-              production
-              <br />
-              <br />
+              <ol>
+                <li>Developing a clear, efficient action plan</li>
+                <li>Writing clean, well-tested code</li>
+                <li>
+                  Consistently modifying the plan as needed to get past
+                  engineering roadblocks and push the best possible solution to
+                  production
+                </li>
+              </ol>
               In my spare time, I've also built a number of new React
               applications from the ground up, such as a gamified vocab practice
               site for middle schoolers, an aesthetically pleasing audiobook
