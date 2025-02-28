@@ -65,6 +65,9 @@
           >Defaults to transparent. Used for all headings.</span
         >
         <input type="color" name="headingBGColor" value="#f5f5f7" />
+        <label for="headingFont">Custom heading font</label>
+        <span class="note">Identifier for an IA item that contains the desired font file. Used for all heaidngs and buttons.</span>
+        <input type="text" name="headingFont" />
       </form>
       <form id="header" class="component">
         <h3>Header</h3>
@@ -79,7 +82,7 @@
         <label for="centerImage">Center image URL</label>
         <span class="note"
           >If URL entered, image will replace title. Otherwise existing title
-          and thumnail will show.</span
+          and thumbnail will show.</span
         >
         <input type="url" name="centerImage" placeholder="https://..." />
       </form>
@@ -245,7 +248,7 @@
 
       const populateExistingLayout = () => {
         clearForms();
-        const layout = JSON5.parse(existingLayout.value);
+        const layout = JSON.parse(existingLayout.value);
         layout.forEach((element) => {
           switch (element.type) {
             case "settings":
