@@ -494,6 +494,7 @@ dialog::backdrop {
   margin-top: 3px;
 }
 .consideration-item p {
+  font-size: 14px;
   color: #8d96a0;
   flex-grow: 1;
 }

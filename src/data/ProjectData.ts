@@ -48,6 +48,23 @@ export const projects: ProjectInfo[] = [
       "Build a search inside carousel which includes results from text and captions searches to display alongside search results.",
     roles: "Project lead, code author",
     company: "ia",
+    considerations: [
+      {
+        text: "The carousel should alternate between results from each service",
+      },
+      {
+        text: "The tiles should align to match the regular search result tiles",
+      },
+      {
+        text: "The carousel mechanism should be encapsulated in a new, reusable carousel component",
+      },
+      {
+        text: "The number of tiles to display per service should be customizable",
+      },
+      {
+        text: "Placeholders should appear instead of the results while they are being fetched",
+      },
+    ],
   },
   {
     id: "registration",
