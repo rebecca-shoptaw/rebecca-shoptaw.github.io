@@ -14,6 +14,18 @@ export type ProjectInfo = {
 
 export const projects: ProjectInfo[] = [
   {
+    id: "static_pages",
+    title: "Create a User-Friendly Admin Editing Workflow",
+    type: "issue",
+    wip: false,
+    problem:
+      "Editing a number of high-visibility pages on the site, including the about page, previously required admins to write and save raw HTML to the database, which led to frequent page breakage and confusion.",
+    solution:
+      "Create a simple, performant new editing workflow that does not require admins to touch the HTML directly.",
+    roles: "Project lead, code author",
+    company: "ia",
+  },
+  {
     id: "search_inside",
     title: "Build Search Inside Carousel",
     type: "issue",

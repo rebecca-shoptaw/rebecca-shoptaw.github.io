@@ -5,6 +5,10 @@ export type ProjectImage = {
 };
 
 export const images: { [key: string]: ProjectImage } = {
+  static_pages: {
+    src: "static-pages.gif",
+    caption: "New page editing experience",
+  },
   search_inside: {
     src: "search-inside.gif",
     caption: "Sample search inside results",

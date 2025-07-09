@@ -6,6 +6,26 @@ export type Snippet = {
 };
 
 export const snippets: { [key: string]: Snippet } = {
+  static_pages: {
+    text: `const pageContent: StaticPageContent = {
+          title: metadata.title?.value ?? '',
+          mainContent: metadata.description?.value ?? '',
+        };
+
+        const sidebarLinks = metadata.rawMetadata?.sidebar_links;
+
+        if (sidebarLinks) {
+          pageContent.sidebarLinks = JSON.parse(sidebarLinks);
+        }
+
+        await this.localCache?.set({
+          key: pageKey,
+          value: pageContent,
+          ttl: 15 * 60,
+        });`,
+    language: "typescript",
+    caption: "static-page.ts",
+  },
   search_inside: {
     text: `/**
    * Adds the previously-fetched federated results to the carousel tiles,
