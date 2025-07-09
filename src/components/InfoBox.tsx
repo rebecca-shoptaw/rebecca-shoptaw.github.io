@@ -60,7 +60,7 @@ const InfoBox = () => {
         <InfoBoxIcons />
         <a
           className="btn-link"
-          href="mailto:rebecca@rebeccashoptaw.dev"
+          href="mailto:rebeccashoptaw.dev@gmail.com"
           target="_blank"
         >
           <button className="btn-default">Contact</button>

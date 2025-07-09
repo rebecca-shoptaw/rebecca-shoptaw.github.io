@@ -81,7 +81,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Rebecca Shoptaw -
-[email](mailto:rebecca@rebeccashoptaw.dev) | [linkedin](https://www.linkedin.com/in/rebeccashoptaw/)
+[email](mailto:rebeccashoptaw.dev@gmail.com) | [linkedin](https://www.linkedin.com/in/rebeccashoptaw/)
 
 <!-- Links and Icons -->
 

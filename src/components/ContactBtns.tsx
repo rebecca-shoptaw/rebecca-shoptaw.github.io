@@ -15,7 +15,7 @@ const ContactBtns = () => {
         </button>
       </div>
 
-      <a href="mailto:rebecca@rebeccashoptaw.dev" target="_blank">
+      <a href="mailto:rebeccashoptaw.dev@gmail.com" target="_blank">
         <button className="contact-btn btn-default">
           Contact <ArrowRightIcon size={16} />
         </button>
