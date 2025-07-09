@@ -22,9 +22,13 @@ const ProjectTile = ({ project }: { project: ProjectInfo }) => {
             <IssueClosedIcon size={16} />
           ))}
         {project.type === "repo" && <RepoIcon size={16} />}
-        <a href={project.link} target="_blank">
-          {project.title}
-        </a>
+        {project.link ? (
+          <a href={project.link} target="_blank">
+            {project.title}
+          </a>
+        ) : (
+          <span className="title">{project.title}</span>
+        )}
       </section>
       <section className="project-body">
         {project.company == "ia" && (

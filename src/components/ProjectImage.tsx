@@ -12,9 +12,13 @@ const ProjectImage = ({ id }: { id: string }) => {
       <dialog id={modalId} className={id}>
         <img className="image-modal" src={src} />
       </dialog>
-      <a href={image.link} target="_blank">
-        {image.caption}
-      </a>
+      {image.link ? (
+        <a href={image.link} target="_blank">
+          {image.caption}
+        </a>
+      ) : (
+        image.caption
+      )}
     </div>
   );
 };

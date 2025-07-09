@@ -2,10 +2,32 @@ export type Snippet = {
   text: string;
   language: string;
   caption: string;
-  link: string;
+  link?: string;
 };
 
 export const snippets: { [key: string]: Snippet } = {
+  search_inside: {
+    text: `/**
+   * Adds the previously-fetched federated results to the carousel tiles,
+   * alternating between available services.
+   */
+  private buildTilesFromFederatedResults(): void {
+    const { federatedResults } = this;
+
+    if (federatedResults) {
+      for (let i = 0; i < this.tilesPerService; i++) {
+        this.addResultsToTiles(federatedResults, i);
+      }
+      this.emitResultsLoadedEvent(federatedResults);
+    } else {
+      this.searchError = true;
+    }
+
+    this.tilesLoading = false;
+  }`,
+    language: "typescript",
+    caption: "federated-search-carousel.ts",
+  },
   registration: {
     text: `function validateUsername() {
         const value_username = $(this).val();
