@@ -106,7 +106,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "i18n",
-    title: "Internationalization Project",
+    title: "Optimize Internationalization",
     type: "issue",
     wip: false,
     link: "https://github.com/internetarchive/openlibrary/pull/8900",
