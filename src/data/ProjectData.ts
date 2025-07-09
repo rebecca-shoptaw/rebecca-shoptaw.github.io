@@ -49,6 +49,59 @@ export const projects: ProjectInfo[] = [
     ],
   },
   {
+    id: "reviews",
+    title: "Overhaul and Rebuild the Reviews Section",
+    type: "issue",
+    wip: false,
+    link: "https://github.com/internetarchive/iaux-reviews",
+    problem:
+      "The reviews section on the archive had a number of pretty serious problems: spammers were filling up pages on the archive with long reviews which they pushed to the top of the list with continual re-editing, and users had to leave the item they were reviewing and go to a new page to submit a review, and had to navigate a non-intuitive form.",
+    solution:
+      "Made several waves of improvements to the review section. First, successfully fought off review spam by adding ReCaptcha, collapsing whitespace in reviews, truncating overly-long reviews, adjusting reviews order and hiding reviews by default. Second, implemented a comprehensive redesign of the review form and moved it inline on the page.",
+    considerations: [
+      {
+        text: "Reviews should be hidden by default",
+      },
+      {
+        text: "Review text should be truncated if needed, and use more/less buttons",
+      },
+      {
+        text: "Reviews should be sorted by create date instead of update date",
+      },
+      {
+        text: "Moderators should be able to delete reviews quickly using an inline delete button",
+      },
+      {
+        text: "If a user has a review, that review should appear first with special styling",
+      },
+      {
+        text: "We should implement a full redesign of the review form",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/6",
+      },
+      {
+        text: "The review form should appear on the page and allow for editing-in-place",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/28",
+      },
+      {
+        text: "We should include ReCaptcha validation to prevent review spam",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/18",
+      },
+      {
+        text: "The review form should include a character counter that prevents over-the-limit submission",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/22",
+      },
+      {
+        text: "The add review button should switch to edit if the user has a review",
+      },
+      {
+        text: "All the reviews logic should be rewritten in TypeScript and moved out of the legacy PHP code",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/38",
+      },
+    ],
+    roles: "Project lead, code author",
+    company: "ia",
+  },
+  {
     id: "static_pages",
     title: "Create a User-Friendly Admin Editing Workflow",
     type: "issue",
