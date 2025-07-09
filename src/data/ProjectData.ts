@@ -55,9 +55,9 @@ export const projects: ProjectInfo[] = [
     wip: false,
     link: "https://github.com/internetarchive/iaux-reviews",
     problem:
-      "The reviews section on the archive had a number of pretty serious problems: spammers were filling up pages on the archive with long reviews which they pushed to the top of the list with continual re-editing, and users had to leave the item they were reviewing and go to a new page to submit a review, and had to navigate a non-intuitive form.",
+      "Spammers were filling up pages on the archive with long reviews which they pushed to the top of the list with continual re-editing, and users had to leave the item they were reviewing and go to a new page to submit a review – and navigate a non-intuitive form when they got there.",
     solution:
-      "Made several waves of improvements to the review section. First, successfully fought off review spam by adding ReCaptcha, collapsing whitespace in reviews, truncating overly-long reviews, adjusting reviews order and hiding reviews by default. Second, implemented a comprehensive redesign of the review form and moved it inline on the page.",
+      "First, successfully fought off review spam by adding ReCaptcha, collapsing whitespace in reviews, truncating overly-long reviews, adjusting reviews order and hiding reviews by default. Second, implemented a comprehensive redesign of the review form and moved it inline on the page.",
     considerations: [
       {
         text: "Reviews should be hidden by default",
@@ -135,7 +135,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "search_inside",
-    title: "Build Search Inside Carousel",
+    title: "Build a Search Inside Carousel",
     type: "issue",
     wip: false,
     problem:
@@ -164,7 +164,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "registration",
-    title: "Overhaul Registration User Interface (UI) and User Experience (UX)",
+    title: "Overhaul the Open Library Registration Experience",
     type: "issue",
     wip: false,
     link: "https://github.com/internetarchive/openlibrary/issues/7694",
@@ -272,7 +272,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "triolingo",
-    title: "Gamified Vocab Practice Site",
+    title: "Build a Gamified Vocab Practice Site",
     type: "repo",
     wip: false,
     link: "https://rebeccashoptaw.dev/triolingo/",
@@ -298,7 +298,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "openEditions",
-    title: "Analogue-esque Audiobook Site",
+    title: "Create an Analogue-esque Audiobook Site",
     type: "repo",
     wip: false,
     link: "https://github.com/rebecca-shoptaw/open-editions",
@@ -321,7 +321,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "portfolio",
-    title: "Engineering Portfolio Redesign",
+    title: "Redesign Engineering Portfolio",
     type: "repo",
     wip: true,
     link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io",
@@ -359,7 +359,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "askOscar",
-    title: "Oscar Wilde Magic 8 Ball",
+    title: "Build an Oscar Wilde Magic 8 Ball",
     type: "repo",
     wip: false,
     link: "https://rebeccashoptaw.dev/ask-oscar-wilde/",
@@ -385,7 +385,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "catBand",
-    title: "All-Cat Jazz Band",
+    title: "Form an All-Cat Jazz Band",
     type: "repo",
     wip: false,
     link: "/cat-band",
