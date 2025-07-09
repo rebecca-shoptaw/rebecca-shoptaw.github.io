@@ -23,13 +23,14 @@ const InfoBox = () => {
             <p className="info-bio">
               Hello! My name is Rebecca and I'm a full-stack software engineer
               who specializes in breaking down complex, large-scale feature
-              requests into straightforward, iterable tasks -- then powering
+              requests into straightforward, iterable tasks – then powering
               through the tasks one by one until the feature is complete.
               <br />
               <br />
-              I've spent the last year at the Internet Archive, first as an
-              engineering fellow and frontend/internationalization lead on Open
-              Library, then as a software engineer on the core site UX team.
+              I joined the Internet Archive at the end of 2023, first as a
+              volunteer, then as an engineering fellow and
+              frontend/internationalization lead on the Open Library team, then
+              as a software engineer on the core site UX team.
               <br />
               <br />
               During that time, I've shipped more than 50 features and fixes
