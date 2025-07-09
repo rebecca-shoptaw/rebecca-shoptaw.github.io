@@ -4,7 +4,7 @@ export type ProjectInfo = {
   title: string;
   type: string;
   wip: boolean;
-  link: string;
+  link?: string;
   problem: string;
   solution: string;
   considerations?: Consideration[];
@@ -13,6 +13,18 @@ export type ProjectInfo = {
 };
 
 export const projects: ProjectInfo[] = [
+  {
+    id: "search_inside",
+    title: "Build Search Inside Carousel",
+    type: "issue",
+    wip: false,
+    problem:
+      "Many users of the Internet Archive's search page have no idea that searching inside text contents or media captions is possible, and may give up before finding what they're looking for.",
+    solution:
+      "Build a search inside carousel which includes results from text and captions searches to display alongside search results.",
+    roles: "Project lead, code author",
+    company: "ia",
+  },
   {
     id: "registration",
     title: "Overhaul Registration User Interface (UI) and User Experience (UX)",

@@ -1,10 +1,14 @@
 export type ProjectImage = {
   src: string;
   caption: string;
-  link: string;
+  link?: string;
 };
 
 export const images: { [key: string]: ProjectImage } = {
+  search_inside: {
+    src: "search-inside.gif",
+    caption: "Sample search inside results",
+  },
   registration: {
     src: "registration.png",
     caption: "Registration project overview",

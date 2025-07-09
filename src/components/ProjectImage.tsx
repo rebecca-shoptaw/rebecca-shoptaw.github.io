@@ -17,7 +17,7 @@ const ProjectImage = ({ id }: { id: string }) => {
           {image.caption}
         </a>
       ) : (
-        image.caption
+        <span className="caption">{image.caption}</span>
       )}
     </div>
   );
