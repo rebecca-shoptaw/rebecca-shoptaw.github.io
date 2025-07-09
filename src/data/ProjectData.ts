@@ -49,6 +49,59 @@ export const projects: ProjectInfo[] = [
     ],
   },
   {
+    id: "reviews",
+    title: "Overhaul and Rebuild the Reviews Section",
+    type: "issue",
+    wip: false,
+    link: "https://github.com/internetarchive/iaux-reviews",
+    problem:
+      "Spammers were filling up pages on the archive with long reviews which they pushed to the top of the list with continual re-editing, and users had to leave the item they were reviewing and go to a new page to submit a review – and navigate a non-intuitive form when they got there.",
+    solution:
+      "First, successfully fought off review spam by adding ReCaptcha, collapsing whitespace in reviews, truncating overly-long reviews, adjusting reviews order and hiding reviews by default. Second, implemented a comprehensive redesign of the review form and moved it inline on the page.",
+    considerations: [
+      {
+        text: "Reviews should be hidden by default",
+      },
+      {
+        text: "Review text should be truncated if needed, and use more/less buttons",
+      },
+      {
+        text: "Reviews should be sorted by create date instead of update date",
+      },
+      {
+        text: "Moderators should be able to delete reviews quickly using an inline delete button",
+      },
+      {
+        text: "If a user has a review, that review should appear first with special styling",
+      },
+      {
+        text: "We should implement a full redesign of the review form",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/6",
+      },
+      {
+        text: "The review form should appear on the page and allow for editing-in-place",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/28",
+      },
+      {
+        text: "We should include ReCaptcha validation to prevent review spam",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/18",
+      },
+      {
+        text: "The review form should include a character counter that prevents over-the-limit submission",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/22",
+      },
+      {
+        text: "The add review button should switch to edit if the user has a review",
+      },
+      {
+        text: "All the reviews logic should be rewritten in TypeScript and moved out of the legacy PHP code",
+        link: "https://github.com/internetarchive/iaux-reviews/pull/38",
+      },
+    ],
+    roles: "Project lead, code author",
+    company: "ia",
+  },
+  {
     id: "static_pages",
     title: "Create a User-Friendly Admin Editing Workflow",
     type: "issue",
@@ -82,7 +135,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "search_inside",
-    title: "Build Search Inside Carousel",
+    title: "Build a Search Inside Carousel",
     type: "issue",
     wip: false,
     problem:
@@ -111,7 +164,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "registration",
-    title: "Overhaul Registration User Interface (UI) and User Experience (UX)",
+    title: "Overhaul the Open Library Registration Experience",
     type: "issue",
     wip: false,
     link: "https://github.com/internetarchive/openlibrary/issues/7694",
@@ -219,7 +272,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "triolingo",
-    title: "Gamified Vocab Practice Site",
+    title: "Build a Gamified Vocab Practice Site",
     type: "repo",
     wip: false,
     link: "https://rebeccashoptaw.dev/triolingo/",
@@ -245,7 +298,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "openEditions",
-    title: "Analogue-esque Audiobook Site",
+    title: "Create an Analogue-esque Audiobook Site",
     type: "repo",
     wip: false,
     link: "https://github.com/rebecca-shoptaw/open-editions",
@@ -268,7 +321,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "portfolio",
-    title: "Engineering Portfolio Redesign",
+    title: "Redesign Engineering Portfolio",
     type: "repo",
     wip: true,
     link: "https://github.com/rebecca-shoptaw/rebecca-shoptaw.github.io",
@@ -306,7 +359,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "askOscar",
-    title: "Oscar Wilde Magic 8 Ball",
+    title: "Build an Oscar Wilde Magic 8 Ball",
     type: "repo",
     wip: false,
     link: "https://rebeccashoptaw.dev/ask-oscar-wilde/",
@@ -332,7 +385,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "catBand",
-    title: "All-Cat Jazz Band",
+    title: "Form an All-Cat Jazz Band",
     type: "repo",
     wip: false,
     link: "/cat-band",

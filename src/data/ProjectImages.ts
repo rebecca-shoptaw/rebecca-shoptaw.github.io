@@ -5,6 +5,10 @@ export type ProjectImage = {
 };
 
 export const images: { [key: string]: ProjectImage } = {
+  reviews: {
+    src: "reviews.gif",
+    caption: "New reviews layout and editing experience",
+  },
   custom_collections: {
     src: "custom-collections.gif",
     caption: "Sample customized collection",

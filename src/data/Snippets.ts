@@ -109,6 +109,24 @@ export const snippets: { [key: string]: Snippet } = {
     language: "json",
     caption: "collection_layout for the sample collection",
   },
+  reviews: {
+    text: `<div class="reviews-list">
+      {this.reviewsFrozen
+        ? <div class="message">
+            {msg('Reviews can no longer be added to this item.')}
+          </div>
+          : nothing}
+      {this.editableCurrentReviewTemplate}
+      {this.filteredReviews.map(review =>
+        review.reviewer_itemname !== this.submitterItemname
+        ? this.renderReview(review)
+        : nothing,
+      )}
+    </div>`,
+    language: "typescript",
+    caption: "ia-review.ts",
+    link: "https://github.com/internetarchive/iaux-reviews/blob/main/src/ia-reviews.ts",
+  },
   static_pages: {
     text: `const pageContent: StaticPageContent = {
           title: metadata.title?.value ?? '',

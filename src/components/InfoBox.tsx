@@ -28,15 +28,14 @@ const InfoBox = () => {
               <br />
               <br />
               I joined the Internet Archive at the end of 2023, first as a
-              volunteer, then as an engineering fellow and
-              frontend/internationalization lead on the Open Library team, then
-              as a software engineer on the core site UX team.
+              volunteer, then as a frontend and internationalization lead on the
+              Open Library team, then as an engineer on the core site UX team.
               <br />
               <br />
-              During that time, I've shipped more than 50 features and fixes
-              across the stack, helping both to make the site as modern,
-              seamless and intuitive as possible for users, and to optimize the
-              development process behind the scenes for engineers.
+              Since joining, I've shipped more than 50 features and fixes across
+              the stack, helping both to make the site as modern, seamless and
+              intuitive as possible for users, and to optimize the development
+              process behind the scenes for engineers.
               <br />
               <br />
               My specialty is driving new features from ideation to realization
