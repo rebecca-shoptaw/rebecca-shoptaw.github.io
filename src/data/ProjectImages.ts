@@ -5,6 +5,10 @@ export type ProjectImage = {
 };
 
 export const images: { [key: string]: ProjectImage } = {
+  custom_collections: {
+    src: "custom-collections.gif",
+    caption: "Sample customized collection",
+  },
   static_pages: {
     src: "static-pages.gif",
     caption: "New page editing experience",

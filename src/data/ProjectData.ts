@@ -14,6 +14,18 @@ export type ProjectInfo = {
 
 export const projects: ProjectInfo[] = [
   {
+    id: "custom_collections",
+    title: "Support Fully-Customized Collection Headers",
+    type: "issue",
+    wip: false,
+    problem:
+      "The collection pages on the Internet Archive lack individuality, and give users little help with navigating the many thousands of items each collection contains.",
+    solution:
+      "Support the creation of a fully customized collection header, with carousels, content cards, and special branding, via a single lightweight JSON object.",
+    roles: "Project lead, code author",
+    company: "ia",
+  },
+  {
     id: "static_pages",
     title: "Create a User-Friendly Admin Editing Workflow",
     type: "issue",

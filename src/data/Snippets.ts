@@ -6,6 +6,109 @@ export type Snippet = {
 };
 
 export const snippets: { [key: string]: Snippet } = {
+  custom_collections: {
+    text: `[
+  {
+    "type": "settings",
+    "overlayColor": "#e5f1fa",
+    "buttonColor": "#e3fdd5",
+    "headingBGColor": "#000000",
+    "headingFont": "teko-semi-bold"
+  },
+  {
+    "type": "header",
+    "backgroundColor": "#e5f1fa",
+    "leftImage": "https://archive.org/download/democracys-library/web-component/banner-logo.svg",
+    "centerImage": "https://archive.org/download/democracys-library/web-component/banner-image-rebrand.webp"
+  },
+  {
+    "type": "carousel",
+    "title": "COLLECTION HIGHLIGHTS",
+    "items": [
+      "MH07D7178",
+      "CAT92272736",
+      "CAT79708698031",
+      "usda-posters",
+      "selectedpolishso00army",
+      "introductionlapt00albe",
+      "hintsonmountainl94youn",
+      "drylandfarmingin00cott"
+    ]
+  },
+  {
+    "type": "content-cards",
+    "cards": [
+      {
+        "title": "ABOUT THIS PROJECT",
+        "description": "Democracy's Library brings together more than 700 collections from over 50 government organizations, archived by the Internet Archive since 2006. With more than half a million documents (and counting) from local, regional, and national governments, we're just getting started!",
+        "linkURL": "https://blog.archive.org/2022/09/06/building-democracys-library-celebrate-with-the-internet-archive-on-october-19/",
+        "linkText": "Learn more",
+        "usePlainLink": "true"
+      },
+      {
+        "title": "WHAT'S NEXT?",
+        "description": "This is just the beginning. Democracy's Library will continue to grow and be updated over time. We'll be adding more information from all over the world, along with useful tools to help find and access what you need. You can help us grow by making a contribution today!",
+        "linkURL": "https://archive.org/donate/?origin=iawww-democlibrycllctn",
+        "linkText": "DONATE"
+      }
+    ]
+  },
+  {
+    "type": "content-cards",
+    "cards": [
+      {
+        "title": "REGIONAL ORGANIZATIONS",
+        "description": "<dl-regional-organizations></dl-regional-organizations>",
+        "linkURL": "https://webservices.archive.org/wgw/",
+        "linkText": "Government websites of the world",
+        "usePlainLink": "true"
+      },
+      {
+        "title": "JAN 6TH COMMITTEE DOCS",
+        "description": "The United States House Select Committee to Investigate the January 6th Attack on the United States Capitol (the January 6th Committee) is a bipartisan select committee of the U.S. House of Representatives established to investigate the U.S. Capitol attack.",
+        "linkURL": "https://archive.org/details/jan-6th-committee-docs",
+        "linkText": "Browse the Jan 6th Committee Docs",
+        "featuredItem": "report-final-report-jan-6-select-committee",
+        "usePlainLink": "true"
+      },
+      {
+        "title": "EXCAVATION OF HUMMINGBIRD SHELTER",
+        "description": "The Bureau of Land Management's report on the excavation of Hummingbird Shelter, part of the White River Resource Area in Colorado, United States.",
+        "linkURL": "https://archive.org/details/blmlibrary",
+        "linkText": "Browse the Bureau of Land Management Library",
+        "featuredItem": "excavationofhumm00conn",
+        "usePlainLink": "true"
+      },
+      {
+        "title": "ORGANIZED CRIME ON WALL STREET",
+        "description": "The Committee on Commerce's hearing on the topic of organized crime on Wall Street. Part of the 106th Congress' second session, this hearing took place September 13, 2000.",
+        "linkURL": "https://archive.org/details/us_house_hearings",
+        "linkText": "Browse the U.S. Congressional Hearings",
+        "featuredItem": "gov.gpo.fdsys.CHRG-106hhrg67115",
+        "usePlainLink": "true"
+      },
+      {
+        "title": "WEATHER MODIFICATION IN ALBERTA",
+        "description": "Report to the Minister of Agriculture, Government of Alberta from the Advisory Committee on Weather Modification",
+        "linkURL": "https://archive.org/details/albertagovernmentpublications",
+        "linkText": "Browse the Government of Alberta Publications",
+        "featuredItem": "potentialforweat00advi",
+        "usePlainLink": "true"
+      },
+      {
+        "title": "EDIBLE & POISONOUS MUSHROOMS OF CANADA",
+        "description": 'From the guide: "Actually there is only one test to find out whether a mushroom or any other plant is poisonous and that is to eat it. If it makes you sick or kills you it is poisonous.'",
+        "linkURL": "https://archive.org/details/canadianagriculturallibrary",
+        "linkText": "Browse the Agriculture and Agri-Food Canada Library",
+        "featuredItem": "ediblepoisonousm00grov",
+        "usePlainLink": "true"
+      }
+    ]
+  }
+  ]`,
+    language: "json",
+    caption: "collection_layout for the sample collection",
+  },
   static_pages: {
     text: `const pageContent: StaticPageContent = {
           title: metadata.title?.value ?? '',
