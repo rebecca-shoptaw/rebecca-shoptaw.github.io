@@ -24,6 +24,29 @@ export const projects: ProjectInfo[] = [
       "Support the creation of a fully customized collection header, with carousels, content cards, and special branding, via a single lightweight JSON object.",
     roles: "Project lead, code author",
     company: "ia",
+    considerations: [
+      {
+        text: "We should build an intuitive editor that collection admins can use to generate the JSON object for the layout",
+      },
+      {
+        text: "All properties of the layout should be optional, so that admins can do as much as building 10 carousels or as little as changing the header background color",
+      },
+      {
+        text: "All text that appears on a custom-color background should auto-select between black and white to meet accessibility standards",
+      },
+      {
+        text: "The header should be fully responsive",
+      },
+      {
+        text: "Admins should be able to add any number of cards and carousels in any order",
+      },
+      {
+        text: "We should support custom fonts and colors for the header",
+      },
+      {
+        text: "All existing hardcoded custom headers should be transferred to the new format",
+      },
+    ],
   },
   {
     id: "static_pages",
@@ -36,6 +59,26 @@ export const projects: ProjectInfo[] = [
       "Create a simple, performant new editing workflow that does not require admins to touch the HTML directly.",
     roles: "Project lead, code author",
     company: "ia",
+    considerations: [
+      {
+        text: "It should be easy to adjust text and styles without touching HTML",
+      },
+      {
+        text: "The editing experience should reuse the existing architecture for editing archived items",
+      },
+      {
+        text: "The page's content should be cached to prevent unnecessary strain on the metadata service",
+      },
+      {
+        text: "An easy-to-find edit button should appear on the page for site admins",
+      },
+      {
+        text: "All existing content should be transferred into the new format",
+      },
+      {
+        text: "The database used to store the original page content should be deleted",
+      },
+    ],
   },
   {
     id: "search_inside",
