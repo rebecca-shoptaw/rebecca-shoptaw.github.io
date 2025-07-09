@@ -4,7 +4,7 @@ export type ProjectInfo = {
   title: string;
   type: string;
   wip: boolean;
-  link: string;
+  link?: string;
   problem: string;
   solution: string;
   considerations?: Consideration[];
@@ -13,6 +13,102 @@ export type ProjectInfo = {
 };
 
 export const projects: ProjectInfo[] = [
+  {
+    id: "custom_collections",
+    title: "Support Fully-Customized Collection Headers",
+    type: "issue",
+    wip: false,
+    problem:
+      "The collection pages on the Internet Archive lack individuality, and give users little help with navigating the many thousands of items each collection contains.",
+    solution:
+      "Support the creation of a fully customized collection header, with carousels, content cards, and special branding, via a single lightweight JSON object.",
+    roles: "Project lead, code author",
+    company: "ia",
+    considerations: [
+      {
+        text: "We should build an intuitive editor that collection admins can use to generate the JSON object for the layout",
+      },
+      {
+        text: "All properties of the layout should be optional, so that admins can do as much as building 10 carousels or as little as changing the header background color",
+      },
+      {
+        text: "All text that appears on a custom-color background should auto-select between black and white to meet accessibility standards",
+      },
+      {
+        text: "The header should be fully responsive",
+      },
+      {
+        text: "Admins should be able to add any number of cards and carousels in any order",
+      },
+      {
+        text: "We should support custom fonts and colors for the header",
+      },
+      {
+        text: "All existing hardcoded custom headers should be transferred to the new format",
+      },
+    ],
+  },
+  {
+    id: "static_pages",
+    title: "Create a User-Friendly Admin Editing Workflow",
+    type: "issue",
+    wip: false,
+    problem:
+      "Editing a number of high-visibility pages on the site, including the about page, previously required admins to write and save raw HTML to the database, which led to frequent page breakage and confusion.",
+    solution:
+      "Create a simple, performant new editing workflow that does not require admins to touch the HTML directly.",
+    roles: "Project lead, code author",
+    company: "ia",
+    considerations: [
+      {
+        text: "It should be easy to adjust text and styles without touching HTML",
+      },
+      {
+        text: "The editing experience should reuse the existing architecture for editing archived items",
+      },
+      {
+        text: "The page's content should be cached to prevent unnecessary strain on the metadata service",
+      },
+      {
+        text: "An easy-to-find edit button should appear on the page for site admins",
+      },
+      {
+        text: "All existing content should be transferred into the new format",
+      },
+      {
+        text: "The database used to store the original page content should be deleted",
+      },
+    ],
+  },
+  {
+    id: "search_inside",
+    title: "Build Search Inside Carousel",
+    type: "issue",
+    wip: false,
+    problem:
+      "Many users of the Internet Archive's search page have no idea that searching inside text contents or media captions is possible, and may give up before finding what they're looking for.",
+    solution:
+      "Build a search inside carousel which includes results from text and captions searches to display alongside search results.",
+    roles: "Project lead, code author",
+    company: "ia",
+    considerations: [
+      {
+        text: "The carousel should alternate between results from each service",
+      },
+      {
+        text: "The tiles should align to match the regular search result tiles",
+      },
+      {
+        text: "The carousel mechanism should be encapsulated in a new, reusable carousel component",
+      },
+      {
+        text: "The number of tiles to display per service should be customizable",
+      },
+      {
+        text: "Placeholders should appear instead of the results while they are being fetched",
+      },
+    ],
+  },
   {
     id: "registration",
     title: "Overhaul Registration User Interface (UI) and User Experience (UX)",
@@ -94,7 +190,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: "i18n",
-    title: "Internationalization Project",
+    title: "Optimize Internationalization",
     type: "issue",
     wip: false,
     link: "https://github.com/internetarchive/openlibrary/pull/8900",

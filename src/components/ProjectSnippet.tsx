@@ -14,9 +14,13 @@ const ProjectSnippet = ({ id }: { id: string }) => {
       <dialog id={modalId} className={id}>
         <ProjectCodeBlock snippet={snippet} />
       </dialog>
-      <a href={snippet.link} target="_blank">
-        {snippet.caption}
-      </a>
+      {snippet.link ? (
+        <a href={snippet.link} target="_blank">
+          {snippet.caption}
+        </a>
+      ) : (
+        <span className="caption">{snippet.caption}</span>
+      )}
     </div>
   );
 };

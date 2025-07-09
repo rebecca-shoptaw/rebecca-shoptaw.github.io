@@ -24,11 +24,17 @@
   padding-left: 12px;
   padding-bottom: 3px;
 
+  .title,
+  a {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: -2px;
+  }
+
   a {
     @include full-color-link;
     @include icon-list-inline-child;
-    font-size: 16px;
-    font-weight: 600;
   }
 }
 
@@ -96,6 +102,10 @@
     a {
       @include inline-link;
     }
+
+    .caption {
+      color: #848d97;
+    }
   }
 }
 
@@ -147,6 +157,7 @@ dialog {
     margin-top: 3px;
   }
   p {
+    font-size: 14px;
     color: $fg-text-muted;
     flex-grow: 1;
   }

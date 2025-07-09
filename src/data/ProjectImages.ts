@@ -1,10 +1,22 @@
 export type ProjectImage = {
   src: string;
   caption: string;
-  link: string;
+  link?: string;
 };
 
 export const images: { [key: string]: ProjectImage } = {
+  custom_collections: {
+    src: "custom-collections.gif",
+    caption: "Sample customized collection",
+  },
+  static_pages: {
+    src: "static-pages.gif",
+    caption: "New page editing experience",
+  },
+  search_inside: {
+    src: "search-inside.gif",
+    caption: "Sample search inside results",
+  },
   registration: {
     src: "registration.png",
     caption: "Registration project overview",

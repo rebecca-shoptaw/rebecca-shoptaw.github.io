@@ -41,8 +41,8 @@ export const InfoBoxList: InfoBoxItem[] = [
   {
     id: "email",
     icon: <MailIcon size={16} />,
-    text: "rebecca@rebeccashoptaw.dev",
-    link: "mailto:rebecca@rebeccashoptaw.dev",
+    text: "rebeccashoptaw.dev@gmail.com",
+    link: "mailto:rebeccashoptaw.dev@gmail.com",
   },
   {
     id: "linkedin",
