@@ -72,16 +72,31 @@
   .site-subtitle {
     display: none !important;
   }
+  .section-body {
+    width: 100%;
+    padding: 0;
+  }
+  .section-body.floating {
+    margin: 0 !important;
+    padding: 0 10px !important;
+  }
+  .infobox--side .section-body {
+    padding: 10px !important;
+  }
+  .infobox--full {
+    width: calc(100% - 20px);
+  }
   .infobox--full .infobox-top {
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center;
   }
   .infobox--full .infobox-top img {
     width: 150px !important;
   }
   .infobox--full .infobox-top .info-bio {
     width: 100% !important;
+  }
+  .infobox--full .section-body {
+    margin: 0 10px !important;
   }
   .infobox--full .infobox-icons {
     width: 100% !important;
