@@ -336,8 +336,18 @@
       const carouselForm = `<h3>Carousel</h3>
 <label for="title">Custom title</label>
 <input type="text" name="title" />
-<label for="items">IA Identifiers</label>
-<span class="note">Comma-separated list, please.</span>
+<label for="carousel_source">Carousel source</label>
+<span class="note">Where to find the content for the carousel.\nIf items selected, the carousel will use the items specified below.\nIf images selected, the carousel will use all collection image files.</span>
+<div class="source-option">
+  <input type="radio" name="carousel_source" id="items" value="items" checked />
+  <label for="items">Items</label>
+</div>
+<div class="source_option">
+  <input type="radio" name="carousel_source" id="images" value="images" />
+  <label for="images">Images</label>
+</div>
+<label for="items">Items</label>
+<span class="note">If using items for the carousel, include a list of IA identifiers here.</span>
 <textarea type="text" name="items"></textarea><button id="btn" class="form-btn form-btn--remove" onClick="remove(this)">Remove</button>`;
 
       const contentCardsForm = `<h3>Content Cards Block</h3>
