@@ -48,46 +48,80 @@
     <section id="forms-section">
       <form id="settings" class="component">
         <h3>Global settings</h3>
-        <label for="overlayColor">Overlay color</label>
-        <span class="note"
-          >Used for all carousels and featured items. Defaults to no overlay if
-          black.</span
-        >
-        <input type="color" name="overlayColor" value="#000000" />
-        <label for="buttonColor">Button color</label>
-        <span class="note"
-          >Used for all buttons. We recommend a light color which is clearly
-          different from your heading background color.</span
-        >
-        <input type="color" name="buttonColor" value="#f5f5f7" />
-        <label for="headingBGColor">Heading background color</label>
-        <span class="note"
-          >Defaults to transparent. Used for all headings.</span
-        >
-        <input type="color" name="headingBGColor" value="#f5f5f7" />
-        <label for="headingFont">Custom heading font</label>
-        <span class="note"
-          >Identifier for an IA item that contains the desired font file. Used
-          for all heaidngs and buttons.</span
-        >
-        <input type="text" name="headingFont" />
+        <div class="form-element">
+          <div class="input-area">
+            <label for="overlayColor">Overlay color</label>
+            <span class="note"
+              >Used for all carousels and featured items. Defaults to no overlay
+              if black.</span
+            >
+            <input type="color" name="overlayColor" value="#000000" />
+          </div>
+          <img
+            src="./custom-collection-assets/overlayColor.png"
+            class="demo-img"
+          />
+        </div>
+        <div class="form-element">
+          <div class="input-area">
+            <label for="buttonColor">Button color</label>
+            <span class="note"
+              >Used for all buttons. We recommend a light color which is clearly
+              different from your heading background color.</span
+            >
+            <input type="color" name="buttonColor" value="#f5f5f7" />
+          </div>
+          <img
+            src="./custom-collection-assets/buttonColor.png"
+            class="demo-img"
+          />
+        </div>
+        <div class="form-element">
+          <div class="input-area">
+            <label for="headingBGColor">Heading background color</label>
+            <span class="note"
+              >Defaults to transparent. Used for all headings.</span
+            >
+            <input type="color" name="headingBGColor" value="#f5f5f7" />
+          </div>
+          <img
+            src="./custom-collection-assets/headingBGColor.png"
+            class="demo-img"
+          />
+        </div>
+        <div class="form-element">
+          <div class="input-area">
+            <label for="headingFont">Custom heading font</label>
+            <span class="note"
+              >Identifier for an IA item that contains the desired font file.
+              Used for all heaidngs and buttons.</span
+            >
+            <input type="text" name="headingFont" />
+          </div>
+          <img src="./custom-collection-assets/font.png" class="demo-img" />
+        </div>
       </form>
       <form id="header" class="component">
         <h3>Header</h3>
-        <label for="backgroundColor">Background color</label>
-        <input type="color" name="backgroundColor" value="#f5f5f7" />
-        <label for="leftImage">Top left image URL</label>
-        <span class="note"
-          >If left and center image URLs entered, image will replace thumbnail.
-          Otherwise existing thumbnail and title will show.</span
-        >
-        <input type="url" name="leftImage" placeholder="https://..." />
-        <label for="centerImage">Center image URL</label>
-        <span class="note"
-          >If URL entered, image will replace title. Otherwise existing title
-          and thumbnail will show.</span
-        >
-        <input type="url" name="centerImage" placeholder="https://..." />
+        <div class="form-element">
+          <div class="input-area">
+            <label for="backgroundColor">Background color</label>
+            <input type="color" name="backgroundColor" value="#f5f5f7" />
+            <label for="leftImage">Top left image URL</label>
+            <span class="note"
+              >If left and center image URLs entered, image will replace
+              thumbnail. Otherwise existing thumbnail and title will show.</span
+            >
+            <input type="url" name="leftImage" placeholder="https://..." />
+            <label for="centerImage">Center image URL</label>
+            <span class="note"
+              >If URL entered, image will replace title. Otherwise existing
+              title and thumbnail will show.</span
+            >
+            <input type="url" name="centerImage" placeholder="https://..." />
+          </div>
+          <img src="./custom-collection-assets/header.png" class="demo-img" />
+        </div>
       </form>
     </section>
     <section id="bottom-controls-section">
@@ -334,21 +368,27 @@
       };
 
       const carouselForm = `<h3>Carousel</h3>
-<label for="title">Custom title</label>
-<input type="text" name="title" />
-<label for="carousel_source">Carousel source</label>
-<span class="note">Where to find the content for the carousel.\nIf items selected, the carousel will use the items specified below.\nIf images selected, the carousel will use all collection image files.</span>
-<div class="source-option">
-  <input type="radio" name="carousel_source" id="items" value="items" checked />
-  <label for="items">Items</label>
-</div>
-<div class="source_option">
-  <input type="radio" name="carousel_source" id="images" value="images" />
-  <label for="images">Images</label>
-</div>
-<label for="items">Items</label>
-<span class="note">If using items for the carousel, include a list of IA identifiers here.</span>
-<textarea type="text" name="items"></textarea><button id="btn" class="form-btn form-btn--remove" onClick="remove(this)">Remove</button>`;
+      <div class="form-element">
+        <div class="input-area">
+            <label for="title">Custom title</label>
+            <input type="text" name="title" />
+            <label for="carousel_source">Carousel source</label>
+            <span class="note">Where to find the content for the carousel.\nIf items selected, the carousel will use the items specified below.\nIf images selected, the carousel will use all collection image files.</span>
+            <div>
+              <input type="radio" name="carousel_source" id="items" value="items" checked />
+              <label for="items">Items</label>
+            </div>
+            <div>
+              <input type="radio" name="carousel_source" id="images" value="images" />
+              <label for="images">Images</label>
+            </div>
+            <label for="items">Items</label>
+            <span class="note">Comma-separated list, please.</span>
+            <textarea type="text" name="items" placeholder="identifier-1, identifier-2, https://archive.org/details/identifier-3"></textarea>
+        </div>
+        <img src="./custom-collection-assets/carousel.png" class="demo-img" />
+      </div>
+    <button id="btn" class="form-btn form-btn--remove" onClick="remove(this)">Remove</button>`;
 
       const contentCardsForm = `<h3>Content Cards Block</h3>
 <section id="cards">
@@ -356,21 +396,34 @@
 <button class="form-btn form-btn--add-card" onClick="addContentCard(this)">New Card</button>
 <button class="form-btn form-btn--remove" onClick="remove(this)">Remove block</button>`;
 
-      const contentCard = `<label for="title">Card title</label>
-	<input type="text" name="title" />
-	<label for="body">Card body</label>
-	<textarea name="body"></textarea>
-  <label for="linkURL">Link</label>
-	<input type="url" name="linkURL" placeholder="https://..." />
-	<label for ="linkText">Link text</label>
-	<span class="note">If a URL is provided without a link text, link text will default to "Go"</span>
-  <input type="text" name="linkText" />
-  <label for="featuredItem">Featured item</label>
-	<span class="note">Optional item image to display with text</span>
-	<input type="text" name="featuredItem" placeholder="IA identifier" />
-  <label for="usePlainLink">Use plain link?</label>
-	<span class="note">Removes button styling</span>
-	<input type="text" name="usePlainLink" placeholder="Write true if desired" />
+      const contentCard = `
+      <div class="form-element">
+        <div class="input-area">
+           <label for="title">Card title</label>
+            <input type="text" name="title" />
+            <label for="body">Card body</label>
+            <textarea name="body"></textarea>
+            <label for="linkURL">Link</label>
+            <input type="url" name="linkURL" placeholder="https://..." />
+            <label for ="linkText">Link text</label>
+            <span class="note">If a URL is provided without a link text, link text will default to "Go"</span>
+            <input type="text" name="linkText" />
+            <label for="featuredItem">Featured item</label>
+            <span class="note">Optional item image to display with text</span>
+            <input type="text" name="featuredItem" placeholder="IA identifier" />
+            <label for="usePlainLink">Use plain link?</label>
+            <span class="note">Removes button styling</span>
+            <div>
+              <input type="radio" name="usePlainLink" id="true" value="true" />
+              <label for="true">True</label>
+            </div>
+            <div>
+              <input type="radio" name="usePlainLink" id="false" value="false" checked />
+              <label for="false">False</label>
+            </div>
+        </div>
+        <img src="./custom-collection-assets/card.png" class="demo-img" />
+      </div>
   <button id="btn" class="form-btn form-btn--remove-card" onClick="remove(this)">Remove card</button>`;
     </script>
     <style>
@@ -409,12 +462,30 @@
       .modal--existing {
         display: flex;
         flex-direction: column;
-        width: 50vw;
-        max-width: 500px;
+        width: 90vw;
+        max-width: 1000px;
         min-width: 250px;
         gap: 10px;
         padding: 20px;
         border: 0.5px solid #aaa;
+      }
+
+      .form-element {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      .input-area {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .demo-img {
+        width: 40%;
+        object-fit: contain;
       }
 
       form,
