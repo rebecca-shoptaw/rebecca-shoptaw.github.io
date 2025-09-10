@@ -372,19 +372,22 @@
         <div class="input-area">
             <label for="title">Custom title</label>
             <input type="text" name="title" />
-            <label for="carousel_source">Carousel source</label>
-            <span class="note">Where to find the content for the carousel.\nIf items selected, the carousel will use the items specified below.\nIf images selected, the carousel will use all collection image files.</span>
+            <label for="carousel_type">Carousel type</label>
+            <span class="note">What kind of carousel to show.\nIf items selected, the carousel will use the items specified below.\nIf images selected, the carousel will use all collection image files, or the files from an optional folder named below.</span>
             <div>
-              <input type="radio" name="carousel_source" id="items" value="items" checked />
+              <input type="radio" name="carousel_type" id="items" value="items" checked />
               <label for="items">Items</label>
             </div>
             <div>
-              <input type="radio" name="carousel_source" id="images" value="images" />
+              <input type="radio" name="carousel_type" id="images" value="images" />
               <label for="images">Images</label>
             </div>
             <label for="items">Items</label>
             <span class="note">Comma-separated list, please.</span>
             <textarea type="text" name="items" placeholder="identifier-1, identifier-2, https://archive.org/details/identifier-3"></textarea>
+            <label for="image_source">Name of image subfolder</label>
+            <span class="note">Defaults to using all collection images if no folder specified</span>
+            <input type="text" name="image_source" placeholder="my-folder"></input>
         </div>
         <img src="./custom-collection-assets/carousel.png" class="demo-img" />
       </div>
