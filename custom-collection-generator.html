@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -27,10 +27,7 @@
     </div>
 
     <dialog class="modal modal--existing">
-      <label for="collectionLayout">Collection_layout</label>
-      <span class="note"
-        >Find this in the metadata fields for the collection.</span
-      >
+      <label for="collectionLayout">Existing entry</label>
       <input name="collectionLayout" />
       <button
         class="form-btn form-btn--generate"
@@ -57,10 +54,7 @@
             >
             <input type="color" name="overlayColor" value="#000000" />
           </div>
-          <img
-            src="./custom-collection-assets/overlayColor.png"
-            class="demo-img"
-          />
+          <img src="./assets/overlayColor.png" class="demo-img" />
         </div>
         <div class="form-element">
           <div class="input-area">
@@ -71,10 +65,7 @@
             >
             <input type="color" name="buttonColor" value="#f5f5f7" />
           </div>
-          <img
-            src="./custom-collection-assets/buttonColor.png"
-            class="demo-img"
-          />
+          <img src="./assets/buttonColor.png" class="demo-img" />
         </div>
         <div class="form-element">
           <div class="input-area">
@@ -84,10 +75,7 @@
             >
             <input type="color" name="headingBGColor" value="#f5f5f7" />
           </div>
-          <img
-            src="./custom-collection-assets/headingBGColor.png"
-            class="demo-img"
-          />
+          <img src="./assets/headingBGColor.png" class="demo-img" />
         </div>
         <div class="form-element">
           <div class="input-area">
@@ -98,7 +86,7 @@
             >
             <input type="text" name="headingFont" />
           </div>
-          <img src="./custom-collection-assets/font.png" class="demo-img" />
+          <img src="./assets/font.png" class="demo-img" />
         </div>
       </form>
       <form id="header" class="component">
@@ -120,7 +108,7 @@
             >
             <input type="url" name="centerImage" placeholder="https://..." />
           </div>
-          <img src="./custom-collection-assets/header.png" class="demo-img" />
+          <img src="./assets/header.png" class="demo-img" />
         </div>
       </form>
     </section>
@@ -145,9 +133,6 @@
     </section>
     <section id="results-section">
       <h3>Result</h3>
-      <span class="note"
-        >Paste this into a "collection_layout" metadata field</span
-      >
       <input type="textbox" id="result" />
       <button class="form-btn form-btn--copy" onClick="copyResult()">
         Copy to Clipboard
@@ -164,7 +149,7 @@
 
       const existingModal = document.querySelector(".modal--existing");
       const existingLayout = document.querySelector(
-        "input[name=collectionLayout]"
+        "input[name=collectionLayout]",
       );
 
       const populateResults = () => {
@@ -322,6 +307,16 @@
 
       const populateNewCarousel = (elem) => {
         const form = createNewForm("carousel", carouselForm);
+        if (elem.carousel_type === "items" && elem.image_source)
+          console.warn(
+            "Only items will be shown in an item carousel. The image source provided will be ignored.",
+          );
+        if (elem.carousel_type === "images" && elem.items)
+          console.warn(
+            "Only " +
+              (elem.image_source ?? "collection") +
+              " images will be shown in the image carousel. The items provided will be ignored.",
+          );
         addElementToForm(elem, form);
       };
 
@@ -368,66 +363,66 @@
       };
 
       const carouselForm = `<h3>Carousel</h3>
-      <div class="form-element">
-        <div class="input-area">
-            <label for="title">Custom title</label>
-            <input type="text" name="title" />
-            <label for="carousel_type">Carousel type</label>
-            <span class="note">What kind of carousel to show.\nIf items selected, the carousel will use the items specified below.\nIf images selected, the carousel will use all collection image files, or the files from an optional folder named below.</span>
-            <div>
-              <input type="radio" name="carousel_type" id="items" value="items" checked />
-              <label for="items">Items</label>
+            <div class="form-element">
+              <div class="input-area">
+                  <label for="title">Custom title</label>
+                  <input type="text" name="title" />
+                  <label for="carousel_type">Carousel type</label>
+                  <span class="note">What kind of carousel to show.\nIf items selected, the carousel will use the items specified below.\nIf images selected, the carousel will use all collection image files, or the files from an optional folder named below.</span>
+                  <div>
+                    <input type="radio" name="carousel_type" id="type_items" value="items" checked />
+                    <label for="type_items">Items</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="carousel_type" id="type_images" value="images" />
+                    <label for="type_images">Images</label>
+                  </div>
+                  <label for="items">Items</label>
+                  <span class="note">Comma-separated list, please.</span>
+                  <textarea type="text" name="items" placeholder="identifier-1, identifier-2, https://archive.org/details/identifier-3"></textarea>
+                  <label for="image_source">Name of image subfolder</label>
+                  <span class="note">Defaults to using all collection images if no folder specified</span>
+                  <input type="text" name="image_source" placeholder="my-folder"></input>
+              </div>
+              <img src="./assets/carousel.png" class="demo-img" />
             </div>
-            <div>
-              <input type="radio" name="carousel_type" id="images" value="images" />
-              <label for="images">Images</label>
-            </div>
-            <label for="items">Items</label>
-            <span class="note">Comma-separated list, please.</span>
-            <textarea type="text" name="items" placeholder="identifier-1, identifier-2, https://archive.org/details/identifier-3"></textarea>
-            <label for="image_source">Name of image subfolder</label>
-            <span class="note">Defaults to using all collection images if no folder specified</span>
-            <input type="text" name="image_source" placeholder="my-folder"></input>
-        </div>
-        <img src="./custom-collection-assets/carousel.png" class="demo-img" />
-      </div>
-    <button id="btn" class="form-btn form-btn--remove" onClick="remove(this)">Remove</button>`;
+          <button id="btn" class="form-btn form-btn--remove" onClick="remove(this)">Remove</button>`;
 
       const contentCardsForm = `<h3>Content Cards Block</h3>
-<section id="cards">
-</section>
-<button class="form-btn form-btn--add-card" onClick="addContentCard(this)">New Card</button>
-<button class="form-btn form-btn--remove" onClick="remove(this)">Remove block</button>`;
+      <section id="cards">
+      </section>
+      <button class="form-btn form-btn--add-card" onClick="addContentCard(this)">New Card</button>
+      <button class="form-btn form-btn--remove" onClick="remove(this)">Remove block</button>`;
 
       const contentCard = `
-      <div class="form-element">
-        <div class="input-area">
-           <label for="title">Card title</label>
-            <input type="text" name="title" />
-            <label for="body">Card body</label>
-            <textarea name="body"></textarea>
-            <label for="linkURL">Link</label>
-            <input type="url" name="linkURL" placeholder="https://..." />
-            <label for ="linkText">Link text</label>
-            <span class="note">If a URL is provided without a link text, link text will default to "Go"</span>
-            <input type="text" name="linkText" />
-            <label for="featuredItem">Featured item</label>
-            <span class="note">Optional item image to display with text</span>
-            <input type="text" name="featuredItem" placeholder="IA identifier" />
-            <label for="usePlainLink">Use plain link?</label>
-            <span class="note">Removes button styling</span>
-            <div>
-              <input type="radio" name="usePlainLink" id="true" value="true" />
-              <label for="true">True</label>
+            <div class="form-element">
+              <div class="input-area">
+                 <label for="title">Card title</label>
+                  <input type="text" name="title" />
+                  <label for="body">Card body</label>
+                  <textarea name="body"></textarea>
+                  <label for="linkURL">Link</label>
+                  <input type="url" name="linkURL" placeholder="https://..." />
+                  <label for ="linkText">Link text</label>
+                  <span class="note">If a URL is provided without a link text, link text will default to "Go"</span>
+                  <input type="text" name="linkText" />
+                  <label for="featuredItem">Featured item</label>
+                  <span class="note">Optional item image to display with text</span>
+                  <input type="text" name="featuredItem" placeholder="IA identifier" />
+                  <label for="usePlainLink">Use plain link?</label>
+                  <span class="note">Removes button styling</span>
+                  <div>
+                    <input type="radio" name="usePlainLink" id="true" value="true" />
+                    <label for="true">True</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="usePlainLink" id="false" value="false" checked />
+                    <label for="false">False</label>
+                  </div>
+              </div>
+              <img src="./assets/card.png" class="demo-img" />
             </div>
-            <div>
-              <input type="radio" name="usePlainLink" id="false" value="false" checked />
-              <label for="false">False</label>
-            </div>
-        </div>
-        <img src="./custom-collection-assets/card.png" class="demo-img" />
-      </div>
-  <button id="btn" class="form-btn form-btn--remove-card" onClick="remove(this)">Remove card</button>`;
+        <button id="btn" class="form-btn form-btn--remove-card" onClick="remove(this)">Remove card</button>`;
     </script>
     <style>
       html {
